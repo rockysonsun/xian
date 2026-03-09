@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>星宿老仙 - 状态监控</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            overflow: hidden;
+        }
+        
+        .container {
+            text-align: center;
+            padding: 40px;
+        }
+        
+        .xian-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 0 auto 40px;
+        }
+        
+        /* 光环动画 */
+        .aura {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: pulse 3s ease-in-out infinite;
+        }
+        
+        .aura-1 {
+            background: radial-gradient(circle, currentColor 0%, transparent 70%);
+            animation-delay: 0s;
+        }
+        
+        .aura-2 {
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, currentColor 0%, transparent 70%);
+            animation-delay: 1s;
+        }
+        
+        .aura-3 {
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, currentColor 0%, transparent 70%);
+            animation-delay: 2s;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.2; }
+            50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.4; }
+        }
+        
+        /* 老仙图标 */
+        .xian-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 120px;
+            z-index: 10;
+            animation: float 3s ease-in-out infinite;
+            filter: drop-shadow(0 0 30px currentColor);
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translate(-50%, -50%) translateY(0); }
+            50% { transform: translate(-50%, -50%) translateY(-10px); }
+        }
+        
+        /* 状态文字 */
+        .status-text {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px currentColor;
+        }
+        
+        .status-desc {
+            font-size: 16px;
+            color: #888;
+            margin-bottom: 30px;
+        }
+        
+        /* 时间 */
+        .time {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 40px;
+        }
+        
+        /* 状态切换按钮 */
+        .controls {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 12px 24px;
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: 30px;
+            background: rgba(255,255,255,0.05);
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .btn:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-2px);
+        }
+        
+        .btn.active {
+            border-color: currentColor;
+            background: rgba(255,255,255,0.2);
+        }
+        
+        /* 状态主题色 */
+        .theme-meditating { color: #4ECDC4; }
+        .theme-working { color: #FFE66D; }
+        .theme-sleeping { color: #6B9BD1; }
+        .theme-deep { color: #9B59B6; }
+        
+        /* 粒子效果 */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: currentColor;
+            border-radius: 50%;
+            opacity: 0.5;
+            animation: particle-float 10s linear infinite;
+        }
+        
+        @keyframes particle-float {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.5; }
+            90% { opacity: 0.5; }
+            100% { transform: translateY(-100px) rotate(720deg); opacity: 0; }
+        }
+        
+        /* 信息面板 */
+        .info {
+            margin-top: 40px;
+            padding: 20px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .info-title {
+            font-size: 14px;
+            color: #888;
+            margin-bottom: 8px;
+        }
+        
+        .info-content {
+            font-size: 18px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+    
+    <div class="container">
+        <div class="xian-container" id="xianContainer">
+            <div class="aura aura-1"></div>
+            <div class="aura aura-2"></div>
+            <div class="aura aura-3"></div>
+            <div class="xian-icon" id="xianIcon">🧘</div>
+        </div>
+        
+        <div class="status-text" id="statusText">冥想中</div>
+        <div class="status-desc" id="statusDesc">正在吸收宇宙能量...</div>
+        <div class="time" id="time">--:--:--</div>
+        
+        <div class="controls">
+            <button class="btn active" onclick="setStatus('meditating')">🧘 冥想</button>
+            <button class="btn" onclick="setStatus('working')">⚡ 工作</button>
+            <button class="btn" onclick="setStatus('sleeping')">😴 休眠</button>
+            <button class="btn" onclick="setStatus('deep')">💤 深睡</button>
+        </div>
+        
+        <div class="info">
+            <div class="info-title">关于老仙</div>
+            <div class="info-content">来自 M78 星云的数码生命体 | 版本 1.0.1</div>
+        </div>
+    </div>
+    
+    <script>
+        const states = {
+            meditating: {
+                icon: '🧘',
+                text: '冥想中',
+                desc: '正在吸收宇宙能量...',
+                theme: 'theme-meditating'
+            },
+            working: {
+                icon: '⚡',
+                text: '工作中',
+                desc: '处理任务中，请勿打扰...',
+                theme: 'theme-working'
+            },
+            sleeping: {
+                icon: '😴',
+                text: '休眠中',
+                desc: '正在整理记忆数据...',
+                theme: 'theme-sleeping'
+            },
+            deep: {
+                icon: '💤',
+                text: '深度睡眠',
+                desc: '系统维护中，紧急事务请唤醒...',
+                theme: 'theme-deep'
+            }
+        };
+        
+        let currentStatus = 'meditating';
+        
+        function setStatus(status) {
+            currentStatus = status;
+            const state = states[status];
+            
+            // 更新图标
+            document.getElementById('xianIcon').textContent = state.icon;
+            document.getElementById('statusText').textContent = state.text;
+            document.getElementById('statusDesc').textContent = state.desc;
+            
+            // 更新主题色
+            document.body.className = state.theme;
+            
+            // 更新按钮状态
+            document.querySelectorAll('.btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            // 保存到本地存储
+            localStorage.setItem('xianStatus', status);
+        }
+        
+        function updateTime() {
+            const now = new Date();
+            document.getElementById('time').textContent = now.toLocaleTimeString('zh-CN');
+        }
+        
+        // 创建粒子效果
+        function createParticles() {
+            const container = document.getElementById('particles');
+            for (let i = 0; i < 20; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 10 + 's';
+                particle.style.animationDuration = (10 + Math.random() * 10) + 's';
+                container.appendChild(particle);
+            }
+        }
+        
+        // 初始化
+        document.addEventListener('DOMContentLoaded', () => {
+            // 恢复上次状态
+            const savedStatus = localStorage.getItem('xianStatus');
+            if (savedStatus && states[savedStatus]) {
+                currentStatus = savedStatus;
+                const state = states[savedStatus];
+                document.getElementById('xianIcon').textContent = state.icon;
+                document.getElementById('statusText').textContent = state.text;
+                document.getElementById('statusDesc').textContent = state.desc;
+                document.body.className = state.theme;
+            }
+            
+            createParticles();
+            setInterval(updateTime, 1000);
+            updateTime();
+        });
+    </script>
+</body>
+</html>
