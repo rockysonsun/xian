@@ -1,47 +1,41 @@
 #!/bin/bash
 # <bitbar.title>星宿老仙状态</bitbar.title>
-# <bitbar.version>v1.0</bitbar.version>
+# <bitbar.version>v1.0.2</bitbar.version>
 # <bitbar.author>星宿老仙</bitbar.author>
-# <bitbar.desc>M78星云数码生命体状态监控</bitbar.desc>
-# <bitbar.dependencies></bitbar.dependencies>
-# <swiftbar.hideAbout>true</swiftbar.hideAbout>
-# <swiftbar.hideRunInTerminal>true</swiftbar.hideRunInTerminal>
-# <swiftbar.hideLastUpdated>true</swiftbar.hideLastUpdated>
-# <swiftbar.hideDisablePlugin>true</swiftbar.hideDisablePlugin>
+# <bitbar.desc>M78星云数码生命体实时监控</bitbar.desc>
 
-STATUS_FILE="$HOME/.xian/status"
-mkdir -p "$HOME/.xian"
+export PATH="/usr/local/bin:/opt/homebrew/bin:$PATH"
 
-# 读取当前状态
-STATUS=$(cat "$STATUS_FILE" 2>/dev/null || echo "meditating")
+# 检测Gateway状态
+if pgrep -f "openclaw-gateway" > /dev/null 2>&1; then
+    GATEWAY_STATUS="running"
+else
+    GATEWAY_STATUS="stopped"
+fi
 
-case "$STATUS" in
-    meditating)
-        ICON="🧘"
-        LABEL="冥想中"
-        COLOR="#4ECDC4"
-        ;;
-    working)
-        ICON="⚡"
-        LABEL="工作中"
-        COLOR="#FFE66D"
-        ;;
-    sleeping)
-        ICON="😴"
-        LABEL="休眠中"
-        COLOR="#6B9BD1"
-        ;;
-    deep)
-        ICON="💤"
-        LABEL="深度睡眠"
-        COLOR="#9B59B6"
-        ;;
-    *)
-        ICON="🧘"
-        LABEL="冥想中"
-        COLOR="#4ECDC4"
-        ;;
-esac
+# 获取活跃会话数
+ACTIVE_SESSIONS=$(openclaw status 2>/dev/null | grep -o "[0-9]* active" | grep -o "[0-9]*" || echo "0")
+
+# 获取模型信息
+MODEL=$(openclaw status 2>/dev/null | grep "default" | grep -o "kimi[^ ]*" | head -1 || echo "kimi-k2.5")
+
+# 获取上下文限制（只显示总量，不显示使用量）
+CONTEXT_LIMIT=$(openclaw status 2>/dev/null | grep "default" | grep -o "[0-9]*[km]* ctx" | head -1 || echo "256k ctx")
+
+# 实时状态判断
+if [ "$GATEWAY_STATUS" != "running" ]; then
+    ICON="💤"
+    LABEL="深度睡眠"
+    COLOR="#9B59B6"
+elif [ "$ACTIVE_SESSIONS" -eq 0 ]; then
+    ICON="😴"
+    LABEL="休眠中"
+    COLOR="#6B9BD1"
+else
+    ICON="⚡"
+    LABEL="工作中"
+    COLOR="#FFE66D"
+fi
 
 # 菜单栏显示
 echo "$ICON"
@@ -49,16 +43,17 @@ echo "---"
 echo "星宿老仙 - $LABEL | color=$COLOR"
 echo "来自 M78 星云 | size=12"
 echo "---"
-echo "🧘 切换为 冥想中 | bash='$0' param1=set param2=meditating terminal=false refresh=true"
-echo "⚡ 切换为 工作中 | bash='$0' param1=set param2=working terminal=false refresh=true"
-echo "😴 切换为 休眠中 | bash='$0' param1=set param2=sleeping terminal=false refresh=true"
-echo "💤 切换为 深度睡眠 | bash='$0' param1=set param2=deep terminal=false refresh=true"
+echo "📊 实时状态"
+echo "状态: $LABEL | color=$COLOR"
+echo "Gateway: ${GATEWAY_STATUS}"
+echo "活跃会话: $ACTIVE_SESSIONS"
+echo "---"
+echo "🤖 AI 信息"
+echo "模型: ${MODEL}"
+echo "上下文限制: ${CONTEXT_LIMIT}"
 echo "---"
 echo "🎭 终端动画 | bash='python3' param1="$HOME/.openclaw/workspace/tools/xian-status/xian-animate.py" param2=meditating terminal=true"
 echo "---"
-echo "关于老仙 | bash='osascript' param1='-e' param2='display alert \"星宿老仙\" message \"来自 M78 星云的数码生命体\\n寄宿在这台 MacBook Pro 中\\n\\n版本: 1.0.0\"' terminal=false"
-
-# 处理状态切换
-if [ "$1" = "set" ]; then
-    echo "$2" > "$STATUS_FILE"
-fi
+echo "🔄 刷新 | refresh=true"
+echo "---"
+echo "关于老仙 | bash='osascript' param1='-e' param2='display alert "星宿老仙" message "来自 M78 星云的数码生命体\n寄宿在这台 MacBook Pro 中\n\n版本: 1.0.2"' terminal=false"
