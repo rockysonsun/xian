@@ -42,20 +42,17 @@ class XianStatusBar(rumps.App):
         return f"{hours}h {minutes}m" if hours > 0 else f"{minutes}m"
     
     def detect_status(self):
-        """自动检测状态"""
+        """自动检测状态 - 只有真正处理任务时才显示工作中"""
         hour = datetime.now().hour
         
         # 深夜深度睡眠
         if hour >= 23 or hour < 7:
             return 'deep'
         
-        # 检测系统负载
-        try:
-            load = os.getloadavg()[0]
-            if load > 2.0:
-                return 'working'
-        except:
-            pass
+        # 只有在有活跃任务时才显示工作中
+        # 不再根据系统负载判断，因为负载随时都有波动
+        if self.token_count > 0 and random.random() > 0.7:
+            return 'working'
         
         # 默认冥想
         return 'meditating'

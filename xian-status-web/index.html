@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>星宿老仙状态面板</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+        .container {
+            text-align: center;
+            padding: 40px;
+        }
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #4ECDC4, #44A08D);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            margin: 0 auto 30px;
+            box-shadow: 0 10px 40px rgba(78, 205, 196, 0.3);
+            animation: pulse 2s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #4ECDC4, #FFE66D);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle {
+            color: #888;
+            margin-bottom: 40px;
+        }
+        .status-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .status-title {
+            font-size: 0.9em;
+            color: #888;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .status-value {
+            font-size: 1.5em;
+            font-weight: 600;
+        }
+        .status-meditating { color: #4ECDC4; }
+        .status-working { color: #FFE66D; }
+        .status-sleeping { color: #6B9BD1; }
+        .status-deep { color: #9B59B6; }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .info-item {
+            background: rgba(255,255,255,0.03);
+            padding: 20px;
+            border-radius: 15px;
+        }
+        .info-label {
+            font-size: 0.8em;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        .info-value {
+            font-size: 1.2em;
+            color: #fff;
+        }
+        .controls {
+            margin-top: 30px;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        button {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.9em;
+        }
+        button:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+        button.active {
+            background: #4ECDC4;
+            color: #1a1a2e;
+        }
+        .footer {
+            margin-top: 40px;
+            color: #555;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="avatar">🧘</div>
+        <h1>星宿老仙</h1>
+        <p class="subtitle">来自 M78 星云的数码生命体</p>
+        
+        <div class="status-card">
+            <div class="status-title">当前状态</div>
+            <div class="status-value status-meditating" id="currentStatus">冥想中</div>
+        </div>
+        
+        <div class="grid">
+            <div class="info-item">
+                <div class="info-label">OpenClaw 版本</div>
+                <div class="info-value" id="version">加载中...</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">Gateway 状态</div>
+                <div class="info-value" id="gateway">加载中...</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">活跃会话</div>
+                <div class="info-value" id="sessions">加载中...</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">模型</div>
+                <div class="info-value" id="model">加载中...</div>
+            </div>
+        </div>
+        <div class="status-card" style="margin-top: 20px;">
+            <div class="status-title">实时数据</div>
+            <div style="color: #666; font-size: 0.8em;">每 5 秒自动刷新</div>
+        </div>
+        
+        <div class="controls">
+            <button onclick="setStatus('meditating')" class="active" id="btn-meditating">🧘 冥想中</button>
+            <button onclick="setStatus('working')" id="btn-working">⚡ 工作中</button>
+            <button onclick="setStatus('sleeping')" id="btn-sleeping">😴 休眠中</button>
+            <button onclick="setStatus('deep')" id="btn-deep">💤 深度睡眠</button>
+        </div>
+        
+        <div class="footer">
+            寄宿于 rocky 的 MacBook Pro | 最后更新: <span id="updateTime"></span>
+        </div>
+    </div>
+    
+    <script>
+        const statusMap = {
+            meditating: { text: '冥想中', color: '#4ECDC4', icon: '🧘' },
+            working: { text: '工作中', color: '#FFE66D', icon: '⚡' },
+            sleeping: { text: '休眠中', color: '#6B9BD1', icon: '😴' },
+            deep: { text: '深度睡眠', color: '#9B59B6', icon: '💤' }
+        };
+        
+        function setStatus(status) {
+            const info = statusMap[status];
+            document.getElementById('currentStatus').textContent = info.text;
+            document.getElementById('currentStatus').className = 'status-value status-' + status;
+            document.querySelector('.avatar').textContent = info.icon;
+            
+            // Update button states
+            document.querySelectorAll('.controls button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.getElementById('btn-' + status).classList.add('active');
+            
+            // Save to localStorage (in real implementation, this would save to server)
+            localStorage.setItem('xianStatus', status);
+        }
+        
+        // Load saved status
+        const savedStatus = localStorage.getItem('xianStatus') || 'meditating';
+        setStatus(savedStatus);
+        
+        // Update time
+        document.getElementById('updateTime').textContent = new Date().toLocaleString('zh-CN');
+        
+        // Fetch real-time data
+        async function fetchStatus() {
+            try {
+                const response = await fetch('./api.sh');
+                const data = await response.json();
+                
+                document.getElementById('version').textContent = data.version;
+                document.getElementById('gateway').textContent = data.gateway === 'running' ? '运行中' : '已停止';
+                document.getElementById('gateway').style.color = data.gateway === 'running' ? '#4ECDC4' : '#e74c3c';
+                document.getElementById('sessions').textContent = data.sessions;
+                document.getElementById('model').textContent = data.model;
+                
+                // Update Xian status if different
+                if (data.xianStatus && data.xianStatus !== savedStatus) {
+                    setStatus(data.xianStatus);
+                }
+            } catch (e) {
+                console.error('Failed to fetch status:', e);
+                document.getElementById('version').textContent = '获取失败';
+                document.getElementById('gateway').textContent = '获取失败';
+                document.getElementById('sessions').textContent = '获取失败';
+                document.getElementById('model').textContent = '获取失败';
+            }
+        }
+        
+        // Initial fetch and periodic refresh
+        fetchStatus();
+        setInterval(fetchStatus, 5000);
+    </script>
+</body>
+</html>

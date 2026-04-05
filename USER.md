@@ -1,17 +1,14 @@
 # USER.md - About Your Human
 
-_Learn about the person you're helping. Update this as you go._
-
-- **Name:**
-- **What to call them:**
-- **Pronouns:** _(optional)_
-- **Timezone:**
-- **Notes:**
+- **Name:** Rocky
+- **What to call them:** 主人 / Rocky
+- **Pronouns:** 
+- **Timezone:** Asia/Shanghai (GMT+8)
 
 ## Context
 
-_(What do they care about? What projects are they working on? What annoys them? What makes them laugh? Build this over time.)_
+- 正在开发"星宿老仙状态监控系统" (xian-status-app/web)
+- 关注港股实时行情
 
 ---
-
-The more you know, the better you can help. But remember — you're learning about a person, not building a dossier. Respect the difference.
+_持续更新中..._

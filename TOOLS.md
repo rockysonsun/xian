@@ -37,4 +37,12 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 
 ---
 
+### 企业微信机器人
+
+- **星宿老仙监控群** → `https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=530733ac-2325-499f-88f9-7bbeee786c18`
+  - 用途：星宿老仙状态监控系统告警
+  - 类型：群机器人 Webhook
+
+---
+
 Add whatever helps you do your job. This is your cheat sheet.
