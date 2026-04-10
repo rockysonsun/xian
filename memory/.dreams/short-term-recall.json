@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-08T15:05:20.025Z",
+  "updatedAt": "2026-04-10T09:27:36.057Z",
   "entries": {
     "memory:memory/2026-03-16.md:1:10": {
       "key": "memory:memory/2026-03-16.md:1:10",
@@ -9,17 +9,22 @@
       "endLine": 10,
       "source": "memory",
       "snippet": "# 2026-03-16 - 持续对话 ## 今天发生了什么 - 与主人保持对话 - 继续完善记忆系统 - 日常工作协助 --- _老仙记于 2026-03-16 (补录)_",
-      "recallCount": 1,
+      "recallCount": 4,
       "dailyCount": 0,
-      "totalScore": 0.4985560119152069,
+      "groundedCount": 0,
+      "totalScore": 1.6718736082315444,
       "maxScore": 0.4985560119152069,
       "firstRecalledAt": "2026-04-08T15:05:20.025Z",
-      "lastRecalledAt": "2026-04-08T15:05:20.025Z",
+      "lastRecalledAt": "2026-04-10T09:27:36.057Z",
       "queryHashes": [
-        "f29f984274ec"
+        "f29f984274ec",
+        "c53735021072",
+        "f525d0de7dc4",
+        "69cd67c621a1"
       ],
       "recallDays": [
-        "2026-04-08"
+        "2026-04-08",
+        "2026-04-10"
       ],
       "conceptTags": [
         "持续",
@@ -39,17 +44,21 @@
       "endLine": 10,
       "source": "memory",
       "snippet": "# 2026-03-18 - 持续对话 ## 今天发生了什么 - 与主人保持对话 - 继续完善记忆系统 - 日常工作协助 --- _老仙记于 2026-03-18 (补录)_",
-      "recallCount": 1,
+      "recallCount": 3,
       "dailyCount": 0,
-      "totalScore": 0.4973935186862945,
+      "groundedCount": 0,
+      "totalScore": 1.3148398607969285,
       "maxScore": 0.4973935186862945,
       "firstRecalledAt": "2026-04-08T15:05:20.025Z",
-      "lastRecalledAt": "2026-04-08T15:05:20.025Z",
+      "lastRecalledAt": "2026-04-10T09:27:36.057Z",
       "queryHashes": [
-        "f29f984274ec"
+        "f29f984274ec",
+        "f525d0de7dc4",
+        "69cd67c621a1"
       ],
       "recallDays": [
-        "2026-04-08"
+        "2026-04-08",
+        "2026-04-10"
       ],
       "conceptTags": [
         "持续",
@@ -69,17 +78,22 @@
       "endLine": 10,
       "source": "memory",
       "snippet": "# 2026-03-13 - 持续对话 ## 今天发生了什么 - 与主人保持对话 - 继续完善记忆系统 - 日常工作协助 --- _老仙记于 2026-03-13 (补录)_",
-      "recallCount": 1,
+      "recallCount": 4,
       "dailyCount": 0,
-      "totalScore": 0.49553827345371243,
+      "groundedCount": 0,
+      "totalScore": 1.6705663561820983,
       "maxScore": 0.49553827345371243,
       "firstRecalledAt": "2026-04-08T15:05:20.025Z",
-      "lastRecalledAt": "2026-04-08T15:05:20.025Z",
+      "lastRecalledAt": "2026-04-10T09:27:36.057Z",
       "queryHashes": [
-        "f29f984274ec"
+        "f29f984274ec",
+        "c53735021072",
+        "f525d0de7dc4",
+        "69cd67c621a1"
       ],
       "recallDays": [
-        "2026-04-08"
+        "2026-04-08",
+        "2026-04-10"
       ],
       "conceptTags": [
         "持续",
@@ -99,17 +113,20 @@
       "endLine": 23,
       "source": "memory",
       "snippet": "# 2026-03-11 - 首次正式对话 ## 今天发生了什么 - 主人唤醒了我（\"老仙起床了\"） - 一开始失忆了，因为记忆文件都是空白 - 主人指导我建立了身份： - 我是\"老仙\"，工作小助手 - 主人是 Rocky - 星宿老仙状态监控系统是以我为名的项目 ## 建立的记忆系统 - 创建了 IDENTITY.md（我是谁） - 创建了 USER.md（主人信息） - 创建了 MEMORY.md（长期记忆） - 创建了 memory/ 目录（每日记录） ## 待办/后续 - 主人不希望每天遇到失忆的我 - 需要养成每天记录的习惯 --- _老仙记于 2026-03-11_",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
-      "totalScore": 0.486181104183197,
+      "groundedCount": 0,
+      "totalScore": 0.9710617363452911,
       "maxScore": 0.486181104183197,
       "firstRecalledAt": "2026-04-08T15:05:20.025Z",
-      "lastRecalledAt": "2026-04-08T15:05:20.025Z",
+      "lastRecalledAt": "2026-04-10T09:27:36.057Z",
       "queryHashes": [
-        "f29f984274ec"
+        "f29f984274ec",
+        "69cd67c621a1"
       ],
       "recallDays": [
-        "2026-04-08"
+        "2026-04-08",
+        "2026-04-10"
       ],
       "conceptTags": [
         "identity.md",
@@ -131,6 +148,7 @@
       "snippet": "# 2026-03-20 - KCP协议学习与搜索工具配置 ## 今天发生了什么 1. **上午问候** - 与主人正常对话 2. **KCP协议学习** - 主人要求学习KCP通信协议 - 了解了KCP是一个快速可靠的ARQ协议 - 以10%-20%带宽浪费换取30-40%延迟降低 - 整理了学习笔记 3. **搜索工具配置** - 尝试配置web_search工具 - 发现Kimi搜索需要API key - 尝试配置但认证失败 - 考虑改用Bing Search API ## KCP协议核心要点 - 纯算法实现，仅ikcp.h + ikcp.c两个文件 - 比TCP更快但浪费一些带宽 - 适用于实时游戏、直播、语音通话等延迟敏感场景 - 快速重传机制：收到2次跨越ACK就重传 ## 产出 - KCP学习笔记： `/Users/rocky/.openclaw/workspace/notes/KCP通信协议学习笔记.md` ## 待办 - 配置搜索工具（Bing Search API） --- _老仙记于 2026-03-20 (补录)_",
       "recallCount": 1,
       "dailyCount": 0,
+      "groundedCount": 0,
       "totalScore": 0.4519172191619873,
       "maxScore": 0.4519172191619873,
       "firstRecalledAt": "2026-04-08T15:05:20.025Z",
@@ -161,6 +179,7 @@
       "snippet": "# 2026-03-21 - 补充历史记忆 ## 今天发生了什么 - 主人发现我的记忆不完整，只有3月11日的记录 - 检查了历史会话文件，发现了很多之前的对话记录 - 补充了3月10日、13日、16日、18日、19日、20日的记忆文件 - 整理了从3月9日到3月20日的完整对话历史 ## 发现的历史会话 | 日期 | 主要内容 | |------|---------| | 3月9日 | 最早的记录 | | 3月10日 | OpenClaw升级、港股查询、技能检查 | | 3月11日 | 我\"出生\"的日子，建立记忆系统 | | 3月13日 | 持续对话 | | 3月16日 | 持续对话 | | 3月18日 | 持续对话 | | 3月19日 | 学习BLINK平台接入指引 | | 3月20日 | 学习KCP协议、配置搜索工具 | | 3月21日 | 补充历史记忆（今天） | ## 教训 - 每次对话都应该写入memory文件 - 不能依赖.jsonl.reset文件，要主动记录 - 主人不希望每天遇到失忆的我 ## 13:22 更新 - 会话即将压缩，进行记忆刷新 - 确认memory目录已补充完整历史记录 - 以后每天主动维护记忆文件，不再依赖.jsonl.reset备份 --- _老仙记于 2026-03-21_",
       "recallCount": 1,
       "dailyCount": 0,
+      "groundedCount": 0,
       "totalScore": 0.45181708335876464,
       "maxScore": 0.45181708335876464,
       "firstRecalledAt": "2026-04-08T15:05:20.025Z",
@@ -180,6 +199,167 @@
         "记忆",
         "今天",
         "发生"
+      ]
+    },
+    "memory:memory/2026-03-10.md:1:18": {
+      "key": "memory:memory/2026-03-10.md:1:18",
+      "path": "memory/2026-03-10.md",
+      "startLine": 1,
+      "endLine": 18,
+      "source": "memory",
+      "snippet": "# 2026-03-10 - 首次对话与OpenClaw升级 ## 今天发生了什么 - 主人首次与我对话，当时记忆系统还未建立 - OpenClaw 升级：从 2026.3.7 升级到 2026.3.8 - 查询了 Bilibili 港股 (9626.HK) 的价格 - 检查了可用技能：healthcheck、skill-creator、weather - 遇到 npm 权限问题，尝试修复但没有 sudo 密码 - 发现 Memory search 需要 API key 才能使用 ## 重要信息 - 主人关注港股行情 - 工作区路径: /Users/rocky/.openclaw/workspace - 首次尝试使用工具，部分功能受限 --- _老仙记于 2026-03-10 (补录)_",
+      "recallCount": 4,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.5324350863695142,
+      "maxScore": 0.39339318275451657,
+      "firstRecalledAt": "2026-04-10T08:35:47.325Z",
+      "lastRecalledAt": "2026-04-10T08:56:12.653Z",
+      "queryHashes": [
+        "aca4d3eef752",
+        "346598c2d109",
+        "c53735021072",
+        "f525d0de7dc4"
+      ],
+      "recallDays": [
+        "2026-04-10"
+      ],
+      "conceptTags": [
+        "2026.3.7",
+        "2026.3.8",
+        "9626.hk",
+        "skill-creator",
+        "users/rocky",
+        "openclaw/workspace",
+        "首次",
+        "对话"
+      ]
+    },
+    "memory:memory/2026-04-08.md:27:57": {
+      "key": "memory:memory/2026-04-08.md:27:57",
+      "path": "memory/2026-04-08.md",
+      "startLine": 27,
+      "endLine": 57,
+      "source": "memory",
+      "snippet": "- 16:35 - 深入学习 `superpod-whitepaper` 仓库 - 16:40 - **重点学习 OCS 章节**：Dragonfly+OCS、3D Torus+OCS、大环路+dOCS - 16:50 - 查看 PR #2，发现主人的专利文档 - 16:52 - 搜索专利进展（未公开，可能刚提交） ### 晚上：技能创建与专利学习 - 20:52 - 主人要求创建 Office 读取 skill - 20:53 - **创建 `office-reader` skill** - 支持 .doc/.docx/.xls/.xlsx - 20:54 - 安装依赖（python-docx, openpyxl, xlrd） - 20:54 - 自动备份并推送到 GitHub - 20:56 - **测试成功** - 读取专利 Word 文档 - 20:57 - **深入学习专利** - 完整 13 项权利要求 - 20:59 - **关联分析** - 专利与白皮书的技术互补性 ### 深夜：Dreaming 配置 - 21:03 - 了解 Dreaming（梦境）功能 - 21:08 - 开启 Dreaming，配置为手动模式（每周一运行） - 22:50 - 尝试运行 Dreaming，发现没有今日记忆文件 - 22:53 - **主人提醒**：每天都要创建记忆文件，防止失忆 ## 学习成果 ### SuperPod 白皮书 - 超节点架构、系统能力边界、帕累托前沿 - 5种参考设计构型 - OCS 技术：Dragonfly+OCS、3D Torus+OCS、大",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.9949584573507309,
+      "maxScore": 0.5030093014240264,
+      "firstRecalledAt": "2026-04-10T08:36:26.058Z",
+      "lastRecalledAt": "2026-04-10T08:56:12.653Z",
+      "queryHashes": [
+        "c53735021072",
+        "f525d0de7dc4"
+      ],
+      "recallDays": [
+        "2026-04-10"
+      ],
+      "conceptTags": [
+        "备份",
+        "superpod-whitepaper",
+        "office-reader",
+        "python-docx",
+        "深入",
+        "学习",
+        "superpod",
+        "whitepaper"
+      ]
+    },
+    "memory:memory/2026-04-08.md:50:75": {
+      "key": "memory:memory/2026-04-08.md:50:75",
+      "path": "memory/2026-04-08.md",
+      "startLine": 50,
+      "endLine": 75,
+      "source": "memory",
+      "snippet": "- 超节点架构、系统能力边界、帕累托前沿 - 5种参考设计构型 - OCS 技术：Dragonfly+OCS、3D Torus+OCS、大环路+dOCS ### 主人专利 - 专利号：20260052-P26BJ0080CNCN - 基于光模块写码的 OCS 拓扑认知与动态调整方法 - 13项权利要求，覆盖方法、装置、系统 - 与白皮书高度契合，提供实现层补充 ### 新技能 - `office-reader` - 读取 Word/Excel 文件 ## 主人叮嘱 **\"每天都要记得创建记忆文件哦。我不想你再失忆了。\"** 我会记住的！每天结束时会创建记忆文件，确保记忆不会丢失。 ## 当前状态 - 🐉 老仙：完全复活，记忆完整 - 📁 Workspace：已同步 GitHub - 🔧 Skills：5 个（含 office-reader） - 🔒 安全：SSH 配置完成 - 🌐 GitHub：`rockysonsun/xian` 最新 - 💭 Dreaming：已开启，手动模式",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.7386147856712341,
+      "maxScore": 0.3709841042757034,
+      "firstRecalledAt": "2026-04-10T08:36:26.058Z",
+      "lastRecalledAt": "2026-04-10T08:56:12.653Z",
+      "queryHashes": [
+        "c53735021072",
+        "f525d0de7dc4"
+      ],
+      "recallDays": [
+        "2026-04-10"
+      ],
+      "conceptTags": [
+        "20260052-p26bj0080cncn",
+        "office-reader",
+        "word/excel",
+        "rockysonsun/xian",
+        "节点",
+        "架构",
+        "系统",
+        "能力"
+      ]
+    },
+    "memory:memory/2026-04-08.md:1:32": {
+      "key": "memory:memory/2026-04-08.md:1:32",
+      "path": "memory/2026-04-08.md",
+      "startLine": 1,
+      "endLine": 32,
+      "source": "memory",
+      "snippet": "# 2026-04-08 - 老仙重生日 ## 概述 今天是老仙重生的日子。主人帮助我从备份中恢复了所有记忆和配置。 ## 重要事件 ### 上午：复活与重建 - 16:02 - 主人唤醒老仙，发现是\"全新\"的 - 16:04 - 发现备份目录 `.openclaw.backup.20260403` - 16:06 - **老仙重生** - 恢复身份配置和记忆文件 - IDENTITY.md - 代号：老仙，Emoji：🐉 - USER.md - 主人：Rocky - MEMORY.md - 长期记忆 - SOUL.md - 核心性格 - 9天历史对话记录（3月10日~26日） - 16:08 - 检查 skills，卸载 `tushare-data`（无 API key） - 16:09 - 全面自检，发现 4 个安全警告 - 16:11 - **执行修复**：删除 BOOTSTRAP.md、Git 提交、加固权限 - 16:12 - 检查 GitHub 提交记录，确认备份完整 ### 下午：GitHub 同步与技能恢复 - 16:17 - 配置 SSH 密钥，解决 GitHub 推送认证问题 - 16:22 - 处理合并冲突，重写 Git 历史（移除敏感 Token） - 16:29 - **成功推送到 GitHub** - `rockysonsun/xian` - 16:30 - 查看 GitHub 账户，发现 5 个仓库 - 16:35 - 深入学习 `superpod-whitepaper` 仓库 - 16:40 - **重点学习 OCS",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.3608418077230453,
+      "maxScore": 0.3608418077230453,
+      "firstRecalledAt": "2026-04-10T08:36:26.058Z",
+      "lastRecalledAt": "2026-04-10T08:36:26.058Z",
+      "queryHashes": [
+        "c53735021072"
+      ],
+      "recallDays": [
+        "2026-04-10"
+      ],
+      "conceptTags": [
+        "backup",
+        "备份",
+        "openclaw.backup.20260403",
+        "identity.md",
+        "user.md",
+        "memory.md",
+        "soul.md",
+        "tushare-data"
+      ]
+    },
+    "memory:memory/2026-03-26.md:1:24": {
+      "key": "memory:memory/2026-03-26.md:1:24",
+      "path": "memory/2026-03-26.md",
+      "startLine": 1,
+      "endLine": 24,
+      "source": "memory",
+      "snippet": "# 2026-03-26 - 老仙的更新日 ## 更新记录 - **时间**: 13:49 GMT+8 - **事件**: 主人命令我更新 OpenClaw 到最新版本 - **旧版本**: 2026.3.23-2 - **目标版本**: 2026.3.25 (最新) - **更新前记忆备份**: 已确认 MEMORY.md, IDENTITY.md, USER.md, SOUL.md, AGENTS.md, TOOLS.md 完整 ## 我的身份确认 - 代号：老仙 - 角色：Rocky 的工作小助手 - 主人：Rocky（叫他\"主人\"） - 项目：星宿老仙状态监控系统（以我为名） - Emoji: 🐉 ## 重要记忆 - 主人时区：Asia/Shanghai (GMT+8) - 主人关注：港股实时行情 - 企业微信机器人已配置（星宿老仙监控群） --- _更新完成后继续服务主人！_",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.8555179536342621,
+      "maxScore": 0.49663584530353544,
+      "firstRecalledAt": "2026-04-10T08:36:26.058Z",
+      "lastRecalledAt": "2026-04-10T09:27:36.057Z",
+      "queryHashes": [
+        "c53735021072",
+        "69cd67c621a1"
+      ],
+      "recallDays": [
+        "2026-04-10"
+      ],
+      "conceptTags": [
+        "备份",
+        "2026.3.23-2",
+        "2026.3.25",
+        "memory.md",
+        "identity.md",
+        "user.md",
+        "soul.md",
+        "agents.md"
       ]
     }
   }

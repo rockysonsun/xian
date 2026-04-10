@@ -39,6 +39,15 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 
 Add whatever helps you do your job. This is your cheat sheet.
 
+## 企业微信机器人配置
+
+### 星宿老仙监控群
+- **Webhook URL**: `https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=530733ac-2325-499f-88f9-7bbeee786c18`
+- **用途**: 重要通知、报告推送、状态监控
+- **配置时间**: 2026-04-10
+
+---
+
 ## 老仙自我保护机制
 
 ### 自动备份脚本
