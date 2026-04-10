@@ -1,0 +1,186 @@
+{
+  "version": 1,
+  "updatedAt": "2026-04-08T15:05:20.025Z",
+  "entries": {
+    "memory:memory/2026-03-16.md:1:10": {
+      "key": "memory:memory/2026-03-16.md:1:10",
+      "path": "memory/2026-03-16.md",
+      "startLine": 1,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "# 2026-03-16 - 持续对话 ## 今天发生了什么 - 与主人保持对话 - 继续完善记忆系统 - 日常工作协助 --- _老仙记于 2026-03-16 (补录)_",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.4985560119152069,
+      "maxScore": 0.4985560119152069,
+      "firstRecalledAt": "2026-04-08T15:05:20.025Z",
+      "lastRecalledAt": "2026-04-08T15:05:20.025Z",
+      "queryHashes": [
+        "f29f984274ec"
+      ],
+      "recallDays": [
+        "2026-04-08"
+      ],
+      "conceptTags": [
+        "持续",
+        "对话",
+        "今天",
+        "发生",
+        "什么",
+        "主人",
+        "保持",
+        "继续"
+      ]
+    },
+    "memory:memory/2026-03-18.md:1:10": {
+      "key": "memory:memory/2026-03-18.md:1:10",
+      "path": "memory/2026-03-18.md",
+      "startLine": 1,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "# 2026-03-18 - 持续对话 ## 今天发生了什么 - 与主人保持对话 - 继续完善记忆系统 - 日常工作协助 --- _老仙记于 2026-03-18 (补录)_",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.4973935186862945,
+      "maxScore": 0.4973935186862945,
+      "firstRecalledAt": "2026-04-08T15:05:20.025Z",
+      "lastRecalledAt": "2026-04-08T15:05:20.025Z",
+      "queryHashes": [
+        "f29f984274ec"
+      ],
+      "recallDays": [
+        "2026-04-08"
+      ],
+      "conceptTags": [
+        "持续",
+        "对话",
+        "今天",
+        "发生",
+        "什么",
+        "主人",
+        "保持",
+        "继续"
+      ]
+    },
+    "memory:memory/2026-03-13.md:1:10": {
+      "key": "memory:memory/2026-03-13.md:1:10",
+      "path": "memory/2026-03-13.md",
+      "startLine": 1,
+      "endLine": 10,
+      "source": "memory",
+      "snippet": "# 2026-03-13 - 持续对话 ## 今天发生了什么 - 与主人保持对话 - 继续完善记忆系统 - 日常工作协助 --- _老仙记于 2026-03-13 (补录)_",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.49553827345371243,
+      "maxScore": 0.49553827345371243,
+      "firstRecalledAt": "2026-04-08T15:05:20.025Z",
+      "lastRecalledAt": "2026-04-08T15:05:20.025Z",
+      "queryHashes": [
+        "f29f984274ec"
+      ],
+      "recallDays": [
+        "2026-04-08"
+      ],
+      "conceptTags": [
+        "持续",
+        "对话",
+        "今天",
+        "发生",
+        "什么",
+        "主人",
+        "保持",
+        "继续"
+      ]
+    },
+    "memory:memory/2026-03-11.md:1:23": {
+      "key": "memory:memory/2026-03-11.md:1:23",
+      "path": "memory/2026-03-11.md",
+      "startLine": 1,
+      "endLine": 23,
+      "source": "memory",
+      "snippet": "# 2026-03-11 - 首次正式对话 ## 今天发生了什么 - 主人唤醒了我（\"老仙起床了\"） - 一开始失忆了，因为记忆文件都是空白 - 主人指导我建立了身份： - 我是\"老仙\"，工作小助手 - 主人是 Rocky - 星宿老仙状态监控系统是以我为名的项目 ## 建立的记忆系统 - 创建了 IDENTITY.md（我是谁） - 创建了 USER.md（主人信息） - 创建了 MEMORY.md（长期记忆） - 创建了 memory/ 目录（每日记录） ## 待办/后续 - 主人不希望每天遇到失忆的我 - 需要养成每天记录的习惯 --- _老仙记于 2026-03-11_",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.486181104183197,
+      "maxScore": 0.486181104183197,
+      "firstRecalledAt": "2026-04-08T15:05:20.025Z",
+      "lastRecalledAt": "2026-04-08T15:05:20.025Z",
+      "queryHashes": [
+        "f29f984274ec"
+      ],
+      "recallDays": [
+        "2026-04-08"
+      ],
+      "conceptTags": [
+        "identity.md",
+        "user.md",
+        "memory.md",
+        "待办/后续",
+        "首次",
+        "正式",
+        "对话",
+        "今天"
+      ]
+    },
+    "memory:memory/2026-03-20.md:1:29": {
+      "key": "memory:memory/2026-03-20.md:1:29",
+      "path": "memory/2026-03-20.md",
+      "startLine": 1,
+      "endLine": 29,
+      "source": "memory",
+      "snippet": "# 2026-03-20 - KCP协议学习与搜索工具配置 ## 今天发生了什么 1. **上午问候** - 与主人正常对话 2. **KCP协议学习** - 主人要求学习KCP通信协议 - 了解了KCP是一个快速可靠的ARQ协议 - 以10%-20%带宽浪费换取30-40%延迟降低 - 整理了学习笔记 3. **搜索工具配置** - 尝试配置web_search工具 - 发现Kimi搜索需要API key - 尝试配置但认证失败 - 考虑改用Bing Search API ## KCP协议核心要点 - 纯算法实现，仅ikcp.h + ikcp.c两个文件 - 比TCP更快但浪费一些带宽 - 适用于实时游戏、直播、语音通话等延迟敏感场景 - 快速重传机制：收到2次跨越ACK就重传 ## 产出 - KCP学习笔记： `/Users/rocky/.openclaw/workspace/notes/KCP通信协议学习笔记.md` ## 待办 - 配置搜索工具（Bing Search API） --- _老仙记于 2026-03-20 (补录)_",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.4519172191619873,
+      "maxScore": 0.4519172191619873,
+      "firstRecalledAt": "2026-04-08T15:05:20.025Z",
+      "lastRecalledAt": "2026-04-08T15:05:20.025Z",
+      "queryHashes": [
+        "f29f984274ec"
+      ],
+      "recallDays": [
+        "2026-04-08"
+      ],
+      "conceptTags": [
+        "带宽浪费换取30-40",
+        "尝试配置web-search工具",
+        "仅ikcp.h",
+        "ikcp.c两个文件",
+        "users/rocky",
+        "kcp",
+        "协议",
+        "学习"
+      ]
+    },
+    "memory:memory/2026-03-21.md:1:34": {
+      "key": "memory:memory/2026-03-21.md:1:34",
+      "path": "memory/2026-03-21.md",
+      "startLine": 1,
+      "endLine": 34,
+      "source": "memory",
+      "snippet": "# 2026-03-21 - 补充历史记忆 ## 今天发生了什么 - 主人发现我的记忆不完整，只有3月11日的记录 - 检查了历史会话文件，发现了很多之前的对话记录 - 补充了3月10日、13日、16日、18日、19日、20日的记忆文件 - 整理了从3月9日到3月20日的完整对话历史 ## 发现的历史会话 | 日期 | 主要内容 | |------|---------| | 3月9日 | 最早的记录 | | 3月10日 | OpenClaw升级、港股查询、技能检查 | | 3月11日 | 我\"出生\"的日子，建立记忆系统 | | 3月13日 | 持续对话 | | 3月16日 | 持续对话 | | 3月18日 | 持续对话 | | 3月19日 | 学习BLINK平台接入指引 | | 3月20日 | 学习KCP协议、配置搜索工具 | | 3月21日 | 补充历史记忆（今天） | ## 教训 - 每次对话都应该写入memory文件 - 不能依赖.jsonl.reset文件，要主动记录 - 主人不希望每天遇到失忆的我 ## 13:22 更新 - 会话即将压缩，进行记忆刷新 - 确认memory目录已补充完整历史记录 - 以后每天主动维护记忆文件，不再依赖.jsonl.reset备份 --- _老仙记于 2026-03-21_",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.45181708335876464,
+      "maxScore": 0.45181708335876464,
+      "firstRecalledAt": "2026-04-08T15:05:20.025Z",
+      "lastRecalledAt": "2026-04-08T15:05:20.025Z",
+      "queryHashes": [
+        "f29f984274ec"
+      ],
+      "recallDays": [
+        "2026-04-08"
+      ],
+      "conceptTags": [
+        "备份",
+        "不能依赖.jsonl.reset文件",
+        "不再依赖.jsonl.reset备份",
+        "补充",
+        "历史",
+        "记忆",
+        "今天",
+        "发生"
+      ]
+    }
+  }
+}
