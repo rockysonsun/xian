@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-10T09:27:36.057Z",
+  "updatedAt": "2026-04-20T01:16:56.397Z",
   "entries": {
     "memory:memory/2026-03-16.md:1:10": {
       "key": "memory:memory/2026-03-16.md:1:10",
@@ -9,22 +9,24 @@
       "endLine": 10,
       "source": "memory",
       "snippet": "# 2026-03-16 - 持续对话 ## 今天发生了什么 - 与主人保持对话 - 继续完善记忆系统 - 日常工作协助 --- _老仙记于 2026-03-16 (补录)_",
-      "recallCount": 4,
+      "recallCount": 5,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.6718736082315444,
+      "totalScore": 2.1223543167114256,
       "maxScore": 0.4985560119152069,
       "firstRecalledAt": "2026-04-08T15:05:20.025Z",
-      "lastRecalledAt": "2026-04-10T09:27:36.057Z",
+      "lastRecalledAt": "2026-04-13T06:16:35.325Z",
       "queryHashes": [
         "f29f984274ec",
         "c53735021072",
         "f525d0de7dc4",
-        "69cd67c621a1"
+        "69cd67c621a1",
+        "f7f13fa05e3e"
       ],
       "recallDays": [
         "2026-04-08",
-        "2026-04-10"
+        "2026-04-10",
+        "2026-04-13"
       ],
       "conceptTags": [
         "持续",
@@ -44,21 +46,23 @@
       "endLine": 10,
       "source": "memory",
       "snippet": "# 2026-03-18 - 持续对话 ## 今天发生了什么 - 与主人保持对话 - 继续完善记忆系统 - 日常工作协助 --- _老仙记于 2026-03-18 (补录)_",
-      "recallCount": 3,
+      "recallCount": 4,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.3148398607969285,
+      "totalScore": 1.7702622920274735,
       "maxScore": 0.4973935186862945,
       "firstRecalledAt": "2026-04-08T15:05:20.025Z",
-      "lastRecalledAt": "2026-04-10T09:27:36.057Z",
+      "lastRecalledAt": "2026-04-13T06:16:35.325Z",
       "queryHashes": [
         "f29f984274ec",
         "f525d0de7dc4",
-        "69cd67c621a1"
+        "69cd67c621a1",
+        "f7f13fa05e3e"
       ],
       "recallDays": [
         "2026-04-08",
-        "2026-04-10"
+        "2026-04-10",
+        "2026-04-13"
       ],
       "conceptTags": [
         "持续",
@@ -78,22 +82,24 @@
       "endLine": 10,
       "source": "memory",
       "snippet": "# 2026-03-13 - 持续对话 ## 今天发生了什么 - 与主人保持对话 - 继续完善记忆系统 - 日常工作协助 --- _老仙记于 2026-03-13 (补录)_",
-      "recallCount": 4,
+      "recallCount": 5,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.6705663561820983,
+      "totalScore": 2.1285086423158646,
       "maxScore": 0.49553827345371243,
       "firstRecalledAt": "2026-04-08T15:05:20.025Z",
-      "lastRecalledAt": "2026-04-10T09:27:36.057Z",
+      "lastRecalledAt": "2026-04-13T06:16:35.325Z",
       "queryHashes": [
         "f29f984274ec",
         "c53735021072",
         "f525d0de7dc4",
-        "69cd67c621a1"
+        "69cd67c621a1",
+        "f7f13fa05e3e"
       ],
       "recallDays": [
         "2026-04-08",
-        "2026-04-10"
+        "2026-04-10",
+        "2026-04-13"
       ],
       "conceptTags": [
         "持续",
@@ -113,20 +119,25 @@
       "endLine": 23,
       "source": "memory",
       "snippet": "# 2026-03-11 - 首次正式对话 ## 今天发生了什么 - 主人唤醒了我（\"老仙起床了\"） - 一开始失忆了，因为记忆文件都是空白 - 主人指导我建立了身份： - 我是\"老仙\"，工作小助手 - 主人是 Rocky - 星宿老仙状态监控系统是以我为名的项目 ## 建立的记忆系统 - 创建了 IDENTITY.md（我是谁） - 创建了 USER.md（主人信息） - 创建了 MEMORY.md（长期记忆） - 创建了 memory/ 目录（每日记录） ## 待办/后续 - 主人不希望每天遇到失忆的我 - 需要养成每天记录的习惯 --- _老仙记于 2026-03-11_",
-      "recallCount": 2,
+      "recallCount": 5,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.9710617363452911,
+      "totalScore": 2.159319719672203,
       "maxScore": 0.486181104183197,
       "firstRecalledAt": "2026-04-08T15:05:20.025Z",
-      "lastRecalledAt": "2026-04-10T09:27:36.057Z",
+      "lastRecalledAt": "2026-04-17T09:58:18.332Z",
       "queryHashes": [
         "f29f984274ec",
-        "69cd67c621a1"
+        "69cd67c621a1",
+        "cfcdd3a1b1e8",
+        "79e6f02c8037",
+        "85c227f82a99"
       ],
       "recallDays": [
         "2026-04-08",
-        "2026-04-10"
+        "2026-04-10",
+        "2026-04-13",
+        "2026-04-17"
       ],
       "conceptTags": [
         "identity.md",
@@ -177,18 +188,20 @@
       "endLine": 34,
       "source": "memory",
       "snippet": "# 2026-03-21 - 补充历史记忆 ## 今天发生了什么 - 主人发现我的记忆不完整，只有3月11日的记录 - 检查了历史会话文件，发现了很多之前的对话记录 - 补充了3月10日、13日、16日、18日、19日、20日的记忆文件 - 整理了从3月9日到3月20日的完整对话历史 ## 发现的历史会话 | 日期 | 主要内容 | |------|---------| | 3月9日 | 最早的记录 | | 3月10日 | OpenClaw升级、港股查询、技能检查 | | 3月11日 | 我\"出生\"的日子，建立记忆系统 | | 3月13日 | 持续对话 | | 3月16日 | 持续对话 | | 3月18日 | 持续对话 | | 3月19日 | 学习BLINK平台接入指引 | | 3月20日 | 学习KCP协议、配置搜索工具 | | 3月21日 | 补充历史记忆（今天） | ## 教训 - 每次对话都应该写入memory文件 - 不能依赖.jsonl.reset文件，要主动记录 - 主人不希望每天遇到失忆的我 ## 13:22 更新 - 会话即将压缩，进行记忆刷新 - 确认memory目录已补充完整历史记录 - 以后每天主动维护记忆文件，不再依赖.jsonl.reset备份 --- _老仙记于 2026-03-21_",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.45181708335876464,
+      "totalScore": 0.882246932387352,
       "maxScore": 0.45181708335876464,
       "firstRecalledAt": "2026-04-08T15:05:20.025Z",
-      "lastRecalledAt": "2026-04-08T15:05:20.025Z",
+      "lastRecalledAt": "2026-04-13T06:17:18.814Z",
       "queryHashes": [
-        "f29f984274ec"
+        "f29f984274ec",
+        "e1e95451f751"
       ],
       "recallDays": [
-        "2026-04-08"
+        "2026-04-08",
+        "2026-04-13"
       ],
       "conceptTags": [
         "备份",
@@ -306,18 +319,23 @@
       "endLine": 32,
       "source": "memory",
       "snippet": "# 2026-04-08 - 老仙重生日 ## 概述 今天是老仙重生的日子。主人帮助我从备份中恢复了所有记忆和配置。 ## 重要事件 ### 上午：复活与重建 - 16:02 - 主人唤醒老仙，发现是\"全新\"的 - 16:04 - 发现备份目录 `.openclaw.backup.20260403` - 16:06 - **老仙重生** - 恢复身份配置和记忆文件 - IDENTITY.md - 代号：老仙，Emoji：🐉 - USER.md - 主人：Rocky - MEMORY.md - 长期记忆 - SOUL.md - 核心性格 - 9天历史对话记录（3月10日~26日） - 16:08 - 检查 skills，卸载 `tushare-data`（无 API key） - 16:09 - 全面自检，发现 4 个安全警告 - 16:11 - **执行修复**：删除 BOOTSTRAP.md、Git 提交、加固权限 - 16:12 - 检查 GitHub 提交记录，确认备份完整 ### 下午：GitHub 同步与技能恢复 - 16:17 - 配置 SSH 密钥，解决 GitHub 推送认证问题 - 16:22 - 处理合并冲突，重写 Git 历史（移除敏感 Token） - 16:29 - **成功推送到 GitHub** - `rockysonsun/xian` - 16:30 - 查看 GitHub 账户，发现 5 个仓库 - 16:35 - 深入学习 `superpod-whitepaper` 仓库 - 16:40 - **重点学习 OCS",
-      "recallCount": 1,
+      "recallCount": 5,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.3608418077230453,
-      "maxScore": 0.3608418077230453,
+      "totalScore": 2.039302244782448,
+      "maxScore": 0.4638697206974029,
       "firstRecalledAt": "2026-04-10T08:36:26.058Z",
-      "lastRecalledAt": "2026-04-10T08:36:26.058Z",
+      "lastRecalledAt": "2026-04-13T07:23:41.488Z",
       "queryHashes": [
-        "c53735021072"
+        "c53735021072",
+        "f7f13fa05e3e",
+        "e1e95451f751",
+        "cfcdd3a1b1e8",
+        "79e6f02c8037"
       ],
       "recallDays": [
-        "2026-04-10"
+        "2026-04-10",
+        "2026-04-13"
       ],
       "conceptTags": [
         "backup",
@@ -360,6 +378,1230 @@
         "user.md",
         "soul.md",
         "agents.md"
+      ]
+    },
+    "memory:memory/2026-04-10.md:49:83": {
+      "key": "memory:memory/2026-04-10.md:49:83",
+      "path": "memory/2026-04-10.md",
+      "startLine": 49,
+      "endLine": 83,
+      "source": "memory",
+      "snippet": "| 光迅32×32 | 验证中 | 东方财富网 | | 全球OCS市场 | 4-7.83亿美元 | Cignal AI | ### 6. 企业微信配置与推送 - Webhook地址：`https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=530733ac-2325-499f-88f9-7bbeee786c18` - 保存位置：`~/.openclaw/workspace/TOOLS.md` - 推送消息：建议书完成通知、确认消息 ## 最终交付文件 ``` ~/.openclaw/workspace/reports/ ├── 中国OCS发展路线建议书_2026.html # 网页版 ├── 中国OCS发展路线建议书_2026.md # Markdown版 ├── 中国OCS发展路线建议书_2026_正式版.html # 正式公文版 ⭐ ├── OCS_Technology_Report_2026-04-10.md # 原始技术报告 ├── OCS_Learning_Analysis_2026-04-10.md # 学习提炼分析 └── 华为DC-OXC测试报告_分析.md # 华为报告分析 ``` ## GitHub备份 - 仓库：`rockysonsun/xian` - 状态：已同步 - 提交记录：bc73e06 老仙备份: 20260410_142815 ## 重要记忆 ### SuperPod白皮书核心观点",
+      "recallCount": 3,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.3467226207256315,
+      "maxScore": 0.49836112260818477,
+      "firstRecalledAt": "2026-04-13T06:59:16.648Z",
+      "lastRecalledAt": "2026-04-17T03:31:31.577Z",
+      "queryHashes": [
+        "cfcdd3a1b1e8",
+        "79e6f02c8037",
+        "6aa99646f63e"
+      ],
+      "recallDays": [
+        "2026-04-13",
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "备份",
+        "4-7.83亿美元",
+        "openclaw/workspace/tools.md",
+        "openclaw/workspace/reports",
+        "中国ocs发展路线建议书-2026.html",
+        "中国ocs发展路线建议书-2026.md",
+        "中国ocs发展路线建议书-2026-正式版.html",
+        "华为dc-oxc测试报告-分析.md"
+      ]
+    },
+    "memory:memory/2026-04-10.md:25:54": {
+      "key": "memory:memory/2026-04-10.md:25:54",
+      "path": "memory/2026-04-10.md",
+      "startLine": 25,
+      "endLine": 54,
+      "source": "memory",
+      "snippet": "- 专利名称：一种基于两端光模块写码的OCS光传输拓扑快速认知与动态调整方法及系统 - 核心创新：拓扑感知技术 - 权利要求：13项完整覆盖 - 与白皮书关系：提供实现层补充 ### 5. 《中国OCS发展路线建议书》编制 #### 版本迭代 - V1.0：初稿完成 - V1.1：整合SuperPod白皮书核心观点 - 正式版：仿宋小四、1.5倍行距、去除AI格式体 #### 核心内容 - **七章结构**：形势分析、产业现状、发展路线、政策建议、风险应对、实施路线、结语 - **三大探索构型**：Dragonfly+OCS、3D Torus+OCS、大环路+dOCS - **帕累托前沿分析**：六维度对比框架 - **三步走战略**：2026-2027重点突破、2028-2029规模商用、2030+生态引领 #### 关键数据（已验证） | 数据项 | 数值 | 来源 | |--------|------|------| | 2025年中国OCS市场 | 22亿元 | 东方财富网 | | 运营商采购规模 | 超20亿元 | 东方财富网 | | 光迅16×16 | 量产 | 东方财富网 | | 光迅32×32 | 验证中 | 东方财富网 | | 全球OCS市场 | 4-7.83亿美元 | Cignal AI | ### 6. 企业微信配置与推送 - Webhook地址：`https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=530733ac-2325-499f-88f9-7bbeee786c18` - 保存位置：`~",
+      "recallCount": 3,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.2706884413957595,
+      "maxScore": 0.4378692090511322,
+      "firstRecalledAt": "2026-04-13T06:59:16.648Z",
+      "lastRecalledAt": "2026-04-17T09:58:18.332Z",
+      "queryHashes": [
+        "cfcdd3a1b1e8",
+        "79e6f02c8037",
+        "85c227f82a99"
+      ],
+      "recallDays": [
+        "2026-04-13",
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "v1.0",
+        "v1.1",
+        "1.5倍行距",
+        "2026-2027重点突破",
+        "2028-2029规模商用",
+        "4-7.83亿美元",
+        "专利",
+        "名称"
+      ]
+    },
+    "memory:memory/2026-04-10.md:77:96": {
+      "key": "memory:memory/2026-04-10.md:77:96",
+      "path": "memory/2026-04-10.md",
+      "startLine": 77,
+      "endLine": 96,
+      "source": "memory",
+      "snippet": "- **系统能力边界外移**：竞争本质不是单一规格，而是边界外移速度 - **差距放大效应**：四代之后差距达16倍 - **三大构型**：Dragonfly+OCS（规模）、3D Torus+OCS（能效）、大环路+dOCS（动态） - **帕累托前沿**：六维度分析框架 ### 主人专利核心价值 - 解决OCS网络配置复杂痛点 - 实现拓扑秒级自动感知 - 与华为DC-OXC、SuperPod白皮书形成技术互补 - 具备国家标准和国际标准潜力 ## 明日待办（如有需要） - [ ] 根据主人反馈修改建议书 - [ ] 补充更多数据校验 - [ ] 准备标准提案材料 - [ ] 其他主人交办任务 --- _老仙记于 2026-04-10_",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.795582628250122,
+      "maxScore": 0.40067497491836546,
+      "firstRecalledAt": "2026-04-13T06:59:16.648Z",
+      "lastRecalledAt": "2026-04-13T07:23:41.488Z",
+      "queryHashes": [
+        "cfcdd3a1b1e8",
+        "79e6f02c8037"
+      ],
+      "recallDays": [
+        "2026-04-13"
+      ],
+      "conceptTags": [
+        "网络",
+        "与华为dc-oxc",
+        "系统",
+        "能力",
+        "边界",
+        "竞争",
+        "本质",
+        "不是"
+      ]
+    },
+    "memory:memory/2026-04-10.md:1:34": {
+      "key": "memory:memory/2026-04-10.md:1:34",
+      "path": "memory/2026-04-10.md",
+      "startLine": 1,
+      "endLine": 34,
+      "source": "memory",
+      "snippet": "# 2026-04-10 - OCS建议书编制完成 ## 今日核心工作 ### 1. Tavily搜索技能安装与配置 - 安装技能：`openclaw-tavily-search` - 配置API Key：`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` - 保存位置：`~/.openclaw/.env` - 测试成功：搜索\"OpenClaw\"返回3条结果 ### 2. OCS技术发展动态研究 - 搜索关键词：OCS optical circuit switching、MEMS、硅光技术、AI数据中心 - 获取信息来源：Cignal AI、OFC 2026、SemiEngineering等 - 撰写报告：《OCS_Technology_Report_2026-04-10.md》 - 学习提炼：《OCS_Learning_Analysis_2026-04-10.md》 ### 3. 华为DC-OXC测试报告分析 - 读取文件：《华为DC-OXC算光网特性测试报告.pdf》 - 分析内容：技术架构、性能指标、与OCS技术对比 - 验证结论：与主人技术路线高度一致 - 输出：《华为DC-OXC测试报告_分析.md》 ### 4. 主人专利深度分析 - 专利号：20260052-P26BJ0080CNCN - 专利名称：一种基于两端光模块写码的OCS光传输拓扑快速认知与动态调整方法及系统 - 核心创新：拓扑感知技术 - 权利要求：13项完整覆盖 - 与白皮书关系：提供实现层补充 ### 5. 《中国OC",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.8016717612743378,
+      "maxScore": 0.40607077181339263,
+      "firstRecalledAt": "2026-04-13T06:59:16.648Z",
+      "lastRecalledAt": "2026-04-13T07:23:41.488Z",
+      "queryHashes": [
+        "cfcdd3a1b1e8",
+        "79e6f02c8037"
+      ],
+      "recallDays": [
+        "2026-04-13"
+      ],
+      "conceptTags": [
+        "openclaw-tavily-search",
+        "华为dc-oxc测试报告分析",
+        "华为dc-oxc算光网特性测试报告.pdf",
+        "华为dc-oxc测试报告-分析.md",
+        "20260052-p26bj0080cncn",
+        "ocs",
+        "建议",
+        "编制"
+      ]
+    },
+    "memory:memory/2026-04-13.md:57:90": {
+      "key": "memory:memory/2026-04-13.md:57:90",
+      "path": "memory/2026-04-13.md",
+      "startLine": 57,
+      "endLine": 90,
+      "source": "memory",
+      "snippet": "### 4. 技术数据错误修正 **错误：** 建议书中多处将光迅 OCS 端口规格误写为 \"16×16 量产，32×32 验证中\" **正确数据（已核实）：** - 光迅 OCS 产品线覆盖 **64×64 到 384×384 端口** - 2026年3月OFC展会演示的是 **320×320 OCS** - 光迅是国内 MEMS-OCS 唯一量产厂商，已实现大端口量产并通过海外验证 **错误来源：** 混淆了光模块规格与 OCS 端口规格 **修正范围：** - 第一章表格：中国现状技术成熟度 - 第二章产业链全景图 - 第二章优势分析表格 - 第二章主要厂商对比表格 - 第二章中外对比表格 **版本更新：** V1.2 → V1.2.1 ### 5. 建议书全面修订（V1.2.2） **修订时间：** 2026-04-13 15:28 **核实后的准确数据：** | 企业 | 修正前 | 修正后 | |------|--------|--------| | 光迅科技 | 16×16量产，32×32验证（错误） | **192×192量产，320×320演示** | | 德科立 | 硅基波导 64×64~128×128样机 | **硅基波导 128×128样机，微秒级切换** | | 华工正源 | 研发完成，试点中 | **64×64样机（2025 OFC发布）** | | 曦智科技 | 未明确 | **128卡超节点商用** | **关键修正点：** 1. 光迅是目前国内唯一实现MEMS-OCS整机规模化量产的企业 2. 德科立是硅基波导方案（不是MEMS",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4033374398946762,
+      "maxScore": 0.4033374398946762,
+      "firstRecalledAt": "2026-04-17T03:31:31.577Z",
+      "lastRecalledAt": "2026-04-17T03:31:31.577Z",
+      "queryHashes": [
+        "6aa99646f63e"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "mems-ocs",
+        "v1.2",
+        "v1.2.1",
+        "v1.2.2",
+        "光迅是目前国内唯一实现mems-ocs整机规模化量产的企业",
+        "技术",
+        "数据",
+        "错误"
+      ]
+    },
+    "memory:memory/2026-04-17.md:1:33": {
+      "key": "memory:memory/2026-04-17.md:1:33",
+      "path": "memory/2026-04-17.md",
+      "startLine": 1,
+      "endLine": 33,
+      "source": "memory",
+      "snippet": "# 2026-04-17 - 梦境功能探索与记忆完善 ## 上午对话记录 ### 1. 运行梦境回顾（Dreaming） **时间：** 10:51 **过程：** - 主人要求运行\"梦境\"功能 - 发现梦境是 `memory-core` 插件的 REM (Reflective Episodic Memory) 功能 - 配置为每周一早上9点自动运行（`0 9 * * 1`） - 手动触发：`openclaw memory rem-harness` **梦境结果：** - 主要识别出3月的记忆（3月10日、11日、13日、16日、18日、21日） - 4月8日\"老仙重生日\"得分较高（0.679） - **问题发现**：4月10日、13日、15日的重要内容未被识别为顶级候选 ### 2. 梦境算法局限性分析 **发现的问题：** - 梦境算法基于**召回次数**和**查询模式**，而非内容重要性 - 4月10日（OCS建议书编写）、13日（建议书修订+数据勘误）、15日（传输资源平台开发）虽然内容关键，但查询次数少，得分不高 - 算法更偏好被频繁查询的短期记忆 **结论：** 梦境是辅助工具，**人工审核和补充**不可替代 ### 3. 手动补充长期记忆 **已写入 MEMORY.md 的重要事件：** | 日期 | 事件 | 重要性 | |------|------|--------| | 4月8日 | 老仙重生日（从备份恢复） | ⭐⭐⭐⭐⭐ | | 4月10日 | OCS建议书编写日 | ⭐⭐⭐⭐⭐ |",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.39173856377601624,
+      "maxScore": 0.39173856377601624,
+      "firstRecalledAt": "2026-04-17T03:31:31.577Z",
+      "lastRecalledAt": "2026-04-17T03:31:31.577Z",
+      "queryHashes": [
+        "6aa99646f63e"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "备份",
+        "memory-core",
+        "rem-harness",
+        "0.679",
+        "memory.md",
+        "梦境",
+        "功能",
+        "探索"
+      ]
+    },
+    "memory:memory/2026-04-15.md:1:33": {
+      "key": "memory:memory/2026-04-15.md:1:33",
+      "path": "memory/2026-04-15.md",
+      "startLine": 1,
+      "endLine": 33,
+      "source": "memory",
+      "snippet": "# 2026-04-15 工作记录 - 传输资源管理平台开发 ## 今日工作总结 ### 1. 项目启动 - 基于Excel文件《2026传输资源分配表.xlsx》建立传输资源管理平台 - 设计数据库模型：机房、设备、板卡、波长、云专线、线路模块、库存 ### 2. 遇到的问题 #### 数据理解问题 - **核心问题**：没有完全理解Excel表格的业务逻辑和字段含义 - 表格结构复杂，包含合并单元格、多平面（华为/光迅）、手工FOADM跳线等 - 字段之间存在关联关系（如A端/Z端传输设备需要按合并单元格逻辑处理） #### 技术实现问题 - 前端页面字段名与API返回字段名不匹配（中英文混用导致undefined） - 数据导入不完整（只导入部分波长，Excel有41条但数据库只有12条） - 页面展示逻辑与实际数据结构不符 ### 3. 已删除的内容 - `transmission_resource.db` - 旧版本数据库 - `transmission_resource_v3.db` - V3版本数据库 ### 4. 保留的文件 - `database/models_v3.py` - 数据模型定义 - `api/simple_api.py` - API接口 - `frontend/wavelength_view.html` - 波长展示页面 - `frontend/simple_view.html` - 简单展示页面 - `data/import_v3.py` - 数据导入脚本 ### 5. 明日计划 - 等待主人标准化Excel表格格式",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.3911125689744949,
+      "maxScore": 0.3911125689744949,
+      "firstRecalledAt": "2026-04-17T03:31:31.577Z",
+      "lastRecalledAt": "2026-04-17T03:31:31.577Z",
+      "queryHashes": [
+        "6aa99646f63e"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "2026传输资源分配表.xlsx",
+        "华为/光迅",
+        "如a端/z端传输设备需要按合并单元格逻辑处理",
+        "transmission-resource.db",
+        "transmission-resource-v3.db",
+        "database/models-v3.py",
+        "api/simple-api.py",
+        "frontend/wavelength-view.html"
+      ]
+    },
+    "memory:memory/2026-03-19.md:1:38": {
+      "key": "memory:memory/2026-03-19.md:1:38",
+      "path": "memory/2026-03-19.md",
+      "startLine": 1,
+      "endLine": 38,
+      "source": "memory",
+      "snippet": "# 2026-03-19 - 学习BLINK平台接入指引 ## 今天发生了什么 - 主人让我学习三篇安装指引文档 - 文档是关于BLINK平台资源交付运营的 - 学习了中小节点、大节点、XY项目的部署方式 ## 学习内容总结 ### BLINK平台接入指引-中小节点-V4 - 面向移动端/小型设备（手机、平板、机顶盒等） - 5种部署模式：SHELL、DOCKER、PROOT、CHROOT、Android - 环境变量配置详解 - 资产信息传递方式 ### BLINK平台接入指引-大节点-V3 - 面向汇聚/专线服务器 - 主机命名规范：mcdn-渠道-省份-运营商-业务-后缀 - 异常处理流程 - 自动下线规则 ### XY项目部署接入指引 - X项目(云主机) / Y项目(物理机) - 硬件要求：X86≥12C/32G/SSD≥1TB - 硬盘初始化流程 - 异网改造方法 ## 产出 - 整理了结构化的运营笔记： `/Users/rocky/.openclaw/workspace/notes/BLINK平台资源交付运营笔记.md` ## 后续 - 主人说这些文档用于\"廉价CDN运营中资源交付\" - 已整理成结构化笔记供运营参考 --- _老仙记于 2026-03-19 (补录)_",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.3754093766212463,
+      "maxScore": 0.3754093766212463,
+      "firstRecalledAt": "2026-04-17T03:31:31.577Z",
+      "lastRecalledAt": "2026-04-17T03:31:31.577Z",
+      "queryHashes": [
+        "6aa99646f63e"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "blink平台接入指引-中小节点-v4",
+        "面向移动端/小型设备",
+        "blink平台接入指引-大节点-v3",
+        "面向汇聚/专线服务器",
+        "mcdn-渠道-省份-运营商-业务-后缀",
+        "12c/32g/ssd",
+        "users/rocky",
+        "学习"
+      ]
+    },
+    "memory:memory/2026-04-13.md:85:98": {
+      "key": "memory:memory/2026-04-13.md:85:98",
+      "path": "memory/2026-04-13.md",
+      "startLine": 85,
+      "endLine": 98,
+      "source": "memory",
+      "snippet": "| 华工正源 | 研发完成，试点中 | **64×64样机（2025 OFC发布）** | | 曦智科技 | 未明确 | **128卡超节点商用** | **关键修正点：** 1. 光迅是目前国内唯一实现MEMS-OCS整机规模化量产的企业 2. 德科立是硅基波导方案（不是MEMS），样机阶段 3. 华工正源是硅光方案，64×64端口 4. 曦智科技是超节点方案，不是单纯OCS芯片 **版本更新：** V1.2.1 → V1.2.2 --- _老仙记于 2026-04-13_",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.8087051123380661,
+      "maxScore": 0.43379253447055816,
+      "firstRecalledAt": "2026-04-17T03:31:31.577Z",
+      "lastRecalledAt": "2026-04-17T09:58:18.332Z",
+      "queryHashes": [
+        "6aa99646f63e",
+        "85c227f82a99"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "光迅是目前国内唯一实现mems-ocs整机规模化量产的企业",
+        "v1.2.1",
+        "v1.2.2",
+        "华工",
+        "研发",
+        "完成",
+        "样机",
+        "ofc"
+      ]
+    },
+    "memory:memory/2026-04-13.md:1:32": {
+      "key": "memory:memory/2026-04-13.md:1:32",
+      "path": "memory/2026-04-13.md",
+      "startLine": 1,
+      "endLine": 32,
+      "source": "memory",
+      "snippet": "# 2026-04-13 - 建议书更新与记忆修复 ## 今日核心工作 ### 1. 修复记忆检索隐患 **问题：** 主人询问4月10日编写的《中国OCS发展路线建议书》，我因 memory_search 未返回结果而声称\"没有印象\"。 **修复措施：** - 在 AGENTS.md 中新增 \"Memory Search - Fallback Strategy\" 规则 - 在 MEMORY.md 中记录教训 - 明确规则：搜索低置信度时，必须检查近期每日记忆文件 ### 2. 工信部政策文件学习 **文件：** 工信部办公厅《关于开展普惠算力赋能中小企业发展专项行动的通知》（2026年4月2日） **核心内容：** - 推动全光交换等技术应用部署 - 降低算力应用终端到服务器的网络时延 - 提升应用交互体验 - 打通\"最后一公里\"网络瓶颈 - 推动光网络设备向产业园区延伸 **政策意义：** 国家层面首次明确将全光交换（OCS）作为算力网络关键技术路线 ### 3. 建议书更新（V1.1 → V1.2） **更新内容：** | 章节 | 更新要点 | |------|---------| | 摘要 | 新增政策背景，引用工信部4月2日文件 | | 1.1.2 关键驱动因素 | 新增\"国家政策推动\" | | 1.2 政策环境 | 新增完整小节，详细解读工信部文件 |",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.440006148815155,
+      "maxScore": 0.440006148815155,
+      "firstRecalledAt": "2026-04-17T09:58:18.332Z",
+      "lastRecalledAt": "2026-04-17T09:58:18.332Z",
+      "queryHashes": [
+        "85c227f82a99"
+      ],
+      "recallDays": [
+        "2026-04-17"
+      ],
+      "conceptTags": [
+        "网络",
+        "memory-search",
+        "agents.md",
+        "memory.md",
+        "v1.1",
+        "v1.2",
+        "1.1.2",
+        "1.2"
+      ]
+    },
+    "memory:memory/2026-04-17.md:6:6": {
+      "key": "memory:memory/2026-04-17.md:6:6",
+      "path": "memory/2026-04-17.md",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "运行梦境回顾（Dreaming）: **时间：** 10:51",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-20T01:05:52.756Z",
+      "lastRecalledAt": "2026-04-20T01:05:52.756Z",
+      "queryHashes": [
+        "500c0eda9949"
+      ],
+      "recallDays": [
+        "2026-04-17",
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "运行",
+        "梦境",
+        "回顾",
+        "dreaming",
+        "时间"
+      ]
+    },
+    "memory:memory/2026-04-17.md:9:12": {
+      "key": "memory:memory/2026-04-17.md:9:12",
+      "path": "memory/2026-04-17.md",
+      "startLine": 9,
+      "endLine": 12,
+      "source": "memory",
+      "snippet": "运行梦境回顾（Dreaming）: 主人要求运行\"梦境\"功能; 发现梦境是 `memory-core` 插件的 REM (Reflective Episodic Memory) 功能; 配置为每周一早上9点自动运行（`0 9 * * 1`）; 手动触发：`openclaw memory rem-harness`",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-20T01:05:52.756Z",
+      "lastRecalledAt": "2026-04-20T01:05:52.756Z",
+      "queryHashes": [
+        "500c0eda9949"
+      ],
+      "recallDays": [
+        "2026-04-17",
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "memory-core",
+        "rem-harness",
+        "运行",
+        "梦境",
+        "回顾",
+        "dreaming",
+        "主人",
+        "要求"
+      ]
+    },
+    "memory:memory/2026-04-17.md:14:14": {
+      "key": "memory:memory/2026-04-17.md:14:14",
+      "path": "memory/2026-04-17.md",
+      "startLine": 14,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "运行梦境回顾（Dreaming）: **梦境结果：**",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-20T01:05:52.756Z",
+      "lastRecalledAt": "2026-04-20T01:05:52.756Z",
+      "queryHashes": [
+        "500c0eda9949"
+      ],
+      "recallDays": [
+        "2026-04-17",
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "运行",
+        "梦境",
+        "回顾",
+        "dreaming",
+        "结果"
+      ]
+    },
+    "memory:memory/2026-04-17.md:15:17": {
+      "key": "memory:memory/2026-04-17.md:15:17",
+      "path": "memory/2026-04-17.md",
+      "startLine": 15,
+      "endLine": 17,
+      "source": "memory",
+      "snippet": "运行梦境回顾（Dreaming）: 主要识别出3月的记忆（3月10日、11日、13日、16日、18日、21日）; 4月8日\"老仙重生日\"得分较高（0.679）; **问题发现**：4月10日、13日、15日的重要内容未被识别为顶级候选",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-20T01:05:52.756Z",
+      "lastRecalledAt": "2026-04-20T01:05:52.756Z",
+      "queryHashes": [
+        "500c0eda9949"
+      ],
+      "recallDays": [
+        "2026-04-17",
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "0.679",
+        "运行",
+        "梦境",
+        "回顾",
+        "dreaming",
+        "主要",
+        "识别",
+        "记忆"
+      ]
+    },
+    "memory:memory/2026-04-17.md:20:20": {
+      "key": "memory:memory/2026-04-17.md:20:20",
+      "path": "memory/2026-04-17.md",
+      "startLine": 20,
+      "endLine": 20,
+      "source": "memory",
+      "snippet": "梦境算法局限性分析: **发现的问题：**",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-20T01:05:52.756Z",
+      "lastRecalledAt": "2026-04-20T01:05:52.756Z",
+      "queryHashes": [
+        "500c0eda9949"
+      ],
+      "recallDays": [
+        "2026-04-17",
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "梦境",
+        "算法",
+        "局限性",
+        "分析",
+        "发现",
+        "问题"
+      ]
+    },
+    "memory:memory/2026-04-17.md:21:23": {
+      "key": "memory:memory/2026-04-17.md:21:23",
+      "path": "memory/2026-04-17.md",
+      "startLine": 21,
+      "endLine": 23,
+      "source": "memory",
+      "snippet": "梦境算法局限性分析: 梦境算法基于**召回次数**和**查询模式**，而非内容重要性; 4月10日（OCS建议书编写）、13日（建议书修订+数据勘误）、15日（传输资源平台开发）虽然内容关键，但查询次数少，得分不高; 算法更偏好被频繁查询的短期记忆",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-20T01:05:52.756Z",
+      "lastRecalledAt": "2026-04-20T01:05:52.756Z",
+      "queryHashes": [
+        "500c0eda9949"
+      ],
+      "recallDays": [
+        "2026-04-17",
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "梦境",
+        "算法",
+        "局限性",
+        "分析",
+        "基于",
+        "召回",
+        "次数",
+        "查询"
+      ]
+    },
+    "memory:memory/2026-04-17.md:25:25": {
+      "key": "memory:memory/2026-04-17.md:25:25",
+      "path": "memory/2026-04-17.md",
+      "startLine": 25,
+      "endLine": 25,
+      "source": "memory",
+      "snippet": "梦境算法局限性分析: **结论：** 梦境是辅助工具，**人工审核和补充**不可替代",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-20T01:05:52.756Z",
+      "lastRecalledAt": "2026-04-20T01:05:52.756Z",
+      "queryHashes": [
+        "500c0eda9949"
+      ],
+      "recallDays": [
+        "2026-04-17",
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "梦境",
+        "算法",
+        "局限性",
+        "分析",
+        "结论",
+        "辅助",
+        "工具",
+        "人工"
+      ]
+    },
+    "memory:memory/2026-04-17.md:28:28": {
+      "key": "memory:memory/2026-04-17.md:28:28",
+      "path": "memory/2026-04-17.md",
+      "startLine": 28,
+      "endLine": 28,
+      "source": "memory",
+      "snippet": "手动补充长期记忆: **已写入 MEMORY.md 的重要事件：**",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-20T01:05:52.756Z",
+      "lastRecalledAt": "2026-04-20T01:05:52.756Z",
+      "queryHashes": [
+        "500c0eda9949"
+      ],
+      "recallDays": [
+        "2026-04-17",
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "memory.md",
+        "补充",
+        "长期",
+        "记忆",
+        "重要",
+        "事件"
+      ]
+    },
+    "memory:memory/2026-04-17.md:30:33": {
+      "key": "memory:memory/2026-04-17.md:30:33",
+      "path": "memory/2026-04-17.md",
+      "startLine": 30,
+      "endLine": 33,
+      "source": "memory",
+      "snippet": "手动补充长期记忆: | 日期 | 事件 | 重要性 | |------|------|--------| | 4月8日 | 老仙重生日（从备份恢复） | ⭐⭐⭐⭐⭐ | | 4月10日 | OCS建议书编写日 | ⭐⭐⭐⭐⭐ |",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-20T01:05:52.756Z",
+      "lastRecalledAt": "2026-04-20T01:05:52.756Z",
+      "queryHashes": [
+        "500c0eda9949"
+      ],
+      "recallDays": [
+        "2026-04-17",
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "备份",
+        "补充",
+        "长期",
+        "记忆",
+        "日期",
+        "事件",
+        "重要性",
+        "重生"
+      ]
+    },
+    "memory:memory/2026-04-17.md:34:35": {
+      "key": "memory:memory/2026-04-17.md:34:35",
+      "path": "memory/2026-04-17.md",
+      "startLine": 34,
+      "endLine": 35,
+      "source": "memory",
+      "snippet": "手动补充长期记忆: | 4月13日 | 建议书V1.2修订 + 工信部政策整合 + 数据勘误 | ⭐⭐⭐⭐ | | 4月15日 | 传输资源管理平台开发启动 | ⭐⭐⭐ |",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-20T01:05:52.756Z",
+      "lastRecalledAt": "2026-04-20T01:05:52.756Z",
+      "queryHashes": [
+        "500c0eda9949"
+      ],
+      "recallDays": [
+        "2026-04-17",
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "建议书v1.2修订",
+        "补充",
+        "长期",
+        "记忆",
+        "建议",
+        "v1.2",
+        "修订",
+        "政策"
+      ]
+    },
+    "memory:memory/2026-04-15.md:6:7": {
+      "key": "memory:memory/2026-04-15.md:6:7",
+      "path": "memory/2026-04-15.md",
+      "startLine": 6,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "项目启动: 基于Excel文件《2026传输资源分配表.xlsx》建立传输资源管理平台; 设计数据库模型：机房、设备、板卡、波长、云专线、线路模块、库存",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-20T01:05:52.756Z",
+      "lastRecalledAt": "2026-04-20T01:05:52.756Z",
+      "queryHashes": [
+        "4c4c0cb04efa"
+      ],
+      "recallDays": [
+        "2026-04-15",
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "2026传输资源分配表.xlsx",
+        "项目",
+        "启动",
+        "基于",
+        "excel",
+        "文件",
+        "传输",
+        "资源"
+      ]
+    },
+    "memory:memory/2026-04-15.md:12:14": {
+      "key": "memory:memory/2026-04-15.md:12:14",
+      "path": "memory/2026-04-15.md",
+      "startLine": 12,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "数据理解问题: **核心问题**：没有完全理解Excel表格的业务逻辑和字段含义; 表格结构复杂，包含合并单元格、多平面（华为/光迅）、手工FOADM跳线等; 字段之间存在关联关系（如A端/Z端传输设备需要按合并单元格逻辑处理）",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-20T01:05:52.756Z",
+      "lastRecalledAt": "2026-04-20T01:05:52.756Z",
+      "queryHashes": [
+        "4c4c0cb04efa"
+      ],
+      "recallDays": [
+        "2026-04-15",
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "华为/光迅",
+        "如a端/z端传输设备需要按合并单元格逻辑处理",
+        "数据",
+        "理解",
+        "问题",
+        "核心",
+        "没有",
+        "完全"
+      ]
+    },
+    "memory:memory/2026-04-15.md:17:19": {
+      "key": "memory:memory/2026-04-15.md:17:19",
+      "path": "memory/2026-04-15.md",
+      "startLine": 17,
+      "endLine": 19,
+      "source": "memory",
+      "snippet": "技术实现问题: 前端页面字段名与API返回字段名不匹配（中英文混用导致undefined）; 数据导入不完整（只导入部分波长，Excel有41条但数据库只有12条）; 页面展示逻辑与实际数据结构不符",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-20T01:05:52.756Z",
+      "lastRecalledAt": "2026-04-20T01:05:52.756Z",
+      "queryHashes": [
+        "4c4c0cb04efa"
+      ],
+      "recallDays": [
+        "2026-04-15",
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "技术",
+        "实现",
+        "问题",
+        "前端",
+        "api",
+        "返回",
+        "匹配",
+        "英文"
+      ]
+    },
+    "memory:memory/2026-04-15.md:22:23": {
+      "key": "memory:memory/2026-04-15.md:22:23",
+      "path": "memory/2026-04-15.md",
+      "startLine": 22,
+      "endLine": 23,
+      "source": "memory",
+      "snippet": "已删除的内容: `transmission_resource.db` - 旧版本数据库; `transmission_resource_v3.db` - V3版本数据库",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-20T01:05:52.756Z",
+      "lastRecalledAt": "2026-04-20T01:05:52.756Z",
+      "queryHashes": [
+        "4c4c0cb04efa"
+      ],
+      "recallDays": [
+        "2026-04-15",
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "transmission-resource.db",
+        "transmission-resource-v3.db",
+        "删除",
+        "内容",
+        "旧版",
+        "数据",
+        "transmission-resource-v3",
+        "版本"
+      ]
+    },
+    "memory:memory/2026-04-15.md:26:29": {
+      "key": "memory:memory/2026-04-15.md:26:29",
+      "path": "memory/2026-04-15.md",
+      "startLine": 26,
+      "endLine": 29,
+      "source": "memory",
+      "snippet": "保留的文件: `database/models_v3.py` - 数据模型定义; `api/simple_api.py` - API接口; `frontend/wavelength_view.html` - 波长展示页面; `frontend/simple_view.html` - 简单展示页面",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-20T01:05:52.756Z",
+      "lastRecalledAt": "2026-04-20T01:05:52.756Z",
+      "queryHashes": [
+        "4c4c0cb04efa"
+      ],
+      "recallDays": [
+        "2026-04-15",
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "database/models-v3.py",
+        "api/simple-api.py",
+        "frontend/wavelength-view.html",
+        "frontend/simple-view.html",
+        "保留",
+        "文件",
+        "database",
+        "models-v3"
+      ]
+    },
+    "memory:memory/2026-04-15.md:30:30": {
+      "key": "memory:memory/2026-04-15.md:30:30",
+      "path": "memory/2026-04-15.md",
+      "startLine": 30,
+      "endLine": 30,
+      "source": "memory",
+      "snippet": "保留的文件: `data/import_v3.py` - 数据导入脚本",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-20T01:05:52.756Z",
+      "lastRecalledAt": "2026-04-20T01:05:52.756Z",
+      "queryHashes": [
+        "4c4c0cb04efa"
+      ],
+      "recallDays": [
+        "2026-04-15",
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "data/import-v3.py",
+        "保留",
+        "文件",
+        "data",
+        "import-v3",
+        "数据",
+        "导入",
+        "脚本"
+      ]
+    },
+    "memory:memory/2026-04-15.md:33:36": {
+      "key": "memory:memory/2026-04-15.md:33:36",
+      "path": "memory/2026-04-15.md",
+      "startLine": 33,
+      "endLine": 36,
+      "source": "memory",
+      "snippet": "明日计划: 等待主人标准化Excel表格格式; 重新理解业务逻辑和字段含义; 按标准化后的格式重新设计数据模型; 逐步验证每个工作表的数据导入",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-20T01:05:52.756Z",
+      "lastRecalledAt": "2026-04-20T01:05:52.756Z",
+      "queryHashes": [
+        "4c4c0cb04efa"
+      ],
+      "recallDays": [
+        "2026-04-15",
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "明日",
+        "计划",
+        "等待",
+        "主人",
+        "标准",
+        "excel",
+        "表格",
+        "格式"
+      ]
+    },
+    "memory:memory/2026-04-15.md:39:42": {
+      "key": "memory:memory/2026-04-15.md:39:42",
+      "path": "memory/2026-04-15.md",
+      "startLine": 39,
+      "endLine": 42,
+      "source": "memory",
+      "snippet": "关键认知: 需要以**波长**为核心，展示A端和Z端的完整信息; 需要处理**合并单元格**逻辑（A端/Z端传输设备沿用上一行）; 需要特殊展示**手工FOADM跳线**信息; 需要区分**华为平面**和**光迅平面**",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-20T01:05:52.756Z",
+      "lastRecalledAt": "2026-04-20T01:05:52.756Z",
+      "queryHashes": [
+        "4c4c0cb04efa"
+      ],
+      "recallDays": [
+        "2026-04-15",
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "a端/z端传输设备沿用上一行",
+        "关键",
+        "认知",
+        "需要",
+        "波长",
+        "核心",
+        "展示",
+        "端的"
+      ]
+    },
+    "memory:memory/2026-04-15.md:46:46": {
+      "key": "memory:memory/2026-04-15.md:46:46",
+      "path": "memory/2026-04-15.md",
+      "startLine": 46,
+      "endLine": 46,
+      "source": "memory",
+      "snippet": "关键认知: *记录时间: 2026-04-15 18:30*",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-20T01:05:52.756Z",
+      "lastRecalledAt": "2026-04-20T01:05:52.756Z",
+      "queryHashes": [
+        "4c4c0cb04efa"
+      ],
+      "recallDays": [
+        "2026-04-15",
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "关键",
+        "认知",
+        "记录",
+        "时间"
+      ]
+    },
+    "memory:memory/2026-04-13.md:6:6": {
+      "key": "memory:memory/2026-04-13.md:6:6",
+      "path": "memory/2026-04-13.md",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "修复记忆检索隐患: **问题：** 主人询问4月10日编写的《中国OCS发展路线建议书》，我因 memory_search 未返回结果而声称\"没有印象\"。",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-20T01:05:52.756Z",
+      "lastRecalledAt": "2026-04-20T01:05:52.756Z",
+      "queryHashes": [
+        "0dac2e09ca9b"
+      ],
+      "recallDays": [
+        "2026-04-13",
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "memory-search",
+        "修复",
+        "记忆",
+        "检索",
+        "隐患",
+        "问题",
+        "主人",
+        "询问"
+      ]
+    },
+    "memory:memory/2026-04-13.md:8:8": {
+      "key": "memory:memory/2026-04-13.md:8:8",
+      "path": "memory/2026-04-13.md",
+      "startLine": 8,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "修复记忆检索隐患: **修复措施：**",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-20T01:05:52.756Z",
+      "lastRecalledAt": "2026-04-20T01:05:52.756Z",
+      "queryHashes": [
+        "0dac2e09ca9b"
+      ],
+      "recallDays": [
+        "2026-04-13",
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "修复",
+        "记忆",
+        "检索",
+        "隐患",
+        "措施"
+      ]
+    },
+    "memory:memory/2026-04-13.md:9:11": {
+      "key": "memory:memory/2026-04-13.md:9:11",
+      "path": "memory/2026-04-13.md",
+      "startLine": 9,
+      "endLine": 11,
+      "source": "memory",
+      "snippet": "修复记忆检索隐患: 在 AGENTS.md 中新增 \"Memory Search - Fallback Strategy\" 规则; 在 MEMORY.md 中记录教训; 明确规则：搜索低置信度时，必须检查近期每日记忆文件",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-20T01:05:52.756Z",
+      "lastRecalledAt": "2026-04-20T01:05:52.756Z",
+      "queryHashes": [
+        "0dac2e09ca9b"
+      ],
+      "recallDays": [
+        "2026-04-13",
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "agents.md",
+        "memory.md",
+        "修复",
+        "记忆",
+        "检索",
+        "隐患",
+        "新增",
+        "fallback"
+      ]
+    },
+    "memory:memory/2026-04-13.md:14:14": {
+      "key": "memory:memory/2026-04-13.md:14:14",
+      "path": "memory/2026-04-13.md",
+      "startLine": 14,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "工信部政策文件学习: **文件：** 工信部办公厅《关于开展普惠算力赋能中小企业发展专项行动的通知》（2026年4月2日）",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-20T01:05:52.756Z",
+      "lastRecalledAt": "2026-04-20T01:05:52.756Z",
+      "queryHashes": [
+        "0dac2e09ca9b"
+      ],
+      "recallDays": [
+        "2026-04-13",
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "政策",
+        "文件",
+        "学习",
+        "办公",
+        "关于",
+        "开展",
+        "中小企业",
+        "发展"
+      ]
+    },
+    "memory:memory/2026-04-13.md:16:16": {
+      "key": "memory:memory/2026-04-13.md:16:16",
+      "path": "memory/2026-04-13.md",
+      "startLine": 16,
+      "endLine": 16,
+      "source": "memory",
+      "snippet": "工信部政策文件学习: **核心内容：**",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-20T01:05:52.756Z",
+      "lastRecalledAt": "2026-04-20T01:05:52.756Z",
+      "queryHashes": [
+        "0dac2e09ca9b"
+      ],
+      "recallDays": [
+        "2026-04-13",
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "政策",
+        "文件",
+        "学习",
+        "核心",
+        "内容"
+      ]
+    },
+    "memory:memory/2026-04-13.md:17:20": {
+      "key": "memory:memory/2026-04-13.md:17:20",
+      "path": "memory/2026-04-13.md",
+      "startLine": 17,
+      "endLine": 20,
+      "source": "memory",
+      "snippet": "工信部政策文件学习: 推动全光交换等技术应用部署; 降低算力应用终端到服务器的网络时延; 提升应用交互体验; 打通\"最后一公里\"网络瓶颈",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-20T01:05:52.756Z",
+      "lastRecalledAt": "2026-04-20T01:05:52.756Z",
+      "queryHashes": [
+        "0dac2e09ca9b"
+      ],
+      "recallDays": [
+        "2026-04-13",
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "网络",
+        "政策",
+        "文件",
+        "学习",
+        "推动",
+        "交换",
+        "技术",
+        "应用"
+      ]
+    },
+    "memory:memory/2026-04-13.md:21:21": {
+      "key": "memory:memory/2026-04-13.md:21:21",
+      "path": "memory/2026-04-13.md",
+      "startLine": 21,
+      "endLine": 21,
+      "source": "memory",
+      "snippet": "工信部政策文件学习: 推动光网络设备向产业园区延伸",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-20T01:05:52.756Z",
+      "lastRecalledAt": "2026-04-20T01:05:52.756Z",
+      "queryHashes": [
+        "0dac2e09ca9b"
+      ],
+      "recallDays": [
+        "2026-04-13",
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "网络",
+        "政策",
+        "文件",
+        "学习",
+        "推动",
+        "设备",
+        "产业",
+        "园区"
+      ]
+    },
+    "memory:memory/2026-04-13.md:23:23": {
+      "key": "memory:memory/2026-04-13.md:23:23",
+      "path": "memory/2026-04-13.md",
+      "startLine": 23,
+      "endLine": 23,
+      "source": "memory",
+      "snippet": "工信部政策文件学习: **政策意义：** 国家层面首次明确将全光交换（OCS）作为算力网络关键技术路线",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-20T01:05:52.756Z",
+      "lastRecalledAt": "2026-04-20T01:05:52.756Z",
+      "queryHashes": [
+        "0dac2e09ca9b"
+      ],
+      "recallDays": [
+        "2026-04-13",
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "网络",
+        "政策",
+        "文件",
+        "学习",
+        "意义",
+        "国家",
+        "层面",
+        "首次"
+      ]
+    },
+    "memory:memory/2026-04-13.md:26:26": {
+      "key": "memory:memory/2026-04-13.md:26:26",
+      "path": "memory/2026-04-13.md",
+      "startLine": 26,
+      "endLine": 26,
+      "source": "memory",
+      "snippet": "建议书更新（V1.1 → V1.2）: **更新内容：**",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-20T01:05:52.756Z",
+      "lastRecalledAt": "2026-04-20T01:05:52.756Z",
+      "queryHashes": [
+        "0dac2e09ca9b"
+      ],
+      "recallDays": [
+        "2026-04-13",
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "v1.1",
+        "v1.2",
+        "建议",
+        "更新",
+        "内容"
+      ]
+    },
+    "memory:memory/2026-04-13.md:28:31": {
+      "key": "memory:memory/2026-04-13.md:28:31",
+      "path": "memory/2026-04-13.md",
+      "startLine": 28,
+      "endLine": 31,
+      "source": "memory",
+      "snippet": "建议书更新（V1.1 → V1.2）: | 章节 | 更新要点 | |------|---------| | 摘要 | 新增政策背景，引用工信部4月2日文件 | | 1.1.2 关键驱动因素 | 新增\"国家政策推动\" |",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-04-20T01:05:52.756Z",
+      "lastRecalledAt": "2026-04-20T01:05:52.756Z",
+      "queryHashes": [
+        "0dac2e09ca9b"
+      ],
+      "recallDays": [
+        "2026-04-13",
+        "2026-04-20"
+      ],
+      "conceptTags": [
+        "v1.1",
+        "v1.2",
+        "1.1.2",
+        "建议",
+        "更新",
+        "章节",
+        "要点",
+        "摘要"
       ]
     }
   }
