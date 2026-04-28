@@ -1,0 +1,25 @@
+# Security - Never commit API keys or sensitive data
+.env
+*.env
+.env.*
+
+# OpenClaw specific
+.openclaw/
+state/
+
+# Backup directories (may contain sensitive data)
+backup/
+.backups/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
