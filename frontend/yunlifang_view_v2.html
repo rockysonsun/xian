@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>云立方机房数据展示</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #1a1a2e;
+            color: #fff;
+            padding: 20px;
+        }
+        h1 { text-align: center; margin-bottom: 20px; }
+        .stats { display: flex; justify-content: center; gap: 30px; margin-bottom: 30px; }
+        .stat { text-align: center; padding: 15px; background: rgba(255,255,255,0.1); border-radius: 8px; }
+        .stat .num { font-size: 32px; color: #00d4ff; font-weight: bold; }
+        .stat .label { font-size: 12px; color: #888; }
+        table { width: 100%; border-collapse: collapse; font-size: 12px; margin-top: 20px; }
+        th, td { padding: 8px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        th { color: #888; font-weight: normal; }
+        .device { color: #fff; max-width: 250px; overflow: hidden; text-overflow: ellipsis; }
+        .n2md02 { color: #52c41a; font-weight: bold; }
+        .wl-tag { display: inline-block; padding: 2px 6px; border-radius: 3px; font-size: 11px; margin: 1px; }
+        .wl-in1 { background: #1890ff; }
+        .wl-in2 { background: #52c41a; }
+        .wl-single { background: #fa8c16; }
+        .section { margin-bottom: 40px; }
+        .section-title { font-size: 16px; margin-bottom: 10px; color: #00d4ff; }
+        #error { color: #ff4d4f; padding: 20px; }
+    </style>
+</head>
+<body>
+    <h1>🏢 云立方机房数据展示</h1>
+    
+    <div class="stats">
+        <div class="stat"><div class="num" id="devCount">-</div><div class="label">设备</div></div>
+        <div class="stat"><div class="num" id="cardCount">-</div><div class="label">板卡</div></div>
+        <div class="stat"><div class="num" id="wlCount">-</div><div class="label">波长</div></div>
+        <div class="stat"><div class="num" id="n2Count">-</div><div class="label">N2MD02</div></div>
+    </div>
+
+    <div id="error"></div>
+
+    <div class="section">
+        <div class="section-title">🔍 N2MD02 双波长板卡</div>
+        <table id="n2md02Table">
+            <thead><tr><th>设备</th><th>槽位</th><th>板卡</th><th>IN1OUT1</th><th>IN2OUT2</th><th>方向</th></tr></thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <div class="section-title">📋 全部板卡 (115条)</div>
+        <div style="max-height: 400px; overflow-y: auto;">
+            <table id="allTable">
+                <thead><tr><th>设备</th><th>厂商</th><th>槽位</th><th>板卡</th><th>波长</th></tr></thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        console.log('开始加载...');
+        
+        fetch('yunlifang_data.json?t=' + Date.now())
+            .then(r => {
+                console.log('响应:', r.status);
+                if (!r.ok) throw new Error('HTTP ' + r.status);
+                return r.json();
+            })
+            .then(data => {
+                console.log('数据条数:', data.length);
+                
+                // 统计
+                const devices = [...new Set(data.map(d => d.device_name))];
+                document.getElementById('devCount').textContent = devices.length;
+                document.getElementById('cardCount').textContent = data.length;
+                
+                let wlNum = 0, n2Num = 0;
+                data.forEach(d => {
+                    if (d.wavelengths) wlNum += d.wavelengths.split('|').length;
+                    if (d.card_type === 'N2MD02') n2Num++;
+                });
+                document.getElementById('wlCount').textContent = wlNum;
+                document.getElementById('n2Count').textContent = n2Num;
+                
+                // 解析波长
+                const parseWL = wl => {
+                    if (!wl) return { i1: [], i2: [], s: [] };
+                    const r = { i1: [], i2: [], s: [] };
+                    wl.split('|').forEach(p => {
+                        const [port, w] = p.split(':');
+                        if (port === 'IN1OUT1') r.i1.push(w);
+                        else if (port === 'IN2OUT2') r.i2.push(w);
+                        else r.s.push(w);
+                    });
+                    return r;
+                };
+                
+                // N2MD02表格
+                const n2Data = data.filter(d => d.card_type === 'N2MD02');
+                document.querySelector('#n2md02Table tbody').innerHTML = n2Data.map(d => {
+                    const wl = parseWL(d.wavelengths);
+                    const dir = d.description.match(/方向: ([^|]+)/)?.[1] || '-';
+                    return `<tr>
+                        <td class="device">${d.device_name}</td>
+                        <td>${d.slot_number}</td>
+                        <td class="n2md02">${d.card_type}</td>
+                        <td>${wl.i1.map(w => `<span class="wl-tag wl-in1">${w}nm</span>`).join('') || '-'}</td>
+                        <td>${wl.i2.map(w => `<span class="wl-tag wl-in2">${w}nm</span>`).join('') || '-'}</td>
+                        <td>${dir}</td>
+                    </tr>`;
+                }).join('');
+                
+                // 全部表格
+                document.querySelector('#allTable tbody').innerHTML = data.map(d => {
+                    const wl = parseWL(d.wavelengths);
+                    const isN2 = d.card_type === 'N2MD02';
+                    let wlHtml = '';
+                    if (isN2) {
+                        wl.i1.forEach(w => wlHtml += `<span class="wl-tag wl-in1">IN1:${w}</span>`);
+                        wl.i2.forEach(w => wlHtml += `<span class="wl-tag wl-in2">IN2:${w}</span>`);
+                    } else {
+                        wl.s.forEach(w => wlHtml += `<span class="wl-tag wl-single">${w}nm</span>`);
+                    }
+                    return `<tr>
+                        <td class="device">${d.device_name}</td>
+                        <td>${d.vendor}</td>
+                        <td>${d.slot_number}</td>
+                        <td>${isN2 ? '<span class="n2md02">' + d.card_type + '</span>' : d.card_type}</td>
+                        <td>${wlHtml || '-'}</td>
+                    </tr>`;
+                }).join('');
+                
+                console.log('渲染完成');
+            })
+            .catch(e => {
+                console.error('错误:', e);
+                document.getElementById('error').textContent = '加载失败: ' + e.message;
+            });
+    </script>
+</body>
+</html>

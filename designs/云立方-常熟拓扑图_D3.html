@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>云立方-常熟传输拓扑图 - D3力导向图</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            color: #fff;
+            overflow: hidden;
+            height: 100vh;
+        }
+        #topology-container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        .header {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 100;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 24px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+            margin-bottom: 5px;
+        }
+        .header .subtitle {
+            font-size: 12px;
+            color: #888;
+        }
+        .legend {
+            position: absolute;
+            top: 80px;
+            right: 20px;
+            z-index: 100;
+            background: rgba(0,0,0,0.6);
+            padding: 20px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            min-width: 220px;
+        }
+        .legend h3 {
+            font-size: 14px;
+            margin-bottom: 15px;
+            color: #00d4ff;
+            font-weight: 500;
+        }
+        .legend-section {
+            margin-bottom: 15px;
+        }
+        .legend-section-title {
+            font-size: 11px;
+            color: #888;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 6px 0;
+            font-size: 12px;
+        }
+        .legend-icon {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+        }
+        .legend-line {
+            width: 30px;
+            height: 3px;
+            border-radius: 2px;
+        }
+        .stats-panel {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            z-index: 100;
+            background: rgba(0,0,0,0.6);
+            padding: 20px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .stats-panel h3 {
+            font-size: 14px;
+            margin-bottom: 12px;
+            color: #00d4ff;
+            font-weight: 500;
+        }
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            margin: 8px 0;
+            font-size: 12px;
+        }
+        .stat-value {
+            color: #00ff88;
+            font-weight: 600;
+        }
+        .tooltip {
+            position: absolute;
+            background: rgba(0,0,0,0.95);
+            color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 12px;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s, transform 0.3s;
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            max-width: 320px;
+            z-index: 1000;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        }
+        .tooltip.show {
+            opacity: 1;
+            transform: translateY(-5px);
+        }
+        .tooltip-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #00d4ff;
+            margin-bottom: 8px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .tooltip-row {
+            display: flex;
+            justify-content: space-between;
+            margin: 5px 0;
+            gap: 20px;
+        }
+        .wavelength-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            margin-top: 8px;
+        }
+        .wavelength-tag {
+            background: #1890ff;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 10px;
+        }
+        .controls {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+            display: flex;
+            gap: 10px;
+        }
+        .control-btn {
+            background: rgba(0,0,0,0.6);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: all 0.3s;
+            backdrop-filter: blur(10px);
+        }
+        .control-btn:hover {
+            background: rgba(0, 212, 255, 0.2);
+            border-color: #00d4ff;
+        }
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+        .node text {
+            pointer-events: none;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+        }
+        .link-label {
+            font-size: 10px;
+            fill: #fff;
+            text-anchor: middle;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+        }
+    </style>
+</head>
+<body>
+    <div id="topology-container">
+        <div class="header">
+            <h1>🌐 云立方-常熟传输拓扑</h1>
+            <div class="subtitle">Yunlifang-Changshu DWDM Network Topology | 45 λ</div>
+        </div>
+        
+        <div class="legend">
+            <h3>图例说明</h3>
+            
+            <div class="legend-section">
+                <div class="legend-section-title">机房节点</div>
+                <div class="legend-item">
+                    <div class="legend-icon" style="background: #00d4ff; box-shadow: 0 0 10px #00d4ff;"></div>
+                    <span>云立方机房 (A端)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-icon" style="background: #00ff88; box-shadow: 0 0 10px #00ff88;"></div>
+                    <span>常熟机房 (Z端)</span>
+                </div>
+            </div>
+            
+            <div class="legend-section">
+                <div class="legend-section-title">平面类型</div>
+                <div class="legend-item">
+                    <div class="legend-icon" style="background: #52c41a;"></div>
+                    <span>光迅平面 (OCS)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-icon" style="background: #fa8c16;"></div>
+                    <span>华为平面 (OTN)</span>
+                </div>
+            </div>
+            
+            <div class="legend-section">
+                <div class="legend-section-title">连接类型</div>
+                <div class="legend-item">
+                    <div class="legend-line" style="background: linear-gradient(90deg, #52c41a, #00ff88);"></div>
+                    <span>光迅互联</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-line" style="background: linear-gradient(90deg, #fa8c16, #ffbb52);"></div>
+                    <span>华为互联</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="stats-panel">
+            <h3>📊 网络统计</h3>
+            <div class="stat-row">
+                <span>站点数量</span>
+                <span class="stat-value">2</span>
+            </div>
+            <div class="stat-row">
+                <span>波长连接</span>
+                <span class="stat-value">45 λ</span>
+            </div>
+            <div class="stat-row">
+                <span>光迅平面</span>
+                <span class="stat-value">22 λ</span>
+            </div>
+            <div class="stat-row">
+                <span>华为平面</span>
+                <span class="stat-value">23 λ</span>
+            </div>
+            <div class="stat-row">
+                <span>波长范围</span>
+                <span class="stat-value">191.35-195.4</span>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button class="control-btn" onclick="resetZoom()">⟲ 重置视图</button>
+            <button class="control-btn" onclick="toggleAnimation()">⏯ 动画</button>
+        </div>
+        
+        <div class="tooltip" id="tooltip"></div>
+    </div>
+
+    <script>
+        // 云立方-常熟实际拓扑数据
+        const topologyData = {
+            nodes: [
+                // 核心层 - 机房
+                { id: "yunlifang", name: "云立方机房", type: "core", level: 0, 
+                  color: "#00d4ff", glow: "#00d4ff", radius: 55,
+                  info: { location: "核心节点", role: "A端", devices: "12台", plane: "双平面" }},
+                
+                { id: "changshu", name: "常熟机房", type: "core", level: 0, 
+                  color: "#00ff88", glow: "#00ff88", radius: 55,
+                  info: { location: "汇聚节点", role: "Z端", devices: "10台", plane: "双平面" }},
+                
+                // 汇聚层 - 云立方光迅平面
+                { id: "ylf-al-d02", name: "301-D02-O2", type: "device", vendor: "ACCESSLINK", plane: "光迅",
+                  color: "#52c41a", radius: 30, parent: "yunlifang",
+                  info: { type: "O2", direction: "常熟方向-2", wavelengths: "191.35-192.05", count: 8 }},
+                
+                { id: "ylf-al-d02-t1200", name: "301-D02-T1200", type: "device", vendor: "ACCESSLINK", plane: "光迅",
+                  color: "#52c41a", radius: 30, parent: "yunlifang",
+                  info: { type: "T1200", direction: "常熟方向-2", wavelengths: "192.25", count: 1 }},
+                
+                { id: "ylf-al-e02", name: "301-E02-O2", type: "device", vendor: "ACCESSLINK", plane: "光迅",
+                  color: "#52c41a", radius: 30, parent: "yunlifang",
+                  info: { type: "O2", direction: "常熟方向", wavelengths: "192.35-193.45", count: 13 }},
+                
+                // 汇聚层 - 云立方华为平面
+                { id: "ylf-hw-e02-216", name: "301-E02-9-216", type: "device", vendor: "HUAWEI", plane: "华为",
+                  color: "#fa8c16", radius: 30, parent: "yunlifang",
+                  info: { type: "DC908Pro", direction: "-", wavelengths: "192.3-192.6", count: 4 }},
+                
+                { id: "ylf-hw-e02-218", name: "301-E02-9-218", type: "device", vendor: "HUAWEI", plane: "华为",
+                  color: "#fa8c16", radius: 30, parent: "yunlifang",
+                  info: { type: "DC908Pro", direction: "-", wavelengths: "194.7-195.4", count: 8 }},
+                
+                { id: "ylf-hw-e05-210", name: "301-E05-9-210", type: "device", vendor: "HUAWEI", plane: "华为",
+                  color: "#fa8c16", radius: 30, parent: "yunlifang",
+                  info: { type: "DC908", direction: "-", wavelengths: "192.7, 194.6", count: 2 }},
+                
+                { id: "ylf-hw-e05-211", name: "301-E05-9-211", type: "device", vendor: "HUAWEI", plane: "华为",
+                  color: "#fa8c16", radius: 30, parent: "yunlifang",
+                  info: { type: "DC908", direction: "-", wavelengths: "193.2-193.8", count: 4 }},
+                
+                { id: "ylf-hw-e05-212", name: "301-E05-9-212", type: "device", vendor: "HUAWEI", plane: "华为",
+                  color: "#fa8c16", radius: 30, parent: "yunlifang",
+                  info: { type: "DC908", direction: "-", wavelengths: "193.4-193.5", count: 2 }},
+                
+                { id: "ylf-hw-e05-o2", name: "301-E05-光迅O2", type: "device", vendor: "HUAWEI", plane: "华为",
+                  color: "#fa8c16", radius: 30, parent: "yunlifang",
+                  info: { type: "光迅O2", direction: "-", wavelengths: "193.9-194.2", count: 4 }},
+                
+                // 汇聚层 - 常熟光迅平面
+                { id: "cs-al-f10-o2-1", name: "B2-301-F10-O2-1", type: "device", vendor: "ACCESSLINK", plane: "光迅",
+                  color: "#52c41a", radius: 30, parent: "changshu",
+                  info: { type: "O2", direction: "云立方方向-1", wavelengths: "191.35-192.05", count: 8 }},
+                
+                { id: "cs-al-f10-t1200", name: "B2-301-F10-T1200", type: "device", vendor: "ACCESSLINK", plane: "光迅",
+                  color: "#52c41a", radius: 30, parent: "changshu",
+                  info: { type: "T1200", direction: "云立方方向-1", wavelengths: "192.25", count: 1 }},
+                
+                { id: "cs-al-f10-o2-2", name: "B2-301-F10-O2-2", type: "device", vendor: "ACCESSLINK", plane: "光迅",
+                  color: "#52c41a", radius: 30, parent: "changshu",
+                  info: { type: "O2", direction: "云立方方向-2", wavelengths: "192.35-193.45", count: 13 }},
+                
+                // 汇聚层 - 常熟华为平面
+                { id: "cs-hw-f20-619", name: "B1-301-F20-9-619", type: "device", vendor: "HUAWEI", plane: "华为",
+                  color: "#fa8c16", radius: 30, parent: "changshu",
+                  info: { type: "DC908Pro", direction: "-", wavelengths: "192.3-192.6", count: 4 }},
+                
+                { id: "cs-hw-f20-621", name: "B1-301-F20-9-621", type: "device", vendor: "HUAWEI", plane: "华为",
+                  color: "#fa8c16", radius: 30, parent: "changshu",
+                  info: { type: "DC908Pro", direction: "-", wavelengths: "194.7-195.4", count: 8 }},
+                
+                { id: "cs-hw-f18-611", name: "301-F18-9-611", type: "device", vendor: "HUAWEI", plane: "华为",
+                  color: "#fa8c16", radius: 30, parent: "changshu",
+                  info: { type: "DC908", direction: "-", wavelengths: "192.7", count: 1 }},
+                
+                { id: "cs-hw-f18-others", name: "301-F18-9-612/613/615", type: "device", vendor: "HUAWEI", plane: "华为",
+                  color: "#fa8c16", radius: 30, parent: "changshu",
+                  info: { type: "DC908", direction: "-", wavelengths: "193.2-193.8", count: 6 }},
+                
+                { id: "cs-hw-f19-o2", name: "B1-301-F19-O2-1", type: "device", vendor: "HUAWEI", plane: "华为",
+                  color: "#fa8c16", radius: 30, parent: "changshu",
+                  info: { type: "O2", direction: "-", wavelengths: "193.9-194.6", count: 5 }},
+            ],
+            links: [
+                // 核心到汇聚 - 云立方
+                { source: "yunlifang", target: "ylf-al-d02", type: "hierarchy", strength: 2 },
+                { source: "yunlifang", target: "ylf-al-d02-t1200", type: "hierarchy", strength: 2 },
+                { source: "yunlifang", target: "ylf-al-e02", type: "hierarchy", strength: 2 },
+                { source: "yunlifang", target: "ylf-hw-e02-216", type: "hierarchy", strength: 2 },
+                { source: "yunlifang", target: "ylf-hw-e02-218", type: "hierarchy", strength: 2 },
+                { source: "yunlifang", target: "ylf-hw-e05-210", type: "hierarchy", strength: 2 },
+                { source: "yunlifang", target: "ylf-hw-e05-211", type: "hierarchy", strength: 2 },
+                { source: "yunlifang", target: "ylf-hw-e05-212", type: "hierarchy", strength: 2 },
+                { source: "yunlifang", target: "ylf-hw-e05-o2", type: "hierarchy", strength: 2 },
+                
+                // 核心到汇聚 - 常熟
+                { source: "changshu", target: "cs-al-f10-o2-1", type: "hierarchy", strength: 2 },
+                { source: "changshu", target: "cs-al-f10-t1200", type: "hierarchy", strength: 2 },
+                { source: "changshu", target: "cs-al-f10-o2-2", type: "hierarchy", strength: 2 },
+                { source: "changshu", target: "cs-hw-f20-619", type: "hierarchy", strength: 2 },
+                { source: "changshu", target: "cs-hw-f20-621", type: "hierarchy", strength: 2 },
+                { source: "changshu", target: "cs-hw-f18-611", type: "hierarchy", strength: 2 },
+                { source: "changshu", target: "cs-hw-f18-others", type: "hierarchy", strength: 2 },
+                { source: "changshu", target: "cs-hw-f19-o2", type: "hierarchy", strength: 2 },
+                
+                // 光迅平面互联
+                { source: "ylf-al-d02", target: "cs-al-f10-o2-1", type: "guangxun", 
+                  label: "8λ", strength: 1, wavelengths: ["191.35","191.45","191.55","191.65","191.75","191.85","191.95","192.05"] },
+                { source: "ylf-al-d02-t1200", target: "cs-al-f10-t1200", type: "guangxun", 
+                  label: "1λ", strength: 1, wavelengths: ["192.25"] },
+                { source: "ylf-al-e02", target: "cs-al-f10-o2-2", type: "guangxun", 
+                  label: "13λ", strength: 1, wavelengths: ["192.35","192.45","192.55","192.65","192.75","192.85","192.95","193.05","193.15","193.25","193.35","193.45"] },
+                
+                // 华为平面互联
+                { source: "ylf-hw-e02-216", target: "cs-hw-f20-619", type: "huawei", 
+                  label: "4λ", strength: 1, wavelengths: ["192.3","192.4","192.5","192.6"] },
+                { source: "ylf-hw-e02-218", target: "cs-hw-f20-621", type: "huawei", 
+                  label: "8λ", strength: 1, wavelengths: ["194.7","194.8","194.9","195.0","195.1","195.2","195.3","195.4"] },
+                { source: "ylf-hw-e05-210", target: "cs-hw-f18-611", type: "huawei", 
+                  label: "1λ", strength: 1, wavelengths: ["192.7"] },
+                { source: "ylf-hw-e05-211", target: "cs-hw-f18-others", type: "huawei", 
+                  label: "4λ", strength: 1, wavelengths: ["193.2","193.3","193.6","193.8"] },
+                { source: "ylf-hw-e05-212", target: "cs-hw-f18-others", type: "huawei", 
+                  label: "2λ", strength: 1, wavelengths: ["193.4","193.5"] },
+                { source: "ylf-hw-e05-210", target: "cs-hw-f19-o2", type: "huawei", 
+                  label: "1λ", strength: 1, wavelengths: ["194.6"] },
+                { source: "ylf-hw-e05-o2", target: "cs-hw-f19-o2", type: "huawei", 
+                  label: "4λ", strength: 1, wavelengths: ["193.9","194.0","194.1","194.2"] },
+            ]
+        };
+
+        // 设置画布
+        const container = d3.select("#topology-container");
+        const width = container.node().getBoundingClientRect().width;
+        const height = container.node().getBoundingClientRect().height;
+        
+        const svg = container.append("svg")
+            .attr("width", width)
+            .attr("height", height);
+        
+        // 定义渐变和滤镜
+        const defs = svg.append("defs");
+        
+        // 发光滤镜
+        const filter = defs.append("filter")
+            .attr("id", "glow")
+            .attr("width", "150%")
+            .attr("height", "150%");
+        
+        filter.append("feGaussianBlur")
+            .attr("stdDeviation", "3.5")
+            .attr("result", "coloredBlur");
+        
+        const feMerge = filter.append("feMerge");
+        feMerge.append("feMergeNode").attr("in", "coloredBlur");
+        feMerge.append("feMergeNode").attr("in", "SourceGraphic");
+        
+        // 光迅渐变
+        const guangxunGradient = defs.append("linearGradient")
+            .attr("id", "guangxun-gradient")
+            .attr("gradientUnits", "userSpaceOnUse");
+        guangxunGradient.append("stop").attr("offset", "0%").attr("stop-color", "#52c41a");
+        guangxunGradient.append("stop").attr("offset", "100%").attr("stop-color", "#00ff88");
+        
+        // 华为渐变
+        const huaweiGradient = defs.append("linearGradient")
+            .attr("id", "huawei-gradient")
+            .attr("gradientUnits", "userSpaceOnUse");
+        huaweiGradient.append("stop").attr("offset", "0%").attr("stop-color", "#fa8c16");
+        huaweiGradient.append("stop").attr("offset", "100%").attr("stop-color", "#ffbb52");
+        
+        const g = svg.append("g");
+        
+        // 缩放行为
+        const zoom = d3.zoom()
+            .scaleExtent([0.3, 3])
+            .on("zoom", (event) => {
+                g.attr("transform", event.transform);
+            });
+        
+        svg.call(zoom);
+        
+        // 力导向模拟
+        const simulation = d3.forceSimulation(topologyData.nodes)
+            .force("link", d3.forceLink(topologyData.links)
+                .id(d => d.id)
+                .distance(d => d.type === "guangxun" || d.type === "huawei" ? 350 : d.type === "hierarchy" ? 100 : 200)
+                .strength(d => d.strength || 1))
+            .force("charge", d3.forceManyBody().strength(d => d.type === "core" ? -3000 : d.type === "device" ? -800 : -500))
+            .force("center", d3.forceCenter(width / 2, height / 2))
+            .force("collision", d3.forceCollide().radius(d => d.radius + 30))
+            .force("x", d3.forceX(d => d.type === "core" ? (d.id === "yunlifang" ? width * 0.3 : width * 0.7) : width / 2).strength(0.3))
+            .force("y", d3.forceY(height / 2).strength(0.1));
+        
+        // 绘制连线
+        const link = g.append("g")
+            .attr("class", "links")
+            .selectAll("line")
+            .data(topologyData.links)
+            .enter()
+            .append("line")
+            .attr("stroke", d => {
+                if (d.type === "guangxun") return "url(#guangxun-gradient)";
+                if (d.type === "huawei") return "url(#huawei-gradient)";
+                return "rgba(255,255,255,0.15)";
+            })
+            .attr("stroke-width", d => d.type === "guangxun" || d.type === "huawei" ? 3 : 1)
+            .attr("stroke-opacity", 0.8);
+        
+        // 连线标签
+        const linkLabel = g.append("g")
+            .attr("class", "link-labels")
+            .selectAll("text")
+            .data(topologyData.links.filter(d => d.label))
+            .enter()
+            .append("text")
+            .attr("class", "link-label")
+            .text(d => d.label);
+        
+        // 绘制节点
+        const node = g.append("g")
+            .attr("class", "nodes")
+            .selectAll("g")
+            .data(topologyData.nodes)
+            .enter()
+            .append("g")
+            .call(d3.drag()
+                .on("start", dragstarted)
+                .on("drag", dragged)
+                .on("end", dragended));
+        
+        // 节点外圈（发光效果）
+        node.append("circle")
+            .attr("r", d => d.radius + 6)
+            .attr("fill", "none")
+            .attr("stroke", d => d.glow || d.color)
+            .attr("stroke-width", 2)
+            .attr("opacity", 0.4)
+            .style("filter", d => d.type === "core" ? "url(#glow)" : "none");
+        
+        // 节点主体
+        node.append("circle")
+            .attr("r", d => d.radius)
+            .attr("fill", d => d.color)
+            .attr("stroke", "#fff")
+            .attr("stroke-width", d => d.type === "core" ? 3 : 2)
+            .style("cursor", "pointer")
+            .style("filter", d => d.type === "core" ? "url(#glow)" : "none");
+        
+        // 节点图标
+        node.append("text")
+            .attr("dy", d => d.type === "core" ? 8 : 5)
+            .attr("text-anchor", "middle")
+            .style("font-size", d => d.type === "core" ? "32px" : "14px")
+            .style("fill", "#fff")
+            .style("font-weight", "bold")
+            .text(d => d.type === "core" ? "🏢" : d.vendor === "HUAWEI" ? "H" : "A");
+        
+        // 节点名称
+        node.append("text")
+            .attr("dy", d => d.radius + 22)
+            .attr("text-anchor", "middle")
+            .style("font-size", d => d.type === "core" ? "14px" : "11px")
+            .style("font-weight", d => d.type === "core" ? "bold" : "normal")
+            .style("fill", "#fff")
+            .text(d => d.name);
+        
+        // 节点副标题
+        node.append("text")
+            .attr("dy", d => d.radius + 36)
+            .attr("text-anchor", "middle")
+            .style("font-size", "10px")
+            .style("fill", "#888")
+            .text(d => d.info ? `${d.info.plane || d.info.role} | ${d.info.count ? d.info.count + 'λ' : d.info.devices}` : "");
+        
+        // 工具提示
+        const tooltip = d3.select("#tooltip");
+        
+        node.on("mouseenter", function(event, d) {
+            let content = `<div class="tooltip-title">${d.name}</div>`;
+            
+            if (d.info) {
+                Object.entries(d.info).forEach(([key, value]) => {
+                    const labels = {
+                        location: "位置",
+                        role: "角色",
+                        devices: "设备数",
+                        vendor: "厂商",
+                        type: "类型",
+                        plane: "平面",
+                        direction: "方向",
+                        count: "波长数",
+                        wavelengths: "波长范围"
+                    };
+                    if (labels[key] && key !== "wavelengths") {
+                        content += `<div class="tooltip-row"><span>${labels[key]}</span><span style="color:#00d4ff">${value}</span></div>`;
+                    }
+                });
+                
+                if (d.info.wavelengths && d.info.count > 3) {
+                    content += `<div class="tooltip-row"><span>波长范围</span><span style="color:#00ff88">${d.info.wavelengths}</span></div>`;
+                }
+            }
+            
+            tooltip.html(content)
+                .style("left", (event.pageX + 15) + "px")
+                .style("top", (event.pageY - 10) + "px")
+                .classed("show", true);
+            
+            d3.select(this).select("circle:nth-child(2)")
+                .transition()
+                .duration(200)
+                .attr("r", d.radius + 8);
+        })
+        .on("mouseleave", function(event, d) {
+            tooltip.classed("show", false);
+            
+            d3.select(this).select("circle:nth-child(2)")
+                .transition()
+                .duration(200)
+                .attr("r", d.radius);
+        });
+        
+        // 更新位置
+        simulation.on("tick", () => {
+            link
+                .attr("x1", d => d.source.x)
+                .attr("y1", d => d.source.y)
+                .attr("x2", d => d.target.x)
+                .attr("y2", d => d.target.y);
+            
+            linkLabel
+                .attr("x", d => (d.source.x + d.target.x) / 2)
+                .attr("y", d => (d.source.y + d.target.y) / 2);
+            
+            node.attr("transform", d => `translate(${d.x},${d.y})`);
+        });
+        
+        // 拖拽函数
+        function dragstarted(event, d) {
+            if (!event.active) simulation.alphaTarget(0.3).restart();
+            d.fx = d.x;
+            d.fy = d.y;
+        }
+        
+        function dragged(event, d) {
+            d.fx = event.x;
+            d.fy = event.y;
+        }
+        
+        function dragended(event, d) {
+            if (!event.active) simulation.alphaTarget(0);
+            d.fx = null;
+            d.fy = null;
+        }
+        
+        // 控制按钮功能
+        window.resetZoom = function() {
+            svg.transition().duration(750).call(
+                zoom.transform,
+                d3.zoomIdentity
+            );
+        };
+        
+        let animationRunning = true;
+        window.toggleAnimation = function() {
+            if (animationRunning) {
+                simulation.stop();
+            } else {
+                simulation.restart();
+            }
+            animationRunning = !animationRunning;
+        };
+    </script>
+</body>
+</html>

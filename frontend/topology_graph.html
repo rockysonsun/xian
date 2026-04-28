@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>传输资源网络拓扑图</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #1a1a2e;
+            color: #fff;
+            overflow: hidden;
+        }
+        #topology-container {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+        .controls {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 100;
+            background: rgba(0,0,0,0.7);
+            padding: 15px;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+        .controls h2 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #00d4ff;
+        }
+        .legend {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+            background: rgba(0,0,0,0.7);
+            padding: 15px;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+            min-width: 200px;
+        }
+        .legend h3 {
+            font-size: 14px;
+            margin-bottom: 10px;
+            color: #00d4ff;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 8px 0;
+            font-size: 12px;
+        }
+        .legend-icon {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+        .legend-line {
+            width: 30px;
+            height: 2px;
+        }
+        .tooltip {
+            position: absolute;
+            background: rgba(0,0,0,0.9);
+            color: #fff;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 12px;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s;
+            border: 1px solid #00d4ff;
+            max-width: 300px;
+            z-index: 1000;
+        }
+        .tooltip.show {
+            opacity: 1;
+        }
+        .site-label {
+            font-size: 18px;
+            font-weight: bold;
+            fill: #00d4ff;
+            text-anchor: middle;
+        }
+        .device-label {
+            font-size: 11px;
+            fill: #fff;
+            text-anchor: middle;
+            pointer-events: none;
+        }
+        .link-label {
+            font-size: 10px;
+            fill: #888;
+            text-anchor: middle;
+            pointer-events: none;
+        }
+        .info-panel {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            z-index: 100;
+            background: rgba(0,0,0,0.7);
+            padding: 15px;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+            max-width: 400px;
+        }
+        .info-panel h3 {
+            font-size: 14px;
+            margin-bottom: 10px;
+            color: #00d4ff;
+        }
+        .info-item {
+            display: flex;
+            justify-content: space-between;
+            margin: 5px 0;
+            font-size: 12px;
+        }
+        .glow {
+            filter: drop-shadow(0 0 8px rgba(0, 212, 255, 0.6));
+        }
+    </style>
+</head>
+<body>
+    <div id="topology-container"></div>
+    
+    <div class="controls">
+        <h2>🌐 传输资源拓扑图</h2>
+        <p style="font-size: 12px; color: #888;">拖拽节点调整位置 | 滚轮缩放</p>
+    </div>
+    
+    <div class="legend">
+        <h3>图例</h3>
+        <div class="legend-item">
+            <div class="legend-icon" style="background: #1890ff; box-shadow: 0 0 10px #1890ff;"></div>
+            <span>云立方机房</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-icon" style="background: #52c41a; box-shadow: 0 0 10px #52c41a;"></div>
+            <span>嘉定机房</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-icon" style="background: #722ed1; box-shadow: 0 0 10px #722ed1;"></div>
+            <span>HUAWEI 设备</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-icon" style="background: #fa8c16; box-shadow: 0 0 10px #fa8c16;"></div>
+            <span>ACCESSLINK 设备</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-line" style="background: linear-gradient(90deg, #00d4ff, #00ff88);"></div>
+            <span>光纤连接</span>
+        </div>
+    </div>
+    
+    <div class="info-panel">
+        <h3>📊 统计信息</h3>
+        <div class="info-item">
+            <span>总设备数:</span>
+            <span id="device-count">-</span>
+        </div>
+        <div class="info-item">
+            <span>连接数:</span>
+            <span id="link-count">-</span>
+        </div>
+        <div class="info-item">
+            <span>在用波长:</span>
+            <span id="wl-count">-</span>
+        </div>
+    </div>
+    
+    <div class="tooltip" id="tooltip"></div>
+
+    <script>
+        // 拓扑数据
+        const topologyData = {
+            nodes: [
+                // 云立方机房 - 核心节点
+                { id: "yunlifang", name: "云立方机房", type: "site", x: 400, y: 300, color: "#1890ff" },
+                
+                // 云立方 HUAWEI 设备
+                { id: "ylf-hw-210", name: "9-210-DC908", type: "device", vendor: "HUAWEI", site: "yunlifang", slots: 7, color: "#722ed1" },
+                { id: "ylf-hw-211", name: "9-211-DC908", type: "device", vendor: "HUAWEI", site: "yunlifang", slots: 8, color: "#722ed1" },
+                { id: "ylf-hw-212", name: "9-212-DC908", type: "device", vendor: "HUAWEI", site: "yunlifang", slots: 8, color: "#722ed1" },
+                { id: "ylf-hw-213", name: "9-213-DC908", type: "device", vendor: "HUAWEI", site: "yunlifang", slots: 1, color: "#722ed1" },
+                { id: "ylf-hw-214", name: "9-214-DC908Pro", type: "device", vendor: "HUAWEI", site: "yunlifang", slots: 8, color: "#722ed1" },
+                { id: "ylf-hw-215", name: "9-215-DC908Pro", type: "device", vendor: "HUAWEI", site: "yunlifang", slots: 4, color: "#722ed1" },
+                { id: "ylf-hw-216", name: "9-216-DC908Pro", type: "device", vendor: "HUAWEI", site: "yunlifang", slots: 4, color: "#722ed1" },
+                { id: "ylf-hw-217", name: "9-217-DC908Pro", type: "device", vendor: "HUAWEI", site: "yunlifang", slots: 8, color: "#722ed1" },
+                { id: "ylf-hw-218", name: "9-218-DC908Pro", type: "device", vendor: "HUAWEI", site: "yunlifang", slots: 8, color: "#722ed1" },
+                
+                // 云立方 ACCESSLINK 设备
+                { id: "ylf-al-o2-1", name: "O2-常熟方向", type: "device", vendor: "ACCESSLINK", site: "yunlifang", slots: 8, color: "#fa8c16" },
+                { id: "ylf-al-o2-2", name: "O2-嘉定方向", type: "device", vendor: "ACCESSLINK", site: "yunlifang", slots: 8, color: "#fa8c16" },
+                { id: "ylf-al-t1200-1", name: "T1200-常熟", type: "device", vendor: "ACCESSLINK", site: "yunlifang", slots: 1, color: "#fa8c16" },
+                { id: "ylf-al-t1200-2", name: "T1200-嘉定", type: "device", vendor: "ACCESSLINK", site: "yunlifang", slots: 4, color: "#fa8c16" },
+                
+                // 嘉定机房 - 核心节点
+                { id: "jiading", name: "嘉定机房", type: "site", x: 1000, y: 300, color: "#52c41a" },
+                
+                // 嘉定 HUAWEI 设备
+                { id: "jd-hw-110", name: "9-110-DC908", type: "device", vendor: "HUAWEI", site: "jiading", slots: 6, color: "#722ed1" },
+                { id: "jd-hw-111", name: "9-111-DC908", type: "device", vendor: "HUAWEI", site: "jiading", slots: 8, color: "#722ed1" },
+                { id: "jd-hw-112", name: "9-112-DC908", type: "device", vendor: "HUAWEI", site: "jiading", slots: 8, color: "#722ed1" },
+                { id: "jd-hw-113", name: "9-113-DC908", type: "device", vendor: "HUAWEI", site: "jiading", slots: 8, color: "#722ed1" },
+                { id: "jd-hw-114", name: "9-114-DC908", type: "device", vendor: "HUAWEI", site: "jiading", slots: 8, color: "#722ed1" },
+                { id: "jd-hw-116", name: "9-116-DC908Pro", type: "device", vendor: "HUAWEI", site: "jiading", slots: 4, color: "#722ed1" },
+                { id: "jd-hw-117", name: "9-117-DC908Pro", type: "device", vendor: "HUAWEI", site: "jiading", slots: 4, color: "#722ed1" },
+                
+                // 嘉定 ACCESSLINK 设备
+                { id: "jd-al-o2-1", name: "O2-1", type: "device", vendor: "ACCESSLINK", site: "jiading", slots: 5, color: "#fa8c16" },
+                { id: "jd-al-o2-2", name: "O2-2", type: "device", vendor: "ACCESSLINK", site: "jiading", slots: 3, color: "#fa8c16" },
+                { id: "jd-al-o2-3", name: "O2-3", type: "device", vendor: "ACCESSLINK", site: "jiading", slots: 4, color: "#fa8c16" },
+                { id: "jd-al-o2-4", name: "O2-4", type: "device", vendor: "ACCESSLINK", site: "jiading", slots: 4, color: "#fa8c16" },
+                { id: "jd-al-t1200-1", name: "T1200-苏州1", type: "device", vendor: "ACCESSLINK", site: "jiading", slots: 4, color: "#fa8c16" },
+                { id: "jd-al-t1200-2", name: "T1200-苏州2", type: "device", vendor: "ACCESSLINK", site: "jiading", slots: 1, color: "#fa8c16" },
+            ],
+            links: [
+                // 云立方内部连接
+                { source: "yunlifang", target: "ylf-hw-210", type: "internal" },
+                { source: "yunlifang", target: "ylf-hw-211", type: "internal" },
+                { source: "yunlifang", target: "ylf-hw-212", type: "internal" },
+                { source: "yunlifang", target: "ylf-hw-213", type: "internal" },
+                { source: "yunlifang", target: "ylf-hw-214", type: "internal" },
+                { source: "yunlifang", target: "ylf-hw-215", type: "internal" },
+                { source: "yunlifang", target: "ylf-hw-216", type: "internal" },
+                { source: "yunlifang", target: "ylf-hw-217", type: "internal" },
+                { source: "yunlifang", target: "ylf-hw-218", type: "internal" },
+                { source: "yunlifang", target: "ylf-al-o2-1", type: "internal" },
+                { source: "yunlifang", target: "ylf-al-o2-2", type: "internal" },
+                { source: "yunlifang", target: "ylf-al-t1200-1", type: "internal" },
+                { source: "yunlifang", target: "ylf-al-t1200-2", type: "internal" },
+                
+                // 嘉定内部连接
+                { source: "jiading", target: "jd-hw-110", type: "internal" },
+                { source: "jiading", target: "jd-hw-111", type: "internal" },
+                { source: "jiading", target: "jd-hw-112", type: "internal" },
+                { source: "jiading", target: "jd-hw-113", type: "internal" },
+                { source: "jiading", target: "jd-hw-114", type: "internal" },
+                { source: "jiading", target: "jd-hw-116", type: "internal" },
+                { source: "jiading", target: "jd-hw-117", type: "internal" },
+                { source: "jiading", target: "jd-al-o2-1", type: "internal" },
+                { source: "jiading", target: "jd-al-o2-2", type: "internal" },
+                { source: "jiading", target: "jd-al-o2-3", type: "internal" },
+                { source: "jiading", target: "jd-al-o2-4", type: "internal" },
+                { source: "jiading", target: "jd-al-t1200-1", type: "internal" },
+                { source: "jiading", target: "jd-al-t1200-2", type: "internal" },
+                
+                // 机房互联 - 云立方到嘉定
+                { source: "ylf-hw-210", target: "jd-hw-110", type: "interconnect", label: "192.1/192.2" },
+                { source: "ylf-hw-214", target: "jd-hw-116", type: "interconnect", label: "192.4-192.7" },
+                { source: "ylf-hw-215", target: "jd-hw-117", type: "interconnect", label: "192.3-192.6" },
+                
+                // 云立方到常熟方向
+                { source: "ylf-hw-211", target: "ylf-al-o2-1", type: "direction", label: "常熟 193.x" },
+                { source: "ylf-hw-212", target: "ylf-al-o2-2", type: "direction", label: "嘉定 195.x" },
+            ]
+        };
+
+        // 设置画布
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+        
+        const svg = d3.select("#topology-container")
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height)
+            .call(d3.zoom().on("zoom", (event) => {
+                g.attr("transform", event.transform);
+            }));
+        
+        const g = svg.append("g");
+        
+        // 创建渐变
+        const defs = svg.append("defs");
+        
+        const gradient = defs.append("linearGradient")
+            .attr("id", "link-gradient")
+            .attr("gradientUnits", "userSpaceOnUse");
+        
+        gradient.append("stop").attr("offset", "0%").attr("stop-color", "#00d4ff");
+        gradient.append("stop").attr("offset", "100%").attr("stop-color", "#00ff88");
+        
+        // 创建力导向模拟
+        const simulation = d3.forceSimulation(topologyData.nodes)
+            .force("link", d3.forceLink(topologyData.links).id(d => d.id).distance(100))
+            .force("charge", d3.forceManyBody().strength(-500))
+            .force("center", d3.forceCenter(width / 2, height / 2))
+            .force("collision", d3.forceCollide().radius(60));
+        
+        // 绘制连线
+        const link = g.append("g")
+            .selectAll("line")
+            .data(topologyData.links)
+            .enter()
+            .append("line")
+            .attr("stroke", d => {
+                if (d.type === "interconnect") return "url(#link-gradient)";
+                if (d.type === "direction") return "#fa8c16";
+                return "#333";
+            })
+            .attr("stroke-width", d => d.type === "interconnect" ? 3 : d.type === "direction" ? 2 : 1)
+            .attr("stroke-opacity", d => d.type === "internal" ? 0.3 : 0.8);
+        
+        // 绘制节点
+        const node = g.append("g")
+            .selectAll("g")
+            .data(topologyData.nodes)
+            .enter()
+            .append("g")
+            .call(d3.drag()
+                .on("start", dragstarted)
+                .on("drag", dragged)
+                .on("end", dragended));
+        
+        // 节点圆形
+        node.append("circle")
+            .attr("r", d => d.type === "site" ? 40 : 25)
+            .attr("fill", d => d.color)
+            .attr("stroke", "#fff")
+            .attr("stroke-width", d => d.type === "site" ? 3 : 2)
+            .style("filter", d => d.type === "site" ? "drop-shadow(0 0 15px " + d.color + ")" : "none")
+            .style("cursor", "pointer");
+        
+        // 节点图标/文字
+        node.append("text")
+            .attr("dy", d => d.type === "site" ? 5 : 4)
+            .attr("text-anchor", "middle")
+            .style("font-size", d => d.type === "site" ? "20px" : "12px")
+            .style("fill", "#fff")
+            .style("pointer-events", "none")
+            .text(d => d.type === "site" ? "🏢" : d.vendor === "HUAWEI" ? "H" : "A");
+        
+        // 节点标签
+        node.append("text")
+            .attr("dy", d => d.type === "site" ? 55 : 40)
+            .attr("text-anchor", "middle")
+            .style("font-size", d => d.type === "site" ? "14px" : "10px")
+            .style("fill", "#fff")
+            .style("font-weight", d => d.type === "site" ? "bold" : "normal")
+            .style("pointer-events", "none")
+            .text(d => d.name);
+        
+        // 连线标签
+        const linkLabel = g.append("g")
+            .selectAll("text")
+            .data(topologyData.links.filter(d => d.label))
+            .enter()
+            .append("text")
+            .attr("font-size", "10px")
+            .attr("fill", "#888")
+            .attr("text-anchor", "middle")
+            .text(d => d.label);
+        
+        // 工具提示
+        const tooltip = d3.select("#tooltip");
+        
+        node.on("mouseover", function(event, d) {
+            let content = `<strong>${d.name}</strong><br/>`;
+            content += `类型: ${d.type === 'site' ? '机房' : '设备'}<br/>`;
+            if (d.vendor) {
+                content += `厂商: ${d.vendor}<br/>`;
+                content += `槽位数: ${d.slots}<br/>`;
+            }
+            
+            tooltip.html(content)
+                .style("left", (event.pageX + 10) + "px")
+                .style("top", (event.pageY - 10) + "px")
+                .classed("show", true);
+            
+            d3.select(this).select("circle")
+                .transition()
+                .duration(200)
+                .attr("r", d.type === "site" ? 45 : 30);
+        })
+        .on("mouseout", function(event, d) {
+            tooltip.classed("show", false);
+            
+            d3.select(this).select("circle")
+                .transition()
+                .duration(200)
+                .attr("r", d.type === "site" ? 40 : 25);
+        });
+        
+        // 更新位置
+        simulation.on("tick", () => {
+            link
+                .attr("x1", d => d.source.x)
+                .attr("y1", d => d.source.y)
+                .attr("x2", d => d.target.x)
+                .attr("y2", d => d.target.y);
+            
+            node.attr("transform", d => `translate(${d.x},${d.y})`);
+            
+            linkLabel
+                .attr("x", d => (d.source.x + d.target.x) / 2)
+                .attr("y", d => (d.source.y + d.target.y) / 2);
+        });
+        
+        // 拖拽函数
+        function dragstarted(event, d) {
+            if (!event.active) simulation.alphaTarget(0.3).restart();
+            d.fx = d.x;
+            d.fy = d.y;
+        }
+        
+        function dragged(event, d) {
+            d.fx = event.x;
+            d.fy = event.y;
+        }
+        
+        function dragended(event, d) {
+            if (!event.active) simulation.alphaTarget(0);
+            d.fx = null;
+            d.fy = null;
+        }
+        
+        // 更新统计信息
+        document.getElementById('device-count').textContent = topologyData.nodes.filter(n => n.type === 'device').length;
+        document.getElementById('link-count').textContent = topologyData.links.filter(l => l.type === 'interconnect' || l.type === 'direction').length;
+        document.getElementById('wl-count').textContent = '44';
+    </script>
+</body>
+</html>

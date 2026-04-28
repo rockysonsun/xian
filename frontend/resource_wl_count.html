@@ -1,0 +1,2630 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>传输资源数据展示</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f7fa;
+        }
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        .site-section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .site-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e8e8e8;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+        th, td {
+            padding: 10px 8px;
+            text-align: left;
+            border: 1px solid #e8e8e8;
+        }
+        th {
+            background: #fafafa;
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+        }
+        tr:hover {
+            background: #f5f7fa;
+        }
+        .vendor-huawei {
+            background: #e6f7ff;
+        }
+        .vendor-accesslink {
+            background: #fff7e6;
+        }
+        .status-active {
+            color: #52c41a;
+            font-weight: bold;
+        }
+        .status-empty {
+            color: #999;
+        }
+        .wavelength {
+            font-family: monospace;
+            color: #1890ff;
+            font-weight: 500;
+        }
+        .wl-count {
+            display: inline-block;
+            background: #52c41a;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .wl-count-0 {
+            background: #d9d9d9;
+        }
+        .wl-count-1 {
+            background: #1890ff;
+        }
+        .wl-count-2 {
+            background: #52c41a;
+        }
+        .device-name {
+            font-weight: 500;
+            color: #333;
+        }
+        .card-type {
+            font-family: monospace;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📊 传输资源数据展示</h1>
+        <p class="subtitle">生成时间: 2026-04-16 14:26:59 | 波长数量根据板卡类型计算</p>
+        
+        <div class="site-section">
+            <div class="site-title">🏢 云立方机房业务板使用情况</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>设备品牌</th>
+                        <th>设备型号</th>
+                        <th>设备编号</th>
+                        <th>槽位</th>
+                        <th>板卡型号</th>
+                        <th>波长数量</th>
+                        <th>波长</th>
+                        <th>方向</th>
+                        <th>状态</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">云立方301-E02-O2（吴江方向）</td>
+                        <td>1</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.4nm</td>
+                        <td>吴江</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">云立方301-E02-O2（吴江方向）</td>
+                        <td>2</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.5nm</td>
+                        <td>吴江</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">云立方301-E02-O2（吴江方向）</td>
+                        <td>3</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.6nm</td>
+                        <td>吴江</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">云立方301-E02-O2（吴江方向）</td>
+                        <td>4</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.7nm</td>
+                        <td>吴江</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">云立方301-E02-O2（吴江方向）</td>
+                        <td>5</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.8nm</td>
+                        <td>吴江</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">云立方301-E02-O2（吴江方向）</td>
+                        <td>6</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.9nm</td>
+                        <td>吴江</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">云立方301-E02-O2（吴江方向）</td>
+                        <td>7</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">193.0nm</td>
+                        <td>吴江</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">云立方301-E02-O2（吴江方向）</td>
+                        <td>8</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">193.1nm</td>
+                        <td>吴江</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">云立方301-E02-O2（吴江方向）-8U（10.152.254.124）</td>
+                        <td>1</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">193.2nm</td>
+                        <td>吴江</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">云立方301-E02-O2（吴江方向）-8U（10.152.254.124）</td>
+                        <td>2</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">193.3nm</td>
+                        <td>吴江</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">云立方301-E02-O2（吴江方向）-8U（10.152.254.124）</td>
+                        <td>3</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">193.4nm</td>
+                        <td>吴江</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">云立方301-E02-O2（吴江方向）-8U（10.152.254.124）</td>
+                        <td>4</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">193.5nm</td>
+                        <td>吴江</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">云立方301-E02-O2（吴江方向）-8U（10.152.254.124）</td>
+                        <td>5</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">193.6nm</td>
+                        <td>吴江</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">云立方301-E02-O2（吴江方向）-8U（10.152.254.124）</td>
+                        <td>6</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">193.7nm</td>
+                        <td>吴江</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">云立方301-E02-O2（吴江方向）-8U（10.152.254.124）</td>
+                        <td>7</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">193.8nm</td>
+                        <td>吴江</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">云立方301-E02-O2（吴江方向）-8U（10.152.254.124）</td>
+                        <td>8</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">193.9nm</td>
+                        <td>吴江</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">云立方301-E02-O2（嘉定方向）</td>
+                        <td>1</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.7nm</td>
+                        <td>嘉定</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">云立方301-E02-O2（嘉定方向）</td>
+                        <td>2</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.8nm</td>
+                        <td>嘉定</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">云立方301-E02-O2（嘉定方向）</td>
+                        <td>3</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.9nm</td>
+                        <td>嘉定</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">云立方301-E02-O2（嘉定方向）</td>
+                        <td>4</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">193.0nm</td>
+                        <td>嘉定</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">云立方301-E02-O2（常熟方向）</td>
+                        <td>1</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.3nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">云立方301-E02-O2（常熟方向）</td>
+                        <td>2</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.4nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">云立方301-E02-O2（常熟方向）</td>
+                        <td>3</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.5nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">云立方301-E02-O2（常熟方向）</td>
+                        <td>4</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.6nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">云立方301-E02-O2（常熟方向）-11U（10.152.254.125）</td>
+                        <td>1</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.7nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">云立方301-E02-O2（常熟方向）-11U（10.152.254.125）</td>
+                        <td>2</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.8nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">云立方301-E02-O2（常熟方向）-11U（10.152.254.125）</td>
+                        <td>3</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.9nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">云立方301-E02-O2（常熟方向）-11U（10.152.254.125）</td>
+                        <td>4</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">193.0nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">云立方301-E02-O2（常熟方向）-11U（10.152.254.125）</td>
+                        <td>5</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">193.1nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">云立方301-E02-O2（常熟方向）-11U（10.152.254.125）</td>
+                        <td>6</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">193.2nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">云立方301-E02-O2（常熟方向）-11U（10.152.254.125）</td>
+                        <td>7</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">193.3nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">云立方301-E02-O2（常熟方向）-11U（10.152.254.125）</td>
+                        <td>8</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">193.4nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>T1200</td>
+                        <td class="device-name">云立方T1200（嘉定方向-1）</td>
+                        <td>1</td>
+                        <td class="card-type">T1X200S</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">191.3nm</td>
+                        <td>嘉定</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>T1200</td>
+                        <td class="device-name">云立方T1200（嘉定方向-1）</td>
+                        <td>2</td>
+                        <td class="card-type">T1X200S</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.2nm</td>
+                        <td>吴江</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>T1200</td>
+                        <td class="device-name">云立方T1200（嘉定方向-1）</td>
+                        <td>3</td>
+                        <td class="card-type">T1X200S</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.3nm</td>
+                        <td>吴江</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>T1200</td>
+                        <td class="device-name">云立方T1200（嘉定方向-1）</td>
+                        <td>4</td>
+                        <td class="card-type">T1X200S</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">191.5nm</td>
+                        <td>嘉定</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>T1200</td>
+                        <td class="device-name">云立方T1200（常熟方向-2）</td>
+                        <td>1</td>
+                        <td class="card-type">T1X200S</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.2nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>T1200</td>
+                        <td class="device-name">云立方T1200（腾讯云方向-1）</td>
+                        <td>1</td>
+                        <td class="card-type">T1X200S</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">191.3nm</td>
+                        <td>腾讯</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>T1200</td>
+                        <td class="device-name">云立方T1200（腾讯云方向-1）</td>
+                        <td>2</td>
+                        <td class="card-type">T1X200S</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">191.4nm</td>
+                        <td>腾讯</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>T1200</td>
+                        <td class="device-name">云立方T1200（腾讯云方向-1）</td>
+                        <td>3</td>
+                        <td class="card-type">T1X200S</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">191.4nm</td>
+                        <td>腾讯</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>T1200</td>
+                        <td class="device-name">云立方T1200（腾讯云方向-1）</td>
+                        <td>4</td>
+                        <td class="card-type">T1X200S</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">191.5nm</td>
+                        <td>腾讯</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>T1200</td>
+                        <td class="device-name">云立方T1200（腾讯云方向-2）</td>
+                        <td>1</td>
+                        <td class="card-type">T1X200S</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">191.6nm</td>
+                        <td>腾讯</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>T1200</td>
+                        <td class="device-name">云立方T1200（腾讯云方向-2）</td>
+                        <td>2</td>
+                        <td class="card-type">T1X200S</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">191.7nm</td>
+                        <td>腾讯</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">云立方一期O2（嘉定2345，常熟1678)-E05机柜</td>
+                        <td>1</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">193.9nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">云立方一期O2（嘉定2345，常熟1678)-E05机柜</td>
+                        <td>2</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.3nm</td>
+                        <td>嘉定</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">云立方一期O2（嘉定2345，常熟1678)-E05机柜</td>
+                        <td>3</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.4nm</td>
+                        <td>嘉定</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">云立方一期O2（嘉定2345，常熟1678)-E05机柜</td>
+                        <td>4</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.5nm</td>
+                        <td>嘉定</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">云立方一期O2（嘉定2345，常熟1678)-E05机柜</td>
+                        <td>5</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.6nm</td>
+                        <td>嘉定</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">云立方一期O2（嘉定2345，常熟1678)-E05机柜</td>
+                        <td>6</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">194.0nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">云立方一期O2（嘉定2345，常熟1678)-E05机柜</td>
+                        <td>7</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">194.1nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">云立方一期O2（嘉定2345，常熟1678)-E05机柜</td>
+                        <td>8</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">194.2nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">云立方一期O2（常熟方向-2)</td>
+                        <td>1</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">191.3nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">云立方一期O2（常熟方向-2)</td>
+                        <td>2</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">191.4nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">云立方一期O2（常熟方向-2)</td>
+                        <td>3</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">191.5nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">云立方一期O2（常熟方向-2)</td>
+                        <td>4</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">191.6nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">云立方一期O2（常熟方向-2)</td>
+                        <td>5</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">191.7nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">云立方一期O2（常熟方向-2)</td>
+                        <td>6</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">191.8nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">云立方一期O2（常熟方向-2)</td>
+                        <td>7</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">191.9nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">云立方一期O2（常熟方向-2)</td>
+                        <td>8</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.0nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-210-DC908</td>
+                        <td>1</td>
+                        <td class="card-type">N2MD02</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">-</td>
+                        <td>-</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-210-DC908</td>
+                        <td>2</td>
+                        <td class="card-type">N2MD02</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">193.5nm</td>
+                        <td>云立方-常熟-嘉定</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-210-DC908</td>
+                        <td>3</td>
+                        <td class="card-type">N2MD02</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">192.7nm</td>
+                        <td>云立方-常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-210-DC908</td>
+                        <td>4</td>
+                        <td class="card-type">N2MD02</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">194.6nm</td>
+                        <td>云立方-常熟-嘉定</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-210-DC908</td>
+                        <td>5</td>
+                        <td class="card-type">N2MD02</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">-</td>
+                        <td>-</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-210-DC908</td>
+                        <td>6</td>
+                        <td class="card-type">N2MD02</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">192.2nm</td>
+                        <td>云立方-吴江</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-210-DC908</td>
+                        <td>7</td>
+                        <td class="card-type">N2MD02</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">192.3nm</td>
+                        <td>云立方-吴江</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-211-DC908</td>
+                        <td>1</td>
+                        <td class="card-type">N2MS04</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">193.3nm</td>
+                        <td>云立方-常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-211-DC908</td>
+                        <td>2</td>
+                        <td class="card-type">N2MS04</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">193.6nm</td>
+                        <td>云立方-常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-211-DC908</td>
+                        <td>3</td>
+                        <td class="card-type">N2MD02</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">-</td>
+                        <td>-</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-211-DC908</td>
+                        <td>4</td>
+                        <td class="card-type">N2MS04</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">193.2nm</td>
+                        <td>云立方-常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-211-DC908</td>
+                        <td>5</td>
+                        <td class="card-type">N2MS04</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">195.9nm</td>
+                        <td>云立方-嘉定</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-211-DC908</td>
+                        <td>6</td>
+                        <td class="card-type">N2MS04</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">195.8nm</td>
+                        <td>云立方-嘉定</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-211-DC908</td>
+                        <td>7</td>
+                        <td class="card-type">N2MS04</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">195.3nm</td>
+                        <td>云立方-嘉定</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-211-DC908</td>
+                        <td>8</td>
+                        <td class="card-type">N2MS04</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">195.2nm</td>
+                        <td>云立方-嘉定</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-212-DC908</td>
+                        <td>1</td>
+                        <td class="card-type">N2MS04</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">195.5nm</td>
+                        <td>云立方-嘉定</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-212-DC908</td>
+                        <td>2</td>
+                        <td class="card-type">N2MS04</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">195.4nm</td>
+                        <td>云立方-嘉定</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-212-DC908</td>
+                        <td>3</td>
+                        <td class="card-type">N2MS04</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">195.7nm</td>
+                        <td>云立方-嘉定</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-212-DC908</td>
+                        <td>4</td>
+                        <td class="card-type">N2MS04</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">195.6nm</td>
+                        <td>云立方-嘉定</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-212-DC908</td>
+                        <td>5</td>
+                        <td class="card-type">N2MS04</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">193.8nm</td>
+                        <td>云立方-常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-212-DC908</td>
+                        <td>6</td>
+                        <td class="card-type">N2MS04</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">-</td>
+                        <td>-</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-212-DC908</td>
+                        <td>7</td>
+                        <td class="card-type">N2MS04</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">193.4nm</td>
+                        <td>云立方-常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-212-DC908</td>
+                        <td>8</td>
+                        <td class="card-type">N2MS04</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">193.5nm</td>
+                        <td>云立方-常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-213-DC908</td>
+                        <td>1</td>
+                        <td class="card-type">N2MD02</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">192.1nm</td>
+                        <td>嘉定</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908-PRO</td>
+                        <td class="device-name">9-214-DC908Pro(WJ)</td>
+                        <td>1</td>
+                        <td class="card-type">1-N2MD04CE-C1</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">192.4nm</td>
+                        <td>云立方-吴江</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908-PRO</td>
+                        <td class="device-name">9-214-DC908Pro(WJ)</td>
+                        <td>2</td>
+                        <td class="card-type">1-N2MD04CE-C5</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">192.5nm</td>
+                        <td>云立方-吴江</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908-PRO</td>
+                        <td class="device-name">9-214-DC908Pro(WJ)</td>
+                        <td>3</td>
+                        <td class="card-type">3-N2MD04CE-C1</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">192.6nm</td>
+                        <td>云立方-吴江</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908-PRO</td>
+                        <td class="device-name">9-214-DC908Pro(WJ)</td>
+                        <td>4</td>
+                        <td class="card-type">3-N2MD04CE-C5</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">192.7nm</td>
+                        <td>云立方-吴江</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908-PRO</td>
+                        <td class="device-name">9-214-DC908Pro(WJ)</td>
+                        <td>5</td>
+                        <td class="card-type">5-N2MD04CE-C1</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">192.8nm</td>
+                        <td>云立方-吴江</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908-PRO</td>
+                        <td class="device-name">9-214-DC908Pro(WJ)</td>
+                        <td>6</td>
+                        <td class="card-type">5-N2MD04CE-C5</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">192.9nm</td>
+                        <td>云立方-吴江</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908-PRO</td>
+                        <td class="device-name">9-214-DC908Pro(WJ)</td>
+                        <td>7</td>
+                        <td class="card-type">7-N2MD04CE-C1</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">193.0nm</td>
+                        <td>云立方-吴江</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908-PRO</td>
+                        <td class="device-name">9-214-DC908Pro(WJ)</td>
+                        <td>8</td>
+                        <td class="card-type">7-N2MD04CE-C5</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">193.1nm</td>
+                        <td>云立方-吴江</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908-PRO</td>
+                        <td class="device-name">9-215-DC908Pro(JD)</td>
+                        <td>1</td>
+                        <td class="card-type">1-N2MD04CE-C1</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">192.3nm</td>
+                        <td>云立方-嘉定</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908-PRO</td>
+                        <td class="device-name">9-215-DC908Pro(JD)</td>
+                        <td>2</td>
+                        <td class="card-type">1-N2MD04CE-C5</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">192.4nm</td>
+                        <td>云立方-嘉定</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908-PRO</td>
+                        <td class="device-name">9-215-DC908Pro(JD)</td>
+                        <td>3</td>
+                        <td class="card-type">3-N2MD04CE-C1</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">192.5nm</td>
+                        <td>云立方-嘉定</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908-PRO</td>
+                        <td class="device-name">9-215-DC908Pro(JD)</td>
+                        <td>4</td>
+                        <td class="card-type">3-N2MD04CE-C5</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">192.6nm</td>
+                        <td>云立方-嘉定</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908-PRO</td>
+                        <td class="device-name">9-216-DC908Pro(CS)</td>
+                        <td>1</td>
+                        <td class="card-type">1-N2MD04CE-C1</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">192.3nm</td>
+                        <td>云立方-常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908-PRO</td>
+                        <td class="device-name">9-216-DC908Pro(CS)</td>
+                        <td>2</td>
+                        <td class="card-type">1-N2MD04CE-C5</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">192.4nm</td>
+                        <td>云立方-常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908-PRO</td>
+                        <td class="device-name">9-216-DC908Pro(CS)</td>
+                        <td>3</td>
+                        <td class="card-type">3-N2MD04CE-C1</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">192.5nm</td>
+                        <td>云立方-常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908-PRO</td>
+                        <td class="device-name">9-216-DC908Pro(CS)</td>
+                        <td>4</td>
+                        <td class="card-type">3-N2MD04CE-C5</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">192.6nm</td>
+                        <td>云立方-常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908-PRO</td>
+                        <td class="device-name">9-217-YLF-to-WJ-DC908Pro</td>
+                        <td>1</td>
+                        <td class="card-type">1-N2MD04CE-C1</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">193.2nm</td>
+                        <td>云立方-吴江</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908-PRO</td>
+                        <td class="device-name">9-217-YLF-to-WJ-DC908Pro</td>
+                        <td>2</td>
+                        <td class="card-type">1-N2MD04CE-C5</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">193.3nm</td>
+                        <td>云立方-吴江</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908-PRO</td>
+                        <td class="device-name">9-217-YLF-to-WJ-DC908Pro</td>
+                        <td>3</td>
+                        <td class="card-type">3-N2MD04CE-C1</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">193.4nm</td>
+                        <td>云立方-吴江</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908-PRO</td>
+                        <td class="device-name">9-217-YLF-to-WJ-DC908Pro</td>
+                        <td>4</td>
+                        <td class="card-type">3-N2MD04CE-C5</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">193.5nm</td>
+                        <td>云立方-吴江</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908-PRO</td>
+                        <td class="device-name">9-217-YLF-to-WJ-DC908Pro</td>
+                        <td>5</td>
+                        <td class="card-type">5-N2MD04CE-C1</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">193.6nm</td>
+                        <td>云立方-吴江</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908-PRO</td>
+                        <td class="device-name">9-217-YLF-to-WJ-DC908Pro</td>
+                        <td>6</td>
+                        <td class="card-type">5-N2MD04CE-C5</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">193.7nm</td>
+                        <td>云立方-吴江</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908-PRO</td>
+                        <td class="device-name">9-217-YLF-to-WJ-DC908Pro</td>
+                        <td>7</td>
+                        <td class="card-type">7-N2MD04CE-C1</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">193.8nm</td>
+                        <td>云立方-吴江</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908-PRO</td>
+                        <td class="device-name">9-217-YLF-to-WJ-DC908Pro</td>
+                        <td>8</td>
+                        <td class="card-type">7-N2MD04CE-C5</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">193.9nm</td>
+                        <td>云立方-吴江</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908-PRO</td>
+                        <td class="device-name">9-218-YLF-to-CSDC908Pro</td>
+                        <td>1</td>
+                        <td class="card-type">1-N2MD04CE-C1</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">194.7nm</td>
+                        <td>云立方-常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908-PRO</td>
+                        <td class="device-name">9-218-YLF-to-CSDC908Pro</td>
+                        <td>2</td>
+                        <td class="card-type">1-N2MD04CE-C5</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">194.8nm</td>
+                        <td>云立方-常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908-PRO</td>
+                        <td class="device-name">9-218-YLF-to-CSDC908Pro</td>
+                        <td>3</td>
+                        <td class="card-type">3-N2MD04CE-C1</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">194.9nm</td>
+                        <td>云立方-常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908-PRO</td>
+                        <td class="device-name">9-218-YLF-to-CSDC908Pro</td>
+                        <td>4</td>
+                        <td class="card-type">3-N2MD04CE-C5</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">195.0nm</td>
+                        <td>云立方-吴江</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908-PRO</td>
+                        <td class="device-name">9-218-YLF-to-CSDC908Pro</td>
+                        <td>5</td>
+                        <td class="card-type">5-N2MD04CE-C1</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">195.1nm</td>
+                        <td>云立方-吴江</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908-PRO</td>
+                        <td class="device-name">9-218-YLF-to-CSDC908Pro</td>
+                        <td>6</td>
+                        <td class="card-type">5-N2MD04CE-C5</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">195.2nm</td>
+                        <td>云立方-吴江</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908-PRO</td>
+                        <td class="device-name">9-218-YLF-to-CSDC908Pro</td>
+                        <td>7</td>
+                        <td class="card-type">7-N2MD04CE-C1</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">195.3nm</td>
+                        <td>云立方-吴江</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908-PRO</td>
+                        <td class="device-name">9-218-YLF-to-CSDC908Pro</td>
+                        <td>8</td>
+                        <td class="card-type">7-N2MD04CE-C5</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">195.4nm</td>
+                        <td>云立方-吴江</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="site-section">
+            <div class="site-title">🏢 嘉定机房业务板使用情况</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>设备品牌</th>
+                        <th>设备型号</th>
+                        <th>设备编号</th>
+                        <th>槽位</th>
+                        <th>板卡型号</th>
+                        <th>波长数量</th>
+                        <th>波长</th>
+                        <th>方向</th>
+                        <th>状态</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">嘉定101_E19_O2_1</td>
+                        <td>1</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.3nm</td>
+                        <td>云立方</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">嘉定101_E19_O2_1</td>
+                        <td>3</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.4nm</td>
+                        <td>云立方</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">嘉定101_E19_O2_1</td>
+                        <td>4</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.5nm</td>
+                        <td>云立方</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">嘉定101_E19_O2_1</td>
+                        <td>5</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.3nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">嘉定101_E19_O2_1</td>
+                        <td>6</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.4nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">嘉定101_E19_O2_2</td>
+                        <td>2</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.6nm</td>
+                        <td>云立方</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">嘉定101_E19_O2_2</td>
+                        <td>5</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.5nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">嘉定101_E19_O2_2</td>
+                        <td>6</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.6nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">嘉定101_E19_O2_3</td>
+                        <td>1</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.7nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">嘉定101_E19_O2_3</td>
+                        <td>2</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.8nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">嘉定101_E19_O2_3</td>
+                        <td>3</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.9nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">嘉定101_E19_O2_3</td>
+                        <td>4</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">193.0nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">嘉定101_E19_O2_4</td>
+                        <td>1</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.7nm</td>
+                        <td>云立方</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">嘉定101_E19_O2_4</td>
+                        <td>2</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.8nm</td>
+                        <td>云立方</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">嘉定101_E19_O2_4</td>
+                        <td>3</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.9nm</td>
+                        <td>云立方</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>O2</td>
+                        <td class="device-name">嘉定101_E19_O2_4</td>
+                        <td>4</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">193.0nm</td>
+                        <td>云立方</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>T1200</td>
+                        <td class="device-name">嘉定T1200（云立方方向-1）</td>
+                        <td>1</td>
+                        <td class="card-type">T1X200S</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">191.3nm</td>
+                        <td>云立方</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>T1200</td>
+                        <td class="device-name">嘉定T1200（云立方方向-1）</td>
+                        <td>2</td>
+                        <td class="card-type">T1X200S</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">191.4nm</td>
+                        <td>云立方</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>T1200</td>
+                        <td class="device-name">嘉定T1200（云立方方向-1）</td>
+                        <td>3</td>
+                        <td class="card-type">T1X200S</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">191.4nm</td>
+                        <td>云立方</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>T1200</td>
+                        <td class="device-name">嘉定T1200（云立方方向-1）</td>
+                        <td>4</td>
+                        <td class="card-type">T1X200S</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">191.5nm</td>
+                        <td>云立方</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>T1200</td>
+                        <td class="device-name">嘉定T1200（云立方方向-2）</td>
+                        <td>1</td>
+                        <td class="card-type">T1X200S</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">191.5nm</td>
+                        <td>云立方</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>T1200</td>
+                        <td class="device-name">嘉定T1200（云立方方向-3）</td>
+                        <td>1</td>
+                        <td class="card-type">T1X200S</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">191.6nm</td>
+                        <td>云立方</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>T1200</td>
+                        <td class="device-name">嘉定T1200（云立方方向-3）</td>
+                        <td>2</td>
+                        <td class="card-type">T1X200S</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">191.6nm</td>
+                        <td>云立方</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>T1200</td>
+                        <td class="device-name">嘉定T1200（云立方方向-3）</td>
+                        <td>3</td>
+                        <td class="card-type">T1X200S</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">191.7nm</td>
+                        <td>云立方</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>T1200</td>
+                        <td class="device-name">嘉定T1200（云立方方向-3）</td>
+                        <td>4</td>
+                        <td class="card-type">T1X200S</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">191.7nm</td>
+                        <td>云立方</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>T1200</td>
+                        <td class="device-name">嘉定T1200（云立方方向-5）</td>
+                        <td>1</td>
+                        <td class="card-type">T1X200S</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.0nm</td>
+                        <td>云立方</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>T1200</td>
+                        <td class="device-name">嘉定T1200（云立方方向-5）</td>
+                        <td>2</td>
+                        <td class="card-type">T1X200S</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.0nm</td>
+                        <td>云立方</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>T1200</td>
+                        <td class="device-name">嘉定T1200（外高桥方向-1）</td>
+                        <td>1</td>
+                        <td class="card-type">T1X200S</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">-</td>
+                        <td>-</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>T1200</td>
+                        <td class="device-name">嘉定T1200（外高桥方向-1）</td>
+                        <td>2</td>
+                        <td class="card-type">T1X200S</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">195.7nm</td>
+                        <td>-</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>T1200</td>
+                        <td class="device-name">嘉定T1200（外高桥方向-1）</td>
+                        <td>3</td>
+                        <td class="card-type">T1X200S</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">195.6nm</td>
+                        <td>-</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>T1200</td>
+                        <td class="device-name">嘉定T1200（外高桥方向-1）</td>
+                        <td>4</td>
+                        <td class="card-type">T1X200S</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">195.5nm</td>
+                        <td>-</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>T1200</td>
+                        <td class="device-name">嘉定T1200（外高桥方向-2）</td>
+                        <td>1</td>
+                        <td class="card-type">T1X200S</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.1nm</td>
+                        <td>-</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>T1200</td>
+                        <td class="device-name">嘉定T1200（常熟方向-1）</td>
+                        <td>1</td>
+                        <td class="card-type">T1X200S</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">191.3nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>T1200</td>
+                        <td class="device-name">嘉定T1200（常熟方向-1）</td>
+                        <td>2</td>
+                        <td class="card-type">T1X200S</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">191.8nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>T1200</td>
+                        <td class="device-name">嘉定T1200（常熟方向-1）</td>
+                        <td>3</td>
+                        <td class="card-type">T1X200S</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">191.7nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>T1200</td>
+                        <td class="device-name">嘉定T1200（常熟方向-1）</td>
+                        <td>4</td>
+                        <td class="card-type">T1X200S</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">191.6nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>T1200</td>
+                        <td class="device-name">嘉定T1200（苏州方向-1）</td>
+                        <td>1</td>
+                        <td class="card-type">T1X200S</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">-</td>
+                        <td>-</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>T1200</td>
+                        <td class="device-name">嘉定T1200（苏州方向-1）</td>
+                        <td>2</td>
+                        <td class="card-type">T1X200S</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">-</td>
+                        <td>-</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>T1200</td>
+                        <td class="device-name">嘉定T1200（苏州方向-1）</td>
+                        <td>3</td>
+                        <td class="card-type">T1X200S</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">-</td>
+                        <td>-</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>T1200</td>
+                        <td class="device-name">嘉定T1200（苏州方向-1）</td>
+                        <td>4</td>
+                        <td class="card-type">T1X200S</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">-</td>
+                        <td>-</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td>T1200</td>
+                        <td class="device-name">嘉定T1200（苏州方向-2）</td>
+                        <td>1</td>
+                        <td class="card-type">T1X200S</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.2nm</td>
+                        <td>-</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-110-DC908</td>
+                        <td>1</td>
+                        <td class="card-type">N2MD02</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">-</td>
+                        <td>-</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-110-DC908</td>
+                        <td>2</td>
+                        <td class="card-type">N2MD02</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">-</td>
+                        <td>-</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-110-DC908</td>
+                        <td>3</td>
+                        <td class="card-type">N2MD02</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">192.1nm</td>
+                        <td>云立方</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-110-DC908</td>
+                        <td>4</td>
+                        <td class="card-type">N2MD02</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">-</td>
+                        <td>-</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-110-DC908</td>
+                        <td>5</td>
+                        <td class="card-type">N2MD02</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">195.3nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-110-DC908</td>
+                        <td>8</td>
+                        <td class="card-type">N2MD02</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">-</td>
+                        <td>-</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-111-DC908</td>
+                        <td>1</td>
+                        <td class="card-type">N2MS04</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.4nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-111-DC908</td>
+                        <td>2</td>
+                        <td class="card-type">N2MS04</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.8nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-111-DC908</td>
+                        <td>3</td>
+                        <td class="card-type">N2MS04</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">193.2nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-111-DC908</td>
+                        <td>4</td>
+                        <td class="card-type">N2MS04</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">193.5nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-111-DC908</td>
+                        <td>5</td>
+                        <td class="card-type">N2MS04</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">195.9nm</td>
+                        <td>云立方-嘉定</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-111-DC908</td>
+                        <td>6</td>
+                        <td class="card-type">N2MS04</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">195.8nm</td>
+                        <td>云立方-嘉定</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-111-DC908</td>
+                        <td>7</td>
+                        <td class="card-type">N2MS04</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">195.3nm</td>
+                        <td>云立方-嘉定</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-111-DC908</td>
+                        <td>8</td>
+                        <td class="card-type">N2MS04</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">195.2nm</td>
+                        <td>云立方-嘉定</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-112-DC908</td>
+                        <td>1</td>
+                        <td class="card-type">N2MS04</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.3nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-112-DC908</td>
+                        <td>2</td>
+                        <td class="card-type">N2MS04</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.7nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-112-DC908</td>
+                        <td>3</td>
+                        <td class="card-type">N2MS04</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">193.1nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-112-DC908</td>
+                        <td>4</td>
+                        <td class="card-type">N2MS04</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">-</td>
+                        <td>-</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-112-DC908</td>
+                        <td>5</td>
+                        <td class="card-type">N2MS04</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">195.5nm</td>
+                        <td>云立方-嘉定</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-112-DC908</td>
+                        <td>6</td>
+                        <td class="card-type">N2MS04</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">195.4nm</td>
+                        <td>云立方-嘉定</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-112-DC908</td>
+                        <td>7</td>
+                        <td class="card-type">N2MS04</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">195.7nm</td>
+                        <td>云立方-嘉定</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-112-DC908</td>
+                        <td>8</td>
+                        <td class="card-type">N2MS04</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">195.6nm</td>
+                        <td>云立方-嘉定</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-113-DC908</td>
+                        <td>1</td>
+                        <td class="card-type">N2MS04</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.2nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-113-DC908</td>
+                        <td>2</td>
+                        <td class="card-type">N2MS04</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.6nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-113-DC908</td>
+                        <td>3</td>
+                        <td class="card-type">N2MS04</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">193.0nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-113-DC908</td>
+                        <td>4</td>
+                        <td class="card-type">N2MD02</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">194.6nm</td>
+                        <td>云立方-常熟-嘉定</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-113-DC908</td>
+                        <td>5</td>
+                        <td class="card-type">N2MS04</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">193.8nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-113-DC908</td>
+                        <td>6</td>
+                        <td class="card-type">N2MS04</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">193.9nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-113-DC908</td>
+                        <td>7</td>
+                        <td class="card-type">N2MS04</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">194.0nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-113-DC908</td>
+                        <td>8</td>
+                        <td class="card-type">N2MS04</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">194.1nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-114-DC908</td>
+                        <td>1</td>
+                        <td class="card-type">N2MS04</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">193.4nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-114-DC908</td>
+                        <td>2</td>
+                        <td class="card-type">N2MS04</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">-</td>
+                        <td>-</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-114-DC908</td>
+                        <td>3</td>
+                        <td class="card-type">N2MS04</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.9nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-114-DC908</td>
+                        <td>4</td>
+                        <td class="card-type">N2MS04</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">193.3nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-114-DC908</td>
+                        <td>5</td>
+                        <td class="card-type">N2MS04</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">192.5nm</td>
+                        <td>常熟</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-114-DC908</td>
+                        <td>6</td>
+                        <td class="card-type">N2MS04</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">-</td>
+                        <td>-</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-114-DC908</td>
+                        <td>7</td>
+                        <td class="card-type">N2MS04</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">-</td>
+                        <td>-</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908</td>
+                        <td class="device-name">9-114-DC908</td>
+                        <td>8</td>
+                        <td class="card-type">N2MS04</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td class="wavelength">-</td>
+                        <td>-</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908-PRO</td>
+                        <td class="device-name">9-116-DC908Pro</td>
+                        <td>1</td>
+                        <td class="card-type">1-N2MD04CE-C1</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">194.7nm</td>
+                        <td>常熟-嘉定</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908-PRO</td>
+                        <td class="device-name">9-116-DC908Pro</td>
+                        <td>2</td>
+                        <td class="card-type">1-N2MD04CE-C5</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">194.8nm</td>
+                        <td>常熟-嘉定</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908-PRO</td>
+                        <td class="device-name">9-116-DC908Pro</td>
+                        <td>3</td>
+                        <td class="card-type">3-N2MD04CE-C1</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">194.9nm</td>
+                        <td>常熟-嘉定</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908-PRO</td>
+                        <td class="device-name">9-116-DC908Pro</td>
+                        <td>4</td>
+                        <td class="card-type">3-N2MD04CE-C5</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">195.0nm</td>
+                        <td>常熟-嘉定</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908-PRO</td>
+                        <td class="device-name">9-117-DC908Pro</td>
+                        <td>1</td>
+                        <td class="card-type">1-N2MD04CE-C1
+（故障模块替换）</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">192.3nm</td>
+                        <td>云立方-嘉定</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908-PRO</td>
+                        <td class="device-name">9-117-DC908Pro</td>
+                        <td>2</td>
+                        <td class="card-type">1-N2MD04CE-C5</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">192.4nm</td>
+                        <td>云立方-嘉定</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908-PRO</td>
+                        <td class="device-name">9-117-DC908Pro</td>
+                        <td>3</td>
+                        <td class="card-type">3-N2MD04CE-C1</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">192.5nm</td>
+                        <td>云立方-嘉定</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td>DC908-PRO</td>
+                        <td class="device-name">9-117-DC908Pro</td>
+                        <td>4</td>
+                        <td class="card-type">3-N2MD04CE-C5</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td class="wavelength">192.6nm</td>
+                        <td>云立方-嘉定</td>
+                        <td class="status-active">在用</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="site-section">
+            <div class="site-title">📋 板卡波长容量说明</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>厂商</th>
+                        <th>板卡型号</th>
+                        <th>波长数量</th>
+                        <th>说明</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td class="card-type">N2MD02</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td>双波长板卡</td>
+                    </tr>
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td class="card-type">N2MS04</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td>单波长板卡</td>
+                    </tr>
+                    <tr class="vendor-huawei">
+                        <td>HUAWEI</td>
+                        <td class="card-type">N2MD04CE</td>
+                        <td><span class="wl-count wl-count-2">2</span></td>
+                        <td>双波长板卡</td>
+                    </tr>
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td class="card-type">T1X200S</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td>单波长板卡</td>
+                    </tr>
+                    <tr class="vendor-accesslink">
+                        <td>ACCESSLINK</td>
+                        <td class="card-type">T04X1-103</td>
+                        <td><span class="wl-count wl-count-1">1</span></td>
+                        <td>单波长板卡</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中国OCS发展路线建议书 V1.2</title>
+    <style>
+        body {
+            font-family: "SimSun", "宋体", serif;
+            font-size: 12pt;
+            line-height: 1.5;
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 25.4mm;
+            color: #333;
+        }
+        h1 {
+            font-family: "SimHei", "黑体", sans-serif;
+            font-size: 22pt;
+            text-align: center;
+            margin-bottom: 30pt;
+        }
+        h2 {
+            font-family: "SimHei", "黑体", sans-serif;
+            font-size: 16pt;
+            margin-top: 24pt;
+            margin-bottom: 12pt;
+        }
+        h3 {
+            font-family: "SimHei", "黑体", sans-serif;
+            font-size: 14pt;
+            margin-top: 18pt;
+            margin-bottom: 10pt;
+        }
+        h4 {
+            font-family: "SimHei", "黑体", sans-serif;
+            font-size: 12pt;
+            margin-top: 14pt;
+            margin-bottom: 8pt;
+        }
+        p {
+            text-indent: 2em;
+            margin: 8pt 0;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 12pt 0;
+            font-size: 10.5pt;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 6pt 8pt;
+            text-align: left;
+        }
+        th {
+            background-color: #f5f5f5;
+            font-weight: bold;
+        }
+        pre {
+            background-color: #f8f8f8;
+            padding: 12pt;
+            overflow-x: auto;
+            font-family: "Consolas", monospace;
+            font-size: 10pt;
+            line-height: 1.4;
+        }
+        code {
+            font-family: "Consolas", monospace;
+            background-color: #f0f0f0;
+            padding: 2pt 4pt;
+        }
+        blockquote {
+            border-left: 3pt solid #666;
+            margin: 12pt 0;
+            padding-left: 12pt;
+            color: #555;
+            font-style: italic;
+        }
+        ul, ol {
+            margin: 8pt 0;
+            padding-left: 2em;
+        }
+        li {
+            margin: 4pt 0;
+        }
+    </style>
+</head>
+<body>
+<h1>中国 OCS（光电路交换）发展路线建议书</h1>
+<p><strong>编制单位：</strong> 星宿老仙技术团队<br />
+<strong>编制日期：</strong> 2026年4月13日<br />
+<strong>版本：</strong> V1.2（已整合工信部2026年4月2日政策文件精神）<br />
+<strong>密级：</strong> 内部参考</p>
+<hr />
+<h2>摘要</h2>
+<p>本建议书基于对全球 OCS 技术发展趋势、中国产业现状、政策环境以及"东数西算"等国家战略的深入分析，<strong>并充分整合 SuperPod 白皮书《分布式 AI 推理加速架构技术白皮书》的核心技术框架（包括系统能力边界外移理论、帕累托前沿分析方法论、三大 OCS 探索构型）</strong>，提出适合中国国情的 OCS 发展路线建议。</p>
+<p><strong>建议书核心主张：</strong></p>
+<blockquote>
+<p>以"拓扑感知"等原创技术为突破口，通过"标准引领+产业协同+场景驱动"三位一体策略，在 2026-2030 年实现中国 OCS 产业从跟跑到并跑、部分领域领跑的跨越。</p>
+</blockquote>
+<p><strong>政策背景（2026年4月最新）：</strong></p>
+<blockquote>
+<p>2026年4月2日，工信部办公厅发布《关于开展普惠算力赋能中小企业发展专项行动的通知》，明确提出<strong>"推动全光交换等技术应用部署，降低算力应用终端到服务器的网络时延，提升应用交互体验"</strong>。这标志着 OCS 技术已从产业探索上升为国家政策导向，为产业发展提供了强有力的政策支撑。</p>
+</blockquote>
+<p><strong>核心判断（基于 SuperPod 白皮书）：</strong></p>
+<blockquote>
+<p>超节点竞争的本质不是比拼任何单一规格，而是比拼<strong>系统能力边界外移的速度</strong>。系统能力边界外移速度的差异，会以指数形式放大为系统性能差距。四代之后差距即达 16 倍。</p>
+</blockquote>
+<p>这意味着 OCS 不仅是一项技术选择，而是决定中国智算产业能否避免被拉开"难以逆转的差距"的关键变量。本建议书提出的发展路线，正是基于这一核心判断，为中国 OCS 产业提供从架构到落地的完整技术路径。</p>
+<hr />
+<h2>第一章 形势分析：为什么中国必须发展 OCS</h2>
+<h3>1.1 全球 OCS 发展态势</h3>
+<h4>1.1.1 技术突破期（2026年为关键拐点）</h4>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>全球现状</th>
+<th>中国现状</th>
+<th>差距评估</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>技术成熟度</strong></td>
+<td>谷歌 TPU v4-v7 已规模化部署 8 年</td>
+<td>光迅 16×16 量产，32×32 验证中</td>
+<td>1-2 年</td>
+</tr>
+<tr>
+<td><strong>产业链完整性</strong></td>
+<td>美、日、欧主导核心器件</td>
+<td>全链条覆盖，部分环节领先</td>
+<td>局部领先</td>
+</tr>
+<tr>
+<td><strong>市场规模</strong></td>
+<td>2025年 7.83 亿美元</td>
+<td>2025年约 22 亿元人民币</td>
+<td>全球第二</td>
+</tr>
+<tr>
+<td><strong>标准话语权</strong></td>
+<td>OCP OCS 项目组 2025 年成立</td>
+<td>积极参与，尚未主导</td>
+<td>需突破</td>
+</tr>
+</tbody>
+</table>
+<h4>1.1.2 关键驱动因素</h4>
+<ol>
+<li><strong>AI 算力需求爆发</strong>：模型参数每年 10 倍增长，GPU 集群从十万卡向百万卡迈进</li>
+<li><strong>电交换瓶颈凸显</strong>：功耗墙（单台 51.2T 电交换机超 3000W）、时延（数十微秒）、距离（&lt;1.5米）</li>
+<li><strong>OCS 技术优势</strong>：功耗降低 40%-70%、时延微秒/纳秒级、协议透明、带宽密度高</li>
+<li><strong>国家政策推动</strong>：工信部明确支持全光交换技术应用部署（2026年4月）</li>
+</ol>
+<h3>1.2 政策环境：国家层面明确支持</h3>
+<h4>1.2.1 工信部最新政策导向（2026年4月）</h4>
+<p><strong>文件依据：</strong></p>
+<blockquote>
+<p>2026年4月2日，工业和信息化部办公厅发布《关于开展普惠算力赋能中小企业发展专项行动的通知》（工信厅通信〔2026〕XX号）</p>
+</blockquote>
+<p><strong>核心内容：</strong>
+- <strong>增强算网融合支撑能力</strong>：深入开展城域"毫秒用算"专项行动，扩大城域1毫秒时延圈覆盖范围
+- <strong>推动全光交换技术应用</strong>：明确提出"推动全光交换等技术应用部署，降低算力应用终端到服务器的网络时延，提升应用交互体验"
+- <strong>打通最后一公里</strong>：提升网络对算力服务的支撑能力，打通"最后一公里"网络和算力接入瓶颈，降低中小企业算力访问时延
+- <strong>光网络延伸</strong>：推动光网络设备向产业园区等用户侧延伸</p>
+<p><strong>政策意义：</strong>
+| 维度 | 政策价值 |
+|------|---------|
+| <strong>技术路线确认</strong> | 国家层面首次明确将全光交换（OCS）作为算力网络关键技术路线 |
+| <strong>产业信心提振</strong> | 为 OCS 产业发展提供政策背书，降低市场不确定性 |
+| <strong>市场需求释放</strong> | 运营商、云厂商将加速 OCS 采购和部署 |
+| <strong>标准制定加速</strong> | 为 OCS 国家标准、行业标准制定提供政策依据 |</p>
+<h4>1.2.2 算力安全自主可控</h4>
+<ul>
+<li><strong>现状风险</strong>：高端电交换芯片（51.2T/102.4T）依赖进口，存在断供风险</li>
+<li><strong>OCS 优势</strong>：硅光技术基于 CMOS 工艺，不依赖先进制程（7nm/5nm），可实现自主可控</li>
+<li><strong>关键数据</strong>：中国信通院报告显示，算力每投入 1 元，带动 3-4 元经济产出</li>
+</ul>
+<h4>1.2.3 "东数西算"工程需求</h4>
+<table>
+<thead>
+<tr>
+<th>工程目标</th>
+<th>OCS 价值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>全国一体化算力网</td>
+<td>OCS 实现算力枢纽间全光互联，时延 &lt;10ms</td>
+</tr>
+<tr>
+<td>绿色低碳（PUE&lt;1.25）</td>
+<td>OCS 功耗较电交换降低 40%-70%</td>
+</tr>
+<tr>
+<td>毫秒用算</td>
+<td>OCS 微秒级切换，支撑实时算力调度</td>
+</tr>
+<tr>
+<td>八大枢纽互联</td>
+<td>OCS 简化网络层级，光模块使用量减少 50%</td>
+</tr>
+</tbody>
+</table>
+<h4>1.2.4 产业换道超车机遇</h4>
+<ul>
+<li><strong>传统电交换</strong>：思科、Arista 等垄断，中国难以突破</li>
+<li><strong>OCS 新赛道</strong>：全球处于同一起跑线，中国具备全产业链优势</li>
+<li><strong>窗口期</strong>：2026-2028 年是技术路线定型关键期，错过将失去话语权</li>
+</ul>
+<hr />
+<h2>第二章 中国 OCS 产业现状评估</h2>
+<h3>2.1 产业链全景图</h3>
+<pre><code>┌─────────────────────────────────────────────────────────────────┐
+│                        中国 OCS 产业链                           │
+├─────────────┬─────────────┬─────────────┬───────────────────────┤
+│   上游支撑   │   中游核心   │   下游应用   │      标准/生态        │
+├─────────────┼─────────────┼─────────────┼───────────────────────┤
+│ • 上海微电子 │ • 光迅科技   │ • 阿里云    │ • OCP 中国（OCTC）    │
+│   90nm 光刻 │   (16×16量产)│ • 腾讯云    │ • 中国通信标准化协会  │
+│ • 中芯国际   │ • 德科立     │ • 字节跳动  │ • 开放数据中心委员会  │
+│   8英寸硅光 │   (32×32样机)│ • 华为      │                       │
+│ • 赛微电子   │ • 华工正源   │ • 壁仞科技  │                       │
+│   MEMS代工  │ • 联特科技   │ • 三大运营商│                       │
+│ • 罗博特科   │ • 曦智科技   │             │                       │
+│   键合设备   │ • 中兴通讯   │             │                       │
+└─────────────┴─────────────┴─────────────┴───────────────────────┘
+</code></pre>
+<h3>2.2 优势与短板分析</h3>
+<h4>2.2.1 核心优势</h4>
+<table>
+<thead>
+<tr>
+<th>优势领域</th>
+<th>具体表现</th>
+<th>战略价值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>全产业链覆盖</strong></td>
+<td>全球除美国外唯一具备完整 OCS 产业链</td>
+<td>供应链安全、成本优势</td>
+</tr>
+<tr>
+<td><strong>成本竞争力</strong></td>
+<td>量产成本较海外低 30%-40%</td>
+<td>规模化替代基础</td>
+</tr>
+<tr>
+<td><strong>市场需求巨大</strong></td>
+<td>全球最大 AI 算力、数据中心市场</td>
+<td>应用场景丰富</td>
+</tr>
+<tr>
+<td><strong>技术追赶快</strong></td>
+<td>光迅 16×16 量产，32×32 验证</td>
+<td>差距持续缩小</td>
+</tr>
+<tr>
+<td><strong>政策支持力度大</strong></td>
+<td>"东数西算"、"毫秒用算"等专项</td>
+<td>发展环境优越</td>
+</tr>
+</tbody>
+</table>
+<h4>2.2.2 关键短板</h4>
+<table>
+<thead>
+<tr>
+<th>短板领域</th>
+<th>具体表现</th>
+<th>风险等级</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>大端口芯片</strong></td>
+<td>海外 128×128 验证中，国内 64×64 研发中</td>
+<td>🔴 高</td>
+</tr>
+<tr>
+<td><strong>高端设备依赖</strong></td>
+<td>DUV 光刻机、硅光 EDA 依赖进口</td>
+<td>🔴 高</td>
+</tr>
+<tr>
+<td><strong>标准话语权</strong></td>
+<td>OCP OCS 项目组刚成立，中国参与度低</td>
+<td>🟡 中</td>
+</tr>
+<tr>
+<td><strong>规模化商用</strong></td>
+<td>海外谷歌已部署 8 年，国内刚起步</td>
+<td>🟡 中</td>
+</tr>
+<tr>
+<td><strong>高端人才</strong></td>
+<td>硅光设计、系统架构人才短缺</td>
+<td>🟡 中</td>
+</tr>
+</tbody>
+</table>
+<h3>2.3 竞争格局分析</h3>
+<h4>2.3.1 国内主要玩家</h4>
+<table>
+<thead>
+<tr>
+<th>企业</th>
+<th>技术路线</th>
+<th>产品状态</th>
+<th>核心优势</th>
+<th>代表客户</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>光迅科技</strong></td>
+<td>MEMS+硅光</td>
+<td>16×16 量产，32×32 验证</td>
+<td>全栈自研、谷歌供应链</td>
+<td>谷歌、华为、运营商</td>
+</tr>
+<tr>
+<td><strong>德科立</strong></td>
+<td>硅基波导</td>
+<td>32×32 样机</td>
+<td>纳秒级切换、海外客户</td>
+<td>谷歌（送样验证）</td>
+</tr>
+<tr>
+<td><strong>华工正源</strong></td>
+<td>硅光</td>
+<td>研发完成，试点中</td>
+<td>光模块协同、云厂商资源</td>
+<td>阿里云</td>
+</tr>
+<tr>
+<td><strong>曦智科技</strong></td>
+<td>硅光 OCS</td>
+<td>128 卡超节点商用</td>
+<td>全球首创、超节点方案</td>
+<td>壁仞科技、中兴</td>
+</tr>
+<tr>
+<td><strong>中兴通讯</strong></td>
+<td>电信级 OCS</td>
+<td>整机量产</td>
+<td>运营商渠道、系统集成</td>
+<td>三大运营商</td>
+</tr>
+</tbody>
+</table>
+<h4>2.3.2 国际对标</h4>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>谷歌（美国）</th>
+<th>中国头部企业</th>
+<th>差距</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>部署规模</strong></td>
+<td>TPU 集群 8 年，万台级</td>
+<td>刚起步，百台级</td>
+<td>3-5 年</td>
+</tr>
+<tr>
+<td><strong>端口规模</strong></td>
+<td>136×136（量产），320×320（研发）</td>
+<td>16×16（量产），32×32（验证）</td>
+<td>2-3 代</td>
+</tr>
+<tr>
+<td><strong>技术成熟度</strong></td>
+<td>自研 Palomar MEMS，成熟</td>
+<td>多种路线并行，探索中</td>
+<td>2-3 年</td>
+</tr>
+<tr>
+<td><strong>生态掌控</strong></td>
+<td>自研 ASIC+OCS 垂直整合</td>
+<td>依赖外部 GPU/ASIC</td>
+<td>生态短板</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>第三章 发展路线建议</h2>
+<h3>3.1 总体思路</h3>
+<p><strong>"三步走"战略：</strong></p>
+<pre><code>┌─────────────────────────────────────────────────────────────────┐
+│  第一步（2026-2027）：重点突破，局部领先                         │
+│  • 32×64 端口硅光芯片量产                                       │
+│  • 拓扑感知等原创技术标准化                                      │
+│  • 东数西算枢纽节点试点部署                                      │
+├─────────────────────────────────────────────────────────────────┤
+│  第二步（2028-2029）：规模商用，并跑发展                         │
+│  • 64×64/128×128 高端口芯片突破                                 │
+│  • 国产 AI 芯片+OCS 协同方案成熟                                 │
+│  • 云厂商、运营商规模采购                                        │
+├─────────────────────────────────────────────────────────────────┤
+│  第三步（2030+）：生态引领，部分领跑                             │
+│  • 256×256+ 超大端口芯片                                        │
+│  • OCS+CPO 全光互联架构普及                                      │
+│  • 中国标准走向国际                                              │
+└─────────────────────────────────────────────────────────────────┘
+</code></pre>
+<h3>3.2 技术路线建议</h3>
+<h4>3.2.1 双轮驱动：MEMS + 硅光并行</h4>
+<table>
+<thead>
+<tr>
+<th>技术路线</th>
+<th>适用场景</th>
+<th>发展重点</th>
+<th>目标企业</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>MEMS OCS</strong></td>
+<td>大端口、低频次切换</td>
+<td>320×320+ 超大端口，&lt;1.5dB 插入损耗</td>
+<td>光迅科技、赛微电子</td>
+</tr>
+<tr>
+<td><strong>硅光 OCS</strong></td>
+<td>中小端口、高频次切换</td>
+<td>纳秒级切换，与 CPO 集成</td>
+<td>德科立、曦智科技、华工正源</td>
+</tr>
+</tbody>
+</table>
+<h4>3.2.2 三大探索构型：适配不同场景需求</h4>
+<p>根据 SuperPod 白皮书的技术分析，结合中国产业现状，建议重点布局以下三种 OCS 架构：</p>
+<p><strong>构型一：Dragonfly + OCS（规模优先型）</strong></p>
+<pre><code>┌─────────────────────────────────────────────────────────────┐
+│  Dragonfly + OCS 架构特点                                    │
+├─────────────────────────────────────────────────────────────┤
+│ • 组内电交换（Clos）+ 组间光交换（OCS）                      │
+│ • 适合万卡级超节点，规模扩展性最强                           │
+│ • 复用以太网生态（RoCEv2/UEC），软件适配成本低               │
+│ • 代表：英伟达 Spectrum-X                                    │
+└─────────────────────────────────────────────────────────────┘
+</code></pre>
+<p><strong>发展建议：</strong>
+- <strong>近期目标</strong>：实现 256 端口 OCS 与 51.2T 电交换机的协同部署
+- <strong>中期目标</strong>：突破 512 端口 OCS，支撑 32K GPU 规模
+- <strong>适用场景</strong>：通用 GPU 集群、大规模训练中心</p>
+<p><strong>构型二：3D Torus + OCS（能效优先型）</strong></p>
+<pre><code>┌─────────────────────────────────────────────────────────────┐
+│  3D Torus + OCS 架构特点                                     │
+├─────────────────────────────────────────────────────────────┤
+│ • 全光层互联，无大型电交换机                                 │
+│ • 拓扑可动态重构（Ring/Mesh/Torus）                          │
+│ • 网络成本 &lt;5%，网络功耗 &lt;3%（系统占比）                     │
+│ • 代表：谷歌 TPU v4/v7（Palomar OCS）                        │
+└─────────────────────────────────────────────────────────────┘
+</code></pre>
+<p><strong>发展建议：</strong>
+- <strong>近期目标</strong>：实现 64-256 节点 Cube 内电连接 + OCS 光互联
+- <strong>中期目标</strong>：突破 4096-9216 卡 Pod 规模
+- <strong>适用场景</strong>：AI 专用集群、高能效智算中心</p>
+<p><strong>构型三：大环路 + dOCS（动态重构型）</strong></p>
+<pre><code>┌─────────────────────────────────────────────────────────────┐
+│  大环路 + dOCS（动态 OCS）架构特点                           │
+├─────────────────────────────────────────────────────────────┤
+│ • 基于拓扑感知的动态光路调整                                 │
+│ • 支持故障秒级切换、业务无损迁移                             │
+│ • 与主人&quot;拓扑感知&quot;专利技术高度契合                           │
+│ • 代表：华为 DC-OXC + 拓扑感知专利                           │
+└─────────────────────────────────────────────────────────────┘
+</code></pre>
+<p><strong>发展建议：</strong>
+- <strong>近期目标</strong>：拓扑感知技术标准化，集成到商用 OCS 设备
+- <strong>中期目标</strong>：实现毫秒级故障切换、分钟级业务调度
+- <strong>适用场景</strong>：运营商骨干网、高可靠金融算力中心</p>
+<h4>3.2.3 三阶段发展路径（与 SuperPod 白皮书对齐）</h4>
+<table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>时间</th>
+<th>核心任务</th>
+<th>技术重点</th>
+<th>规模目标</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>近期</strong></td>
+<td>2026-2027</td>
+<td>标准构型落地</td>
+<td>LPO、HBM4、低精度优化</td>
+<td>8K GPU</td>
+</tr>
+<tr>
+<td><strong>中期</strong></td>
+<td>2028-2029</td>
+<td>探索构型验证</td>
+<td>OCS、CPO、Chiplet+UCIe</td>
+<td>32K GPU</td>
+</tr>
+<tr>
+<td><strong>长期</strong></td>
+<td>2030+</td>
+<td>全栈能力构建</td>
+<td>芯片出光、全光直连</td>
+<td>64K+ GPU</td>
+</tr>
+</tbody>
+</table>
+<h4>3.2.2 原创技术突破：拓扑感知</h4>
+<p><strong>核心建议：</strong> 将"基于两端光模块写码的 OCS 光传输拓扑快速认知与动态调整方法"（专利号：20260052-P26BJ0080CNCN）上升为<strong>国家标准</strong>，并推动成为<strong>国际标准</strong>。</p>
+<p><strong>技术价值：</strong>
+- 解决 OCS 网络配置复杂痛点
+- 实现拓扑秒级自动感知
+- 提升网络可靠性和运维效率</p>
+<p><strong>产业化路径：</strong>
+1. <strong>2026年</strong>：与华为、中兴等设备商合作，集成到 DC-OXC/OCS 设备
+2. <strong>2027年</strong>：在"东数西算"枢纽节点试点验证
+3. <strong>2028年</strong>：向 OCP 提交标准提案，推动国际标准化</p>
+<h4>3.2.3 关键技术攻关清单</h4>
+<table>
+<thead>
+<tr>
+<th>技术方向</th>
+<th>攻关目标</th>
+<th>时间节点</th>
+<th>承担主体</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>高端口硅光芯片</strong></td>
+<td>64×64 量产，128×128 验证</td>
+<td>2027年</td>
+<td>光迅、德科立</td>
+</tr>
+<tr>
+<td><strong>超低损耗 MEMS</strong></td>
+<td>插入损耗 &lt;1.0dB，320×320 端口</td>
+<td>2028年</td>
+<td>光迅、赛微电子</td>
+</tr>
+<tr>
+<td><strong>纳秒级切换</strong></td>
+<td>切换时延 &lt;100ns</td>
+<td>2028年</td>
+<td>德科立、曦智</td>
+</tr>
+<tr>
+<td><strong>OCS+CPO 集成</strong></td>
+<td>光开关与光引擎单片集成</td>
+<td>2029年</td>
+<td>华工正源、联特</td>
+</tr>
+<tr>
+<td><strong>智能调度算法</strong></td>
+<td>AI 驱动的拓扑动态优化</td>
+<td>2027年</td>
+<td>云厂商、算法公司</td>
+</tr>
+</tbody>
+</table>
+<h3>3.3 产业生态建议</h3>
+<h4>3.3.1 构建"国家队+民企"协同创新体</h4>
+<p><strong>协同框架（基于 SuperPod 白皮书产业协同理念）：</strong></p>
+<pre><code>┌─────────────────────────────────────────────────────────────┐
+│                    国家 OCS 创新联合体                        │
+├─────────────────┬─────────────────┬─────────────────────────┤
+│    芯片设计      │    系统设备      │      应用示范           │
+├─────────────────┼─────────────────┼─────────────────────────┤
+│ • 光迅科技       │ • 华为           │ • 阿里云（云场景）       │
+│ • 德科立         │ • 中兴通讯       │ • 三大运营商（电信场景） │
+│ • 曦智科技       │ • 烽火通信       │ • 壁仞科技（AI场景）     │
+│ • 华工正源       │                 │                         │
+└─────────────────┴─────────────────┴─────────────────────────┘
+         ↓                    ↓                    ↓
+    ┌─────────────────────────────────────────────────────────┐
+    │              共性技术平台（建议国家支持）                 │
+    │  • 硅光工艺平台（中芯国际/华虹）                          │
+    │  • MEMS 代工平台（赛微电子）                              │
+    │  • 测试验证中心（信通院）                                 │
+    │  • EDA 工具开发（联合攻关）                               │
+    └─────────────────────────────────────────────────────────┘
+</code></pre>
+<p><strong>核心协同逻辑（引自白皮书）：</strong></p>
+<blockquote>
+<p>"超节点竞争不是单产品竞争，而是跨芯片、互联、光学、封装、整机、软件与运维的协同工程。建立这种协同能力需要产学研用各方的深度参与——芯片厂商提供算力底座、光模块厂商提供互联能力、封装厂商突破集成极限、云厂商验证规模化落地、高校和研究机构提供前沿理论和算法支撑。"</p>
+</blockquote>
+<p><strong>中国 OCS 产业协同重点：</strong></p>
+<table>
+<thead>
+<tr>
+<th>参与方</th>
+<th>核心能力</th>
+<th>协同任务</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>芯片厂商</strong>（光迅、德科立、曦智）</td>
+<td>OCS 芯片设计</td>
+<td>提供算力底座，突破大端口芯片</td>
+</tr>
+<tr>
+<td><strong>光模块厂商</strong>（华工正源、联特）</td>
+<td>高速光互联</td>
+<td>提供互联能力，协同 CPO 集成</td>
+</tr>
+<tr>
+<td><strong>封装厂商</strong>（长电、通富）</td>
+<td>先进封装</td>
+<td>突破集成极限，Chiplet+UCIe</td>
+</tr>
+<tr>
+<td><strong>云厂商</strong>（阿里、腾讯、字节）</td>
+<td>规模化验证</td>
+<td>验证规模化落地，反馈需求</td>
+</tr>
+<tr>
+<td><strong>研究机构</strong>（信通院、清华）</td>
+<td>前沿理论</td>
+<td>提供算法支撑，建立仿真平台</td>
+</tr>
+</tbody>
+</table>
+<h4>3.3.2 培育本土 AI 芯片+OCS 协同生态</h4>
+<p><strong>现状问题：</strong> 国内 AI 芯片生态分散（华为昇腾、壁仞、寒武纪等），缺乏统一互联标准</p>
+<p><strong>建议方案：</strong>
+- 以 OCS 为中立互联层，兼容不同 AI 芯片
+- 参考"光跃超节点"模式（曦智+壁仞+中兴），推广至更多国产 AI 芯片
+- 制定《国产 AI 芯片光互联接口规范》团体标准</p>
+<h3>3.4 标准战略建议</h3>
+<h4>3.4.1 国内标准布局</h4>
+<table>
+<thead>
+<tr>
+<th>标准层级</th>
+<th>标准名称</th>
+<th>主导单位</th>
+<th>时间节点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>国家标准</strong></td>
+<td>OCS 光传输拓扑快速认知技术要求</td>
+<td>信通院</td>
+<td>2027年发布</td>
+</tr>
+<tr>
+<td><strong>行业标准</strong></td>
+<td>数据中心 OCS 设备技术规范</td>
+<td>开放数据中心委员会</td>
+<td>2026年发布</td>
+</tr>
+<tr>
+<td><strong>团体标准</strong></td>
+<td>硅光 OCS 芯片测试方法</td>
+<td>中国通信标准化协会</td>
+<td>2026年发布</td>
+</tr>
+<tr>
+<td><strong>地方标准</strong></td>
+<td>东数西算枢纽 OCS 应用指南</td>
+<td>八大枢纽节点</td>
+<td>2027年发布</td>
+</tr>
+</tbody>
+</table>
+<h4>3.4.2 国际标准突破路径</h4>
+<p><strong>目标：</strong> 2028 年前在 OCP OCS 项目组中取得实质性话语权</p>
+<p><strong>路径：</strong>
+1. <strong>2026年</strong>：积极参与 OCP OCS 项目组，提交技术白皮书
+2. <strong>2027年</strong>：联合光迅、华为等企业，提交拓扑感知等原创技术提案
+3. <strong>2028年</strong>：主导 1-2 项 OCS 国际标准制定
+4. <strong>2029年</strong>：推动中国 OCS 标准成为国际主流方案之一</p>
+<h3>3.5 场景应用建议</h3>
+<h4>3.5.1 基于帕累托前沿的方案选择框架</h4>
+<p><strong>引入 SuperPod 白皮书帕累托分析框架：</strong></p>
+<p>不同 OCS 架构在"拓扑弹性、故障隔离、功耗与 TCO、规模上限、时延、生态成熟度"六个维度上呈现不同的帕累托位置。建议根据具体场景需求，选择最适配的架构：</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th style="text-align: center;">标准构型<br>(电交换)</th>
+<th style="text-align: center;">Dragonfly+OCS</th>
+<th style="text-align: center;">3D Torus+OCS</th>
+<th style="text-align: center;">大环路+dOCS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>拓扑弹性</strong></td>
+<td style="text-align: center;">★</td>
+<td style="text-align: center;">★★★</td>
+<td style="text-align: center;">★★★★★</td>
+<td style="text-align: center;">★★★★★</td>
+</tr>
+<tr>
+<td><strong>故障隔离</strong></td>
+<td style="text-align: center;">★★★★★</td>
+<td style="text-align: center;">★★★★★</td>
+<td style="text-align: center;">★★★★★</td>
+<td style="text-align: center;">★★★★★</td>
+</tr>
+<tr>
+<td><strong>功耗与 TCO</strong></td>
+<td style="text-align: center;">★★★</td>
+<td style="text-align: center;">★★★★</td>
+<td style="text-align: center;">★★★★★</td>
+<td style="text-align: center;">★★★★</td>
+</tr>
+<tr>
+<td><strong>规模上限</strong></td>
+<td style="text-align: center;">★★★</td>
+<td style="text-align: center;">★★★★★</td>
+<td style="text-align: center;">★★★★</td>
+<td style="text-align: center;">★★★★</td>
+</tr>
+<tr>
+<td><strong>时延</strong></td>
+<td style="text-align: center;">★★★★</td>
+<td style="text-align: center;">★★★★★</td>
+<td style="text-align: center;">★★★★</td>
+<td style="text-align: center;">★★★★</td>
+</tr>
+<tr>
+<td><strong>生态成熟度</strong></td>
+<td style="text-align: center;">★★★★★</td>
+<td style="text-align: center;">★★★★</td>
+<td style="text-align: center;">★★★</td>
+<td style="text-align: center;">★★★★</td>
+</tr>
+</tbody>
+</table>
+<p><strong>选择原则：</strong>
+- <strong>规模优先</strong>（万卡级通用集群）→ Dragonfly + OCS
+- <strong>能效优先</strong>（AI 专用集群）→ 3D Torus + OCS
+- <strong>可靠优先</strong>（金融、运营商）→ 大环路 + dOCS</p>
+<h4>3.5.2 分场景推进策略</h4>
+<table>
+<thead>
+<tr>
+<th>应用场景</th>
+<th>推荐架构</th>
+<th>成熟度</th>
+<th>推进策略</th>
+<th>目标规模（2030）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AI 智算中心</strong></td>
+<td>3D Torus+OCS</td>
+<td>高</td>
+<td>优先突破，规模部署</td>
+<td>50% 新建智算中心采用 OCS</td>
+</tr>
+<tr>
+<td><strong>东数西算枢纽</strong></td>
+<td>大环路+dOCS</td>
+<td>中</td>
+<td>政策驱动，试点先行</td>
+<td>八大枢纽全覆盖</td>
+</tr>
+<tr>
+<td><strong>超大规模数据中心</strong></td>
+<td>Dragonfly+OCS</td>
+<td>中</td>
+<td>头部云厂商引领</td>
+<td>阿里云、腾讯云等规模采购</td>
+</tr>
+<tr>
+<td><strong>运营商骨干网</strong></td>
+<td>大环路+dOCS</td>
+<td>低</td>
+<td>与 OXC 协同演进</td>
+<td>重点城市试点</td>
+</tr>
+<tr>
+<td><strong>6G 承载网</strong></td>
+<td>3D Torus+OCS</td>
+<td>低</td>
+<td>前瞻布局，技术储备</td>
+<td>试验网验证</td>
+</tr>
+</tbody>
+</table>
+<h4>3.5.2 重点工程建议</h4>
+<p><strong>工程一："全光智算"示范工程（2026-2028）</strong>
+- 目标：建设 10 个千卡级全光 OCS 智算中心示范
+- 投资：预计 50 亿元
+- 效果：训练效率提升 40%，能耗降低 40%</p>
+<p><strong>工程二："东数西算"全光互联工程（2027-2030）</strong>
+- 目标：八大枢纽节点间 OCS 全光互联
+- 投资：纳入"东数西算"专项，预计 100 亿元
+- 效果：枢纽间时延 &lt;10ms，带宽提升 3 倍</p>
+<p><strong>工程三：国产 AI 芯片 OCS 互联生态工程（2026-2029）</strong>
+- 目标：实现 5 家以上国产 AI 芯片与 OCS 协同优化
+- 投资：企业主导，政府补贴 30%
+- 效果：打破英伟达 NVLink 生态垄断</p>
+<hr />
+<h2>第四章 政策建议</h2>
+<h3>4.1 政策依据与延续</h3>
+<h4>4.1.1 现有政策基础（2026年4月最新）</h4>
+<p><strong>工信部《关于开展普惠算力赋能中小企业发展专项行动的通知》（2026年4月2日）</strong></p>
+<p>该文件为 OCS 产业发展提供了直接的政策依据：</p>
+<table>
+<thead>
+<tr>
+<th>政策要点</th>
+<th>对 OCS 产业的指导意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>推动全光交换技术应用部署</strong></td>
+<td>明确 OCS 为国家支持的算力网络关键技术</td>
+</tr>
+<tr>
+<td><strong>降低算力应用终端到服务器的网络时延</strong></td>
+<td>确立低时延为 OCS 核心应用场景</td>
+</tr>
+<tr>
+<td><strong>提升应用交互体验</strong></td>
+<td>为 OCS 在实时计算、AI 推理等场景应用提供政策支撑</td>
+</tr>
+<tr>
+<td><strong>打通"最后一公里"网络瓶颈</strong></td>
+<td>支持 OCS 向边缘、园区延伸部署</td>
+</tr>
+<tr>
+<td><strong>推动光网络设备向产业园区延伸</strong></td>
+<td>明确 OCS 在产业互联网中的应用方向</td>
+</tr>
+</tbody>
+</table>
+<p><strong>政策延续建议：</strong>
+本建议书提出的发展路线与工信部文件精神高度契合，建议在此基础上进一步：
+1. 制定《全光交换技术发展专项规划》
+2. 出台 OCS 设备采购、应用示范的配套实施细则
+3. 建立跨部门协调机制，统筹推进 OCS 产业发展</p>
+<h3>4.2 顶层设计建议</h3>
+<h4>4.2.1 纳入国家战略</h4>
+<p><strong>建议：</strong> 将 OCS 技术列入《"十五五"国家信息化规划》重大技术方向，与集成电路、人工智能并列</p>
+<p><strong>理由：</strong>
+- OCS 是算力基础设施的核心技术
+- 关乎算力安全自主可控
+- 技术窗口期关键，需国家层面统筹
+- <strong>已获得工信部政策背书（2026年4月文件）</strong></p>
+<p><strong>核心判断（引自 SuperPod 白皮书）：</strong></p>
+<blockquote>
+<p>"系统能力边界外移速度的差异，会以指数形式放大为系统性能差距。能在制程、封装、互联、精度和软件栈上同时引入新设计变量的参与者，系统算力每两年增长 5–6 倍；仅在芯片层面优化的参与者，每两年约 2–2.5 倍。四代之后差距即达 16 倍。"</p>
+</blockquote>
+<p>这意味着 OCS 不仅是一项技术选择，而是决定中国智算产业能否避免被拉开"难以逆转的差距"的关键变量。</p>
+<h4>4.2.2 设立专项基金</h4>
+<p><strong>建议：</strong> 设立"全光互联技术与产业创新发展专项"，规模 100 亿元，分 5 年实施</p>
+<p><strong>重点支持方向：</strong>
+1. 高端口硅光/MEMS 芯片研发（40%）
+2. OCS 系统设备产业化（30%）
+3. 应用示范与生态建设（20%）
+4. 标准制定与人才培养（10%）</p>
+<h3>4.3 产业政策建议</h3>
+<h4>4.3.1 财税支持</h4>
+<table>
+<thead>
+<tr>
+<th>政策工具</th>
+<th>具体措施</th>
+<th>适用对象</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>研发费用加计扣除</strong></td>
+<td>OCS 芯片研发加计扣除比例提高至 150%</td>
+<td>芯片设计企业</td>
+</tr>
+<tr>
+<td><strong>首台套补贴</strong></td>
+<td>国产 OCS 设备首台套补贴 30%</td>
+<td>设备制造企业</td>
+</tr>
+<tr>
+<td><strong>示范应用补贴</strong></td>
+<td>采用国产 OCS 的数据中心补贴 PUE 改造费用</td>
+<td>数据中心运营方</td>
+</tr>
+<tr>
+<td><strong>政府采购优先</strong></td>
+<td>政府投资的数据中心优先采用国产 OCS</td>
+<td>新建数据中心</td>
+</tr>
+</tbody>
+</table>
+<h4>4.3.2 金融支持</h4>
+<ul>
+<li><strong>产业基金</strong>：引导国家集成电路基金、国家制造业转型升级基金投资 OCS 领域</li>
+<li><strong>信贷支持</strong>：对 OCS 企业提供优惠贷款，利率下浮 20%</li>
+<li><strong>上市支持</strong>：支持符合条件的 OCS 企业在科创板、北交所上市</li>
+</ul>
+<h3>4.4 人才政策建议</h3>
+<h4>4.4.1 紧缺人才清单</h4>
+<p>将"硅光芯片设计工程师""OCS 系统架构师""光互联网络工程师"列入《国家紧缺人才目录》</p>
+<h4>4.4.2 人才培养计划</h4>
+<ul>
+<li><strong>高校布局</strong>：在 10 所"双一流"高校设立"硅光技术"微专业</li>
+<li><strong>产教融合</strong>：支持光迅、华为等企业与高校共建实验室</li>
+<li><strong>国际引进</strong>：对海外 OCS 领域高端人才给予个税优惠、落户便利</li>
+</ul>
+<hr />
+<h2>第五章 风险与应对</h2>
+<h3>5.1 主要风险识别</h3>
+<table>
+<thead>
+<tr>
+<th>风险类型</th>
+<th>风险描述</th>
+<th>发生概率</th>
+<th>影响程度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>技术风险</strong></td>
+<td>大端口芯片技术攻关不及预期</td>
+<td>中</td>
+<td>高</td>
+</tr>
+<tr>
+<td><strong>市场风险</strong></td>
+<td>电交换技术突破，OCS 需求不及预期</td>
+<td>低</td>
+<td>高</td>
+</tr>
+<tr>
+<td><strong>供应链风险</strong></td>
+<td>高端光刻机、EDA 工具断供</td>
+<td>中</td>
+<td>高</td>
+</tr>
+<tr>
+<td><strong>生态风险</strong></td>
+<td>国产 AI 芯片生态分散，难以形成合力</td>
+<td>高</td>
+<td>中</td>
+</tr>
+<tr>
+<td><strong>国际竞争风险</strong></td>
+<td>美国加大技术封锁</td>
+<td>中</td>
+<td>高</td>
+</tr>
+</tbody>
+</table>
+<h3>5.2 应对策略</h3>
+<h4>5.2.1 技术风险应对</h4>
+<ul>
+<li><strong>多路线布局</strong>：MEMS、硅光、液晶等多技术路线并行，不押注单一路线</li>
+<li><strong>产学研协同</strong>：依托国家实验室、高校攻克基础科学问题</li>
+<li><strong>国际合作</strong>：与欧洲、日本等非美地区开展技术合作</li>
+</ul>
+<h4>5.2.2 供应链风险应对</h4>
+<ul>
+<li><strong>国产替代加速</strong>：支持上海微电子 90nm 以下光刻机研发</li>
+<li><strong>工艺创新</strong>：发展无需先进制程的硅光技术（90nm 即可满足）</li>
+<li><strong>战略储备</strong>：建立关键设备、材料战略储备机制</li>
+</ul>
+<h4>5.2.3 生态风险应对</h4>
+<ul>
+<li><strong>中立互联层</strong>：以 OCS 为中立层，兼容不同 AI 芯片</li>
+<li><strong>开源社区</strong>：建立开源 OCS 控制软件社区，降低生态门槛</li>
+<li><strong>联盟机制</strong>：成立"国产 AI 芯片光互联联盟"，协同技术路线</li>
+</ul>
+<hr />
+<h2>第六章 实施路线图</h2>
+<h3>6.1 2026 年重点任务</h3>
+<table>
+<thead>
+<tr>
+<th>季度</th>
+<th>重点任务</th>
+<th>责任主体</th>
+<th>交付物</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Q1</strong></td>
+<td>完成 OCS 产业发展白皮书</td>
+<td>信通院</td>
+<td>白皮书</td>
+</tr>
+<tr>
+<td><strong>Q2</strong></td>
+<td>启动"全光智算"示范工程</td>
+<td>工信部</td>
+<td>10个示范项目立项</td>
+</tr>
+<tr>
+<td><strong>Q3</strong></td>
+<td>发布《数据中心 OCS 技术规范》</td>
+<td>开放数据中心委员会</td>
+<td>行业标准</td>
+</tr>
+<tr>
+<td><strong>Q4</strong></td>
+<td>举办首届中国 OCS 产业大会</td>
+<td>地方政府/行业协会</td>
+<td>产业联盟成立</td>
+</tr>
+</tbody>
+</table>
+<h3>6.2 2027-2030 里程碑</h3>
+<pre><code>2027年 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ├─ 32×64 端口硅光芯片量产
+  ├─ 拓扑感知技术成为行业标准
+  ├─ &quot;东数西算&quot;枢纽节点 OCS 试点部署
+  └─ 国产 OCS 市场占有率 30%
+
+2028年 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ├─ 64×64/128×128 高端口芯片突破
+  ├─ 向 OCP 提交国际标准提案
+  ├─ 云厂商、运营商规模采购
+  └─ 国产 OCS 市场占有率 50%
+
+2029年 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ├─ OCS+CPO 集成方案成熟
+  ├─ 主导 1-2 项 OCS 国际标准
+  ├─ 国产 AI 芯片+OCS 生态形成
+  └─ 国产 OCS 市场占有率 70%
+
+2030年 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ├─ 256×256+ 超大端口芯片
+  ├─ 全光互联架构普及
+  ├─ 中国 OCS 标准走向国际
+  └─ 全球 OCS 市场占比 35%
+</code></pre>
+<hr />
+<h2>第七章 结语</h2>
+<p>OCS 技术是算力基础设施的"光革命"，是中国实现算力自主可控、换道超车的历史机遇。当前，全球 OCS 产业正处于从技术验证向规模化商用过渡的关键期，中国具备全产业链优势、巨大市场需求和强有力政策支持，完全有条件在全球 OCS 产业格局中占据重要地位。</p>
+<h3>核心判断：系统能力边界外移的竞争</h3>
+<p><strong>引自 SuperPod 白皮书：</strong></p>
+<blockquote>
+<p>"超节点竞争的本质不是比拼任何单一规格，而是比拼系统能力边界外移的速度。当前能够独立完成这种全栈联合优化的，只有极少数垂直整合型平台。对多数参与者而言，约束往往不在某项单一技术缺失，而在于芯片、互联、封装、软件、整机与验证尚未形成系统闭环。"</p>
+</blockquote>
+<p><strong>对中国 OCS 产业的启示：</strong>
+- <strong>不是单点技术追赶</strong>：不要试图在 MEMS 或硅光单条曲线上做线性追赶
+- <strong>而是系统能力建设</strong>：要在芯片、互联、光学、封装、整机、软件与运维的协同工程上建立闭环
+- <strong>关键窗口期</strong>：2026-2028 年是技术路线定型关键期，错过将失去话语权</p>
+<h3>核心建议总结</h3>
+<ol>
+<li><strong>技术突破</strong>：以"拓扑感知"原创技术为突破口，布局 Dragonfly+OCS、3D Torus+OCS、大环路+dOCS 三大构型</li>
+<li><strong>标准引领</strong>：积极参与 OCP OCS 项目组，争取 2028 年前主导 1-2 项国际标准</li>
+<li><strong>产业协同</strong>：构建"国家队+民企"协同创新体，形成从芯片到系统的全栈能力</li>
+<li><strong>场景驱动</strong>：以"东数西算"、AI 智算中心为抓手，规模拉动产业，实现帕累托最优</li>
+<li><strong>政策支持</strong>：设立 100 亿元专项基金，完善财税、金融、人才政策体系</li>
+</ol>
+<h3>三个关键里程碑</h3>
+<table>
+<thead>
+<tr>
+<th>时间节点</th>
+<th>里程碑目标</th>
+<th>标志事件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>2027年</strong></td>
+<td>并跑发展</td>
+<td>国产 OCS 市场占有率 50%，主导 1 项国际标准</td>
+</tr>
+<tr>
+<td><strong>2029年</strong></td>
+<td>生态引领</td>
+<td>国产 AI 芯片+OCS 生态成熟，OCS+CPO 集成方案落地</td>
+</tr>
+<tr>
+<td><strong>2031年</strong></td>
+<td>部分领跑</td>
+<td>256×256+ 超大端口芯片突破，全球市场份额 35%</td>
+</tr>
+</tbody>
+</table>
+<h3>最终判断</h3>
+<p><strong>时不我待，只争朝夕！</strong></p>
+<p>建议相关部门高度重视 OCS 技术发展，抓住 2026-2028 年关键窗口期，统筹规划、加大投入、协同推进。将"拓扑感知"等原创技术上升为国家标准，推动中国 OCS 产业从"跟跑"到"并跑"再到"部分领跑"，将中国建设成为全球 OCS 技术创新中心和产业高地，为数字中国、网络强国建设提供坚实支撑。</p>
+<hr />
+<p><strong>本建议书技术框架参考：</strong>
+- SuperPod 白皮书《分布式 AI 推理加速架构技术白皮书》（DeepLink 团队，2025）
+- 专利《一种基于两端光模块写码的 OCS 光传输拓扑快速认知与动态调整方法》（专利号：20260052-P26BJ0080CNCN）
+- 中国信通院《中国算力发展指数研究报告》
+- OCP《OCS Subproject Technical Specification》</p>
+<hr />
+<h2>附录</h2>
+<h3>附录 A：术语表</h3>
+<table>
+<thead>
+<tr>
+<th>术语</th>
+<th>英文全称</th>
+<th>中文解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OCS</td>
+<td>Optical Circuit Switching</td>
+<td>光电路交换</td>
+</tr>
+<tr>
+<td>MEMS</td>
+<td>Micro-Electro-Mechanical System</td>
+<td>微机电系统</td>
+</tr>
+<tr>
+<td>CPO</td>
+<td>Co-Packaged Optics</td>
+<td>共封装光学</td>
+</tr>
+<tr>
+<td>OXC</td>
+<td>Optical Cross Connect</td>
+<td>光交叉连接</td>
+</tr>
+<tr>
+<td>OCP</td>
+<td>Open Compute Project</td>
+<td>开放计算项目</td>
+</tr>
+<tr>
+<td>PUE</td>
+<td>Power Usage Effectiveness</td>
+<td>电能使用效率</td>
+</tr>
+</tbody>
+</table>
+<h3>附录 B：主要参考来源</h3>
+<ol>
+<li><strong>SuperPod 白皮书</strong>《分布式 AI 推理加速架构技术白皮书》（DeepLink 团队，2025）</li>
+<li>核心贡献：提出系统能力边界外移分析框架、帕累托前沿方法论</li>
+<li>OCS 架构：Dragonfly+OCS、3D Torus+OCS、大环路+dOCS 三种探索构型</li>
+<li>
+<p>产业路径：近期/中期/长期三阶段发展策略</p>
+</li>
+<li>
+<p>中国信通院《中国算力发展指数研究报告》</p>
+</li>
+<li>
+<p>国家数据局《"数据要素×"三年行动计划》</p>
+</li>
+<li>
+<p>工信部《算力基础设施高质量发展行动计划》</p>
+</li>
+<li>
+<p>Cignal AI《Optical Circuit Switching Market Report》</p>
+</li>
+<li>
+<p>OCP《OCS Subproject Technical Specification》</p>
+</li>
+<li>
+<p>各企业公开资料及技术白皮书</p>
+</li>
+</ol>
+<h3>附录 C：编制团队</h3>
+<ul>
+<li><strong>技术顾问</strong>：星宿老仙</li>
+<li><strong>产业分析</strong>：AI 助手</li>
+<li><strong>数据支持</strong>：Tavily 搜索平台</li>
+<li><strong>文档编制</strong>：OpenClaw 智能助手</li>
+</ul>
+<hr />
+<p><strong>编制完成日期：</strong> 2026年4月10日<br />
+<strong>建议书版本：</strong> V1.0<br />
+<strong>下次修订计划：</strong> 2026年7月（根据 OCP China Day 反馈修订）</p>
+<hr />
+<p><em>本建议书基于公开信息编制，仅供相关部门决策参考。</em></p>
+</body>
+</html>

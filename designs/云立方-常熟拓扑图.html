@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>云立方-常熟传输拓扑图</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f0f2f5;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        
+        /* 拓扑图容器 */
+        .topology {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 40px;
+            margin: 40px 0;
+            position: relative;
+        }
+        
+        /* 站点框 */
+        .site {
+            flex: 1;
+            border: 2px solid #e8e8e8;
+            border-radius: 12px;
+            padding: 20px;
+            background: #fafafa;
+            min-width: 300px;
+        }
+        .site-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #1890ff;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #1890ff;
+        }
+        
+        /* 平面分组 */
+        .plane-group {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            border-left: 4px solid;
+        }
+        .plane-group.guangxun {
+            border-left-color: #52c41a;
+        }
+        .plane-group.huawei {
+            border-left-color: #fa8c16;
+        }
+        .plane-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        .plane-title.guangxun { color: #52c41a; }
+        .plane-title.huawei { color: #fa8c16; }
+        
+        /* 设备节点 */
+        .device {
+            background: #f6ffed;
+            border: 1px solid #b7eb8f;
+            border-radius: 6px;
+            padding: 10px 12px;
+            margin-bottom: 8px;
+            font-size: 12px;
+            font-family: 'Courier New', monospace;
+        }
+        .device.huawei-device {
+            background: #fff7e6;
+            border-color: #ffd591;
+        }
+        .device-label {
+            font-weight: bold;
+            color: #262626;
+            margin-bottom: 4px;
+        }
+        .device-info {
+            color: #595959;
+            font-size: 11px;
+        }
+        
+        /* 波长连接 */
+        .wavelengths {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            margin-top: 6px;
+        }
+        .wavelength-tag {
+            background: #1890ff;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: bold;
+        }
+        
+        /* 连接箭头 */
+        .connection-zone {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-width: 150px;
+            padding: 20px;
+        }
+        .arrow {
+            font-size: 40px;
+            color: #1890ff;
+            margin: 10px 0;
+        }
+        .connection-info {
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+        }
+        .connection-stats {
+            background: #e6f7ff;
+            padding: 10px 20px;
+            border-radius: 20px;
+            margin-top: 10px;
+        }
+        .connection-stats .number {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1890ff;
+        }
+        .connection-stats .label {
+            font-size: 12px;
+            color: #666;
+        }
+        
+        /* 图例 */
+        .legend {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e8e8e8;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: #666;
+        }
+        .legend-color {
+            width: 16px;
+            height: 16px;
+            border-radius: 4px;
+        }
+        
+        /* 统计信息 */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .stat-card {
+            background: white;
+            border: 1px solid #e8e8e8;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+        }
+        .stat-card h4 {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+        .stat-card .value {
+            font-size: 28px;
+            font-weight: bold;
+            color: #1890ff;
+        }
+        
+        /* 波长范围 */
+        .wave-range {
+            font-size: 11px;
+            color: #8c8c8c;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📡 云立方-常熟传输拓扑图</h1>
+        <p class="subtitle">基于波长连接数据自动生成 | 45条波长连接</p>
+        
+        <!-- 统计信息 -->
+        <div class="stats">
+            <div class="stat-card">
+                <h4>总波长数</h4>
+                <div class="value">45</div>
+            </div>
+            <div class="stat-card">
+                <h4>光迅平面</h4>
+                <div class="value">22</div>
+            </div>
+            <div class="stat-card">
+                <h4>华为平面</h4>
+                <div class="value">23</div>
+            </div>
+            <div class="stat-card">
+                <h4>设备对</h4>
+                <div class="value">12</div>
+            </div>
+        </div>
+        
+        <!-- 拓扑图 -->
+        <div class="topology">
+            <!-- 云立方站点 -->
+            <div class="site">
+                <div class="site-title">🏢 云立方机房 (A端)</div>
+                
+                <!-- 光迅平面 -->
+                <div class="plane-group guangxun">
+                    <div class="plane-title guangxun">🟢 光迅平面</div>
+                    
+                    <div class="device">
+                        <div class="device-label">301-D02-O2 (常熟方向-2)</div>
+                        <div class="device-info">8条波长 → 常熟B2-301-F10-O2</div>
+                        <div class="wavelengths">
+                            <span class="wavelength-tag">191.35</span>
+                            <span class="wavelength-tag">191.45</span>
+                            <span class="wavelength-tag">191.55</span>
+                            <span class="wavelength-tag">191.65</span>
+                            <span class="wavelength-tag">191.75</span>
+                            <span class="wavelength-tag">191.85</span>
+                            <span class="wavelength-tag">191.95</span>
+                            <span class="wavelength-tag">192.05</span>
+                        </div>
+                    </div>
+                    
+                    <div class="device">
+                        <div class="device-label">301-D02-T1200 (常熟方向-2)</div>
+                        <div class="device-info">1条波长 → 常熟B2-301-F10-T1200</div>
+                        <div class="wavelengths">
+                            <span class="wavelength-tag">192.25</span>
+                        </div>
+                    </div>
+                    
+                    <div class="device">
+                        <div class="device-label">301-E02-O2 (常熟方向)</div>
+                        <div class="device-info">13条波长 → 常熟B2-301-F10-O2</div>
+                        <div class="wave-range">波长范围: 192.35-193.45</div>
+                    </div>
+                </div>
+                
+                <!-- 华为平面 -->
+                <div class="plane-group huawei">
+                    <div class="plane-title huawei">🟠 华为平面</div>
+                    
+                    <div class="device huawei-device">
+                        <div class="device-label">301-E02-9-216-DC908Pro</div>
+                        <div class="device-info">4条波长 → B1-301-F20-9-619-DC908Pro</div>
+                        <div class="wavelengths">
+                            <span class="wavelength-tag">192.3</span>
+                            <span class="wavelength-tag">192.4</span>
+                            <span class="wavelength-tag">192.5</span>
+                            <span class="wavelength-tag">192.6</span>
+                        </div>
+                    </div>
+                    
+                    <div class="device huawei-device">
+                        <div class="device-label">301-E02-9-218-DC908Pro</div>
+                        <div class="device-info">8条波长 → B1-301-F20-9-621-DC908Pro</div>
+                        <div class="wavelengths">
+                            <span class="wavelength-tag">194.7</span>
+                            <span class="wavelength-tag">194.8</span>
+                            <span class="wavelength-tag">194.9</span>
+                            <span class="wavelength-tag">195.0</span>
+                            <span class="wavelength-tag">195.1</span>
+                            <span class="wavelength-tag">195.2</span>
+                            <span class="wavelength-tag">195.3</span>
+                            <span class="wavelength-tag">195.4</span>
+                        </div>
+                    </div>
+                    
+                    <div class="device huawei-device">
+                        <div class="device-label">301-E05-9-210-DC908</div>
+                        <div class="device-info">2条波长 → 301-F18-9-611 / 常熟B1-301-F19-O2-1</div>
+                        <div class="wavelengths">
+                            <span class="wavelength-tag">192.7</span>
+                            <span class="wavelength-tag">194.6</span>
+                        </div>
+                    </div>
+                    
+                    <div class="device huawei-device">
+                        <div class="device-label">301-E05-9-211-DC908</div>
+                        <div class="device-info">4条波长 → 301-F18-9-61x系列</div>
+                        <div class="wavelengths">
+                            <span class="wavelength-tag">193.2</span>
+                            <span class="wavelength-tag">193.3</span>
+                            <span class="wavelength-tag">193.6</span>
+                            <span class="wavelength-tag">193.8</span>
+                        </div>
+                    </div>
+                    
+                    <div class="device huawei-device">
+                        <div class="device-label">301-E05-9-212-DC908</div>
+                        <div class="device-info">2条波长 → 301-F18-9-612/613-DC908</div>
+                        <div class="wavelengths">
+                            <span class="wavelength-tag">193.4</span>
+                            <span class="wavelength-tag">193.5</span>
+                        </div>
+                    </div>
+                    
+                    <div class="device huawei-device">
+                        <div class="device-label">301-E05-光迅O2</div>
+                        <div class="device-info">4条波长 → 常熟B1-301-F19-O2-1</div>
+                        <div class="wavelengths">
+                            <span class="wavelength-tag">193.9</span>
+                            <span class="wavelength-tag">194.0</span>
+                            <span class="wavelength-tag">194.1</span>
+                            <span class="wavelength-tag">194.2</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 连接区域 -->
+            <div class="connection-zone">
+                <div class="arrow">⇄</div>
+                <div class="connection-info">
+                    <div>双平面互联</div>
+                    <div style="margin-top: 5px;">光迅OCS + 华为OTN</div>
+                </div>
+                <div class="connection-stats">
+                    <div class="number">45</div>
+                    <div class="label">波长连接</div>
+                </div>
+            </div>
+            
+            <!-- 常熟站点 -->
+            <div class="site">
+                <div class="site-title">🏢 常熟机房 (Z端)</div>
+                
+                <!-- 光迅平面 -->
+                <div class="plane-group guangxun">
+                    <div class="plane-title guangxun">🟢 光迅平面</div>
+                    
+                    <div class="device">
+                        <div class="device-label">B2-301-F10-O2 (云立方方向-1)</div>
+                        <div class="device-info">← 云立方301-D02-O2 (8条)</div>
+                        <div class="wavelengths">
+                            <span class="wavelength-tag">191.35</span>
+                            <span class="wavelength-tag">191.45</span>
+                            <span class="wavelength-tag">191.55</span>
+                            <span class="wavelength-tag">191.65</span>
+                            <span class="wavelength-tag">191.75</span>
+                            <span class="wavelength-tag">191.85</span>
+                            <span class="wavelength-tag">191.95</span>
+                            <span class="wavelength-tag">192.05</span>
+                        </div>
+                    </div>
+                    
+                    <div class="device">
+                        <div class="device-label">B2-301-F10-T1200 (云立方方向-1)</div>
+                        <div class="device-info">← 云立方301-D02-T1200 (1条)</div>
+                        <div class="wavelengths">
+                            <span class="wavelength-tag">192.25</span>
+                        </div>
+                    </div>
+                    
+                    <div class="device">
+                        <div class="device-label">B2-301-F10-O2 (云立方方向-2)</div>
+                        <div class="device-info">← 云立方301-E02-O2 (13条)</div>
+                        <div class="wave-range">波长范围: 192.35-193.45</div>
+                    </div>
+                </div>
+                
+                <!-- 华为平面 -->
+                <div class="plane-group huawei">
+                    <div class="plane-title huawei">🟠 华为平面</div>
+                    
+                    <div class="device huawei-device">
+                        <div class="device-label">B1-301-F20-9-619-DC908Pro</div>
+                        <div class="device-info">← 云立方301-E02-9-216-DC908Pro (4条)</div>
+                        <div class="wavelengths">
+                            <span class="wavelength-tag">192.3</span>
+                            <span class="wavelength-tag">192.4</span>
+                            <span class="wavelength-tag">192.5</span>
+                            <span class="wavelength-tag">192.6</span>
+                        </div>
+                    </div>
+                    
+                    <div class="device huawei-device">
+                        <div class="device-label">B1-301-F20-9-621-DC908Pro</div>
+                        <div class="device-info">← 云立方301-E02-9-218-DC908Pro (8条)</div>
+                        <div class="wavelengths">
+                            <span class="wavelength-tag">194.7</span>
+                            <span class="wavelength-tag">194.8</span>
+                            <span class="wavelength-tag">194.9</span>
+                            <span class="wavelength-tag">195.0</span>
+                            <span class="wavelength-tag">195.1</span>
+                            <span class="wavelength-tag">195.2</span>
+                            <span class="wavelength-tag">195.3</span>
+                            <span class="wavelength-tag">195.4</span>
+                        </div>
+                    </div>
+                    
+                    <div class="device huawei-device">
+                        <div class="device-label">301-F18-9-611-DC908</div>
+                        <div class="device-info">← 云立方301-E05-9-210-DC908 (1条)</div>
+                        <div class="wavelengths">
+                            <span class="wavelength-tag">192.7</span>
+                        </div>
+                    </div>
+                    
+                    <div class="device huawei-device">
+                        <div class="device-label">301-F18-9-612/613/615-DC908</div>
+                        <div class="device-info">← 云立方301-E05-9-211/212-DC908 (6条)</div>
+                        <div class="wavelengths">
+                            <span class="wavelength-tag">193.2</span>
+                            <span class="wavelength-tag">193.3</span>
+                            <span class="wavelength-tag">193.4</span>
+                            <span class="wavelength-tag">193.5</span>
+                            <span class="wavelength-tag">193.8</span>
+                        </div>
+                    </div>
+                    
+                    <div class="device huawei-device">
+                        <div class="device-label">B1-301-F19-O2-1</div>
+                        <div class="device-info">← 云立方301-E05-光迅O2/210-DC908 (6条)</div>
+                        <div class="wavelengths">
+                            <span class="wavelength-tag">193.9</span>
+                            <span class="wavelength-tag">194.0</span>
+                            <span class="wavelength-tag">194.1</span>
+                            <span class="wavelength-tag">194.2</span>
+                            <span class="wavelength-tag">194.6</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 图例 -->
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color" style="background: #52c41a;"></div>
+                <span>光迅平面 (OCS光交换)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #fa8c16;"></div>
+                <span>华为平面 (OTN光传送)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #1890ff;"></div>
+                <span>波长连接</span>
+            </div>
+        </div>
+        
+        <!-- 说明 -->
+        <div style="margin-top: 30px; padding: 20px; background: #f6ffed; border-radius: 8px; font-size: 13px; color: #666;">
+            <strong>拓扑说明：</strong><br>
+            • 云立方-常熟采用双平面架构：光迅平面（绿色）使用OCS光交换设备，华为平面（橙色）使用OTN光传送设备<br>
+            • 共45条波长连接，覆盖191.35-195.4nm波长范围<br>
+            • 每个波长标签显示具体波长值，设备框显示互联关系
+        </div>
+    </div>
+</body>
+</html>

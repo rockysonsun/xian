@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>云立方机房数据展示 - N2MD02双波长</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f7fa;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        .stats-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        .stat-card h3 {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .stat-value {
+            font-size: 32px;
+            font-weight: bold;
+            color: #1890ff;
+        }
+        .section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e8e8e8;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+        th, td {
+            padding: 10px 8px;
+            text-align: left;
+            border: 1px solid #e8e8e8;
+        }
+        th {
+            background: #fafafa;
+            font-weight: 600;
+        }
+        tr:hover {
+            background: #f5f7fa;
+        }
+        .vendor-huawei {
+            background: #e6f7ff;
+        }
+        .vendor-accesslink {
+            background: #fff7e6;
+        }
+        .card-n2md02 {
+            border-left: 3px solid #52c41a;
+        }
+        .wavelength-tag {
+            display: inline-block;
+            background: #1890ff;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            margin: 1px;
+            font-family: monospace;
+        }
+        .port-label {
+            font-size: 10px;
+            color: #666;
+            margin-right: 4px;
+        }
+        .dual-wl-indicator {
+            display: inline-block;
+            background: #52c41a;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: bold;
+        }
+        .single-wl-indicator {
+            display: inline-block;
+            background: #1890ff;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 10px;
+        }
+        .device-group {
+            margin-bottom: 30px;
+        }
+        .device-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+            padding: 8px 12px;
+            background: #f0f0f0;
+            border-radius: 4px;
+        }
+        .filter-bar {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+        .filter-btn {
+            padding: 6px 12px;
+            border: 1px solid #d9d9d9;
+            background: white;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 13px;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            background: #1890ff;
+            color: white;
+            border-color: #1890ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏢 云立方机房数据展示</h1>
+        <p class="subtitle">N2MD02双波长板卡逻辑：IN1OUT1 + IN2OUT2</p>
+        
+        <div class="stats-cards">
+            <div class="stat-card">
+                <h3>总设备数</h3>
+                <div class="stat-value" id="deviceCount">-</div>
+            </div>
+            <div class="stat-card">
+                <h3>总板卡数</h3>
+                <div class="stat-value" id="cardCount">-</div>
+            </div>
+            <div class="stat-card">
+                <h3>波长端口数</h3>
+                <div class="stat-value" id="portCount">-</div>
+            </div>
+            <div class="stat-card">
+                <h3>N2MD02板卡</h3>
+                <div class="stat-value" id="n2md02Count">-</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">📋 板卡明细表（按设备分组）</div>
+            <div class="filter-bar">
+                <button class="filter-btn active" onclick="showAll()">全部</button>
+                <button class="filter-btn" onclick="showN2MD02()">仅N2MD02</button>
+                <button class="filter-btn" onclick="showHuawei()">仅HUAWEI</button>
+                <button class="filter-btn" onclick="showAccesslink()">仅ACCESSLINK</button>
+            </div>
+            <div id="dataTable"></div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">🔍 N2MD02双波长板卡详情</div>
+            <table id="n2md02Table">
+                <thead>
+                    <tr>
+                        <th>设备名称</th>
+                        <th>槽位</th>
+                        <th>板卡型号</th>
+                        <th>端口1 (IN1OUT1)</th>
+                        <th>端口2 (IN2OUT2)</th>
+                        <th>方向</th>
+                        <th>原始描述</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        // 模拟数据 - 实际应从API获取
+        const mockData = {
+            devices: [
+                { id: 1, name: "9-210-DC908", vendor: "HUAWEI", type: "DC908" },
+                { id: 2, name: "9-211-DC908", vendor: "HUAWEI", type: "DC908" },
+                { id: 3, name: "9-212-DC908", vendor: "HUAWEI", type: "DC908" },
+                { id: 4, name: "9-213-DC908", vendor: "HUAWEI", type: "DC908" },
+                { id: 5, name: "9-214-DC908Pro(WJ)", vendor: "HUAWEI", type: "DC908Pro" },
+            ],
+            cards: [
+                // N2MD02 双波长示例
+                { device_id: 1, slot: 1, card_type: "N2MD02", status: "active", 
+                  wavelengths: [], description: "IN1OUT1-空置/IN2OUT2-空置" },
+                { device_id: 1, slot: 2, card_type: "N2MD02", status: "active", 
+                  wavelengths: [{port: "IN2OUT2", wl: "193.5"}, {port: "IN2OUT2", wl: "193.7"}], 
+                  direction: "云立方-常熟-嘉定",
+                  description: "苏州-嘉定-云立方 193.5 FOADM)-下线/IN2OUT2-云立方-嘉定-常熟-FOADM-193.7" },
+                { device_id: 1, slot: 3, card_type: "N2MD02", status: "active", 
+                  wavelengths: [{port: "IN1OUT1", wl: "192.7"}], 
+                  direction: "云立方-常熟",
+                  description: "IN1OUT1-云立方-常熟-直达-192.7/IN2OUT2-空置" },
+                { device_id: 1, slot: 4, card_type: "N2MD02", status: "active", 
+                  wavelengths: [{port: "IN1OUT1", wl: "194.6"}], 
+                  direction: "云立方-常熟-嘉定",
+                  description: "IN1OUT1-云立方-常熟-嘉定-FOADM-194.6/IN2OUT2-空置" },
+                { device_id: 1, slot: 6, card_type: "N2MD02", status: "active", 
+                  wavelengths: [{port: "IN1OUT1", wl: "192.2"}], 
+                  direction: "云立方-吴江",
+                  description: "IN1OUT1-云立方-吴江-192.2/IN2OUT2-空置" },
+                { device_id: 1, slot: 7, card_type: "N2MD02", status: "active", 
+                  wavelengths: [{port: "IN1OUT1", wl: "192.3"}], 
+                  direction: "云立方-吴江",
+                  description: "IN1OUT1-云立方-吴江-192.3/IN2OUT2-空置" },
+                
+                // N2MS04 单波长示例
+                { device_id: 2, slot: 1, card_type: "N2MS04", status: "active", 
+                  wavelengths: [{port: "IN/OUT", wl: "193.3"}], 
+                  direction: "云立方-常熟",
+                  description: "IN/OUT（云立方-常熟-193.3）" },
+                { device_id: 2, slot: 2, card_type: "N2MS04", status: "active", 
+                  wavelengths: [{port: "IN/OUT", wl: "193.6"}], 
+                  direction: "云立方-常熟",
+                  description: "IN/OUT（云立方-常熟-193.6）" },
+                
+                // N2MD04CE 双波长示例
+                { device_id: 5, slot: 1, card_type: "1-N2MD04CE-C1", status: "active", 
+                  wavelengths: [{port: "IN/OUT", wl: "192.4"}], 
+                  direction: "云立方-吴江",
+                  description: "IN/OUT（云立方-吴江192.4）" },
+            ]
+        };
+
+        // 计算统计
+        document.getElementById('deviceCount').textContent = mockData.devices.length;
+        document.getElementById('cardCount').textContent = mockData.cards.length;
+        
+        let portCount = 0;
+        let n2md02Count = 0;
+        mockData.cards.forEach(card => {
+            portCount += card.wavelengths.length;
+            if (card.card_type.includes('N2MD02')) {
+                n2md02Count++;
+            }
+        });
+        document.getElementById('portCount').textContent = portCount;
+        document.getElementById('n2md02Count').textContent = n2md02Count;
+
+        // 渲染主表格
+        function renderTable(cards) {
+            let html = '<table><thead><tr>';
+            html += '<th>设备</th><th>厂商</th><th>槽位</th><th>板卡型号</th><th>波长容量</th><th>波长详情</th><th>方向</th>';
+            html += '</tr></thead><tbody>';
+            
+            cards.forEach(card => {
+                const device = mockData.devices.find(d => d.id === card.device_id);
+                const vendorClass = device.vendor === 'HUAWEI' ? 'vendor-huawei' : 'vendor-accesslink';
+                const n2md02Class = card.card_type.includes('N2MD02') ? 'card-n2md02' : '';
+                
+                let wlCapacity = 1;
+                if (card.card_type.includes('N2MD02') || card.card_type.includes('N2MD04CE')) {
+                    wlCapacity = 2;
+                }
+                
+                let wlDisplay = '';
+                card.wavelengths.forEach(wl => {
+                    wlDisplay += `<span class="wavelength-tag">${wl.port}: ${wl.wl}nm</span>`;
+                });
+                
+                const capacityBadge = wlCapacity === 2 
+                    ? '<span class="dual-wl-indicator">双波长</span>' 
+                    : '<span class="single-wl-indicator">单波长</span>';
+                
+                html += `<tr class="${vendorClass} ${n2md02Class}">`;
+                html += `<td>${device.name}</td>`;
+                html += `<td>${device.vendor}</td>`;
+                html += `<td>${card.slot}</td>`;
+                html += `<td><strong>${card.card_type}</strong></td>`;
+                html += `<td>${capacityBadge}</td>`;
+                html += `<td>${wlDisplay || '-'}</td>`;
+                html += `<td>${card.direction || '-'}</td>`;
+                html += '</tr>';
+            });
+            
+            html += '</tbody></table>';
+            document.getElementById('dataTable').innerHTML = html;
+        }
+
+        // 渲染N2MD02详情表
+        function renderN2MD02Table() {
+            const n2md02Cards = mockData.cards.filter(c => c.card_type === 'N2MD02');
+            let html = '';
+            
+            n2md02Cards.forEach(card => {
+                const device = mockData.devices.find(d => d.id === card.device_id);
+                
+                // 查找IN1OUT1和IN2OUT2的波长
+                const wl1 = card.wavelengths.find(w => w.port === 'IN1OUT1');
+                const wl2 = card.wavelengths.find(w => w.port === 'IN2OUT2');
+                
+                html += '<tr>';
+                html += `<td>${device.name}</td>`;
+                html += `<td>${card.slot}</td>`;
+                html += `<td><strong>${card.card_type}</strong></td>`;
+                html += `<td>${wl1 ? `<span class="wavelength-tag">${wl1.wl}nm</span>` : '<span style="color:#999">空置</span>'}</td>`;
+                html += `<td>${wl2 ? `<span class="wavelength-tag">${wl2.wl}nm</span>` : '<span style="color:#999">空置</span>'}</td>`;
+                html += `<td>${card.direction || '-'}</td>`;
+                html += `<td style="font-size:11px;color:#666">${card.description}</td>`;
+                html += '</tr>';
+            });
+            
+            document.querySelector('#n2md02Table tbody').innerHTML = html;
+        }
+
+        // 筛选函数
+        function showAll() {
+            renderTable(mockData.cards);
+            updateFilterBtn(event.target);
+        }
+        
+        function showN2MD02() {
+            renderTable(mockData.cards.filter(c => c.card_type.includes('N2MD02')));
+            updateFilterBtn(event.target);
+        }
+        
+        function showHuawei() {
+            const huaweiDeviceIds = mockData.devices.filter(d => d.vendor === 'HUAWEI').map(d => d.id);
+            renderTable(mockData.cards.filter(c => huaweiDeviceIds.includes(c.device_id)));
+            updateFilterBtn(event.target);
+        }
+        
+        function showAccesslink() {
+            const alDeviceIds = mockData.devices.filter(d => d.vendor === 'ACCESSLINK').map(d => d.id);
+            renderTable(mockData.cards.filter(c => alDeviceIds.includes(c.device_id)));
+            updateFilterBtn(event.target);
+        }
+        
+        function updateFilterBtn(btn) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+        }
+
+        // 初始化
+        renderTable(mockData.cards);
+        renderN2MD02Table();
+    </script>
+</body>
+</html>

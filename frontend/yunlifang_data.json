@@ -1,0 +1,1037 @@
+[
+  {
+    "device_name": "云立方301-E02-O2（吴江方向）",
+    "vendor": "ACCESSLINK",
+    "slot_number": 1,
+    "card_type": "T04X1-103",
+    "status": "active",
+    "description": "光迅光层吴江方向192.4",
+    "wavelengths": "IN/OUT:192.4"
+  },
+  {
+    "device_name": "云立方301-E02-O2（吴江方向）",
+    "vendor": "ACCESSLINK",
+    "slot_number": 2,
+    "card_type": "T04X1-103",
+    "status": "active",
+    "description": "光迅光层吴江方向192.5",
+    "wavelengths": "IN/OUT:192.5"
+  },
+  {
+    "device_name": "云立方301-E02-O2（吴江方向）",
+    "vendor": "ACCESSLINK",
+    "slot_number": 3,
+    "card_type": "T04X1-103",
+    "status": "active",
+    "description": "光迅光层吴江方向192.6",
+    "wavelengths": "IN/OUT:192.6"
+  },
+  {
+    "device_name": "云立方301-E02-O2（吴江方向）",
+    "vendor": "ACCESSLINK",
+    "slot_number": 4,
+    "card_type": "T04X1-103",
+    "status": "active",
+    "description": "光迅光层吴江方向192.7",
+    "wavelengths": "IN/OUT:192.7"
+  },
+  {
+    "device_name": "云立方301-E02-O2（吴江方向）",
+    "vendor": "ACCESSLINK",
+    "slot_number": 5,
+    "card_type": "T04X1-103",
+    "status": "active",
+    "description": "光迅光层吴江方向192.8",
+    "wavelengths": "IN/OUT:192.8"
+  },
+  {
+    "device_name": "云立方301-E02-O2（吴江方向）",
+    "vendor": "ACCESSLINK",
+    "slot_number": 6,
+    "card_type": "T04X1-103",
+    "status": "active",
+    "description": "光迅光层吴江方向192.9",
+    "wavelengths": "IN/OUT:192.9"
+  },
+  {
+    "device_name": "云立方301-E02-O2（吴江方向）",
+    "vendor": "ACCESSLINK",
+    "slot_number": 7,
+    "card_type": "T04X1-103",
+    "status": "active",
+    "description": "光迅光层吴江方向193.0",
+    "wavelengths": "IN/OUT:193.0"
+  },
+  {
+    "device_name": "云立方301-E02-O2（吴江方向）",
+    "vendor": "ACCESSLINK",
+    "slot_number": 8,
+    "card_type": "T04X1-103",
+    "status": "active",
+    "description": "光迅光层吴江方向193.1",
+    "wavelengths": "IN/OUT:193.1"
+  },
+  {
+    "device_name": "云立方301-E02-O2（吴江方向）-8U（10.152.254.124）",
+    "vendor": "ACCESSLINK",
+    "slot_number": 1,
+    "card_type": "T04X1-103",
+    "status": "active",
+    "description": "光迅光层吴江方向193.2",
+    "wavelengths": "IN/OUT:193.2"
+  },
+  {
+    "device_name": "云立方301-E02-O2（吴江方向）-8U（10.152.254.124）",
+    "vendor": "ACCESSLINK",
+    "slot_number": 2,
+    "card_type": "T04X1-103",
+    "status": "active",
+    "description": "光迅光层吴江方向193.3",
+    "wavelengths": "IN/OUT:193.3"
+  },
+  {
+    "device_name": "云立方301-E02-O2（吴江方向）-8U（10.152.254.124）",
+    "vendor": "ACCESSLINK",
+    "slot_number": 3,
+    "card_type": "T04X1-103",
+    "status": "active",
+    "description": "光迅光层吴江方向193.4",
+    "wavelengths": "IN/OUT:193.4"
+  },
+  {
+    "device_name": "云立方301-E02-O2（吴江方向）-8U（10.152.254.124）",
+    "vendor": "ACCESSLINK",
+    "slot_number": 4,
+    "card_type": "T04X1-103",
+    "status": "active",
+    "description": "光迅光层吴江方向193.5",
+    "wavelengths": "IN/OUT:193.5"
+  },
+  {
+    "device_name": "云立方301-E02-O2（吴江方向）-8U（10.152.254.124）",
+    "vendor": "ACCESSLINK",
+    "slot_number": 5,
+    "card_type": "T04X1-103",
+    "status": "active",
+    "description": "光迅光层吴江方向193.6",
+    "wavelengths": "IN/OUT:193.6"
+  },
+  {
+    "device_name": "云立方301-E02-O2（吴江方向）-8U（10.152.254.124）",
+    "vendor": "ACCESSLINK",
+    "slot_number": 6,
+    "card_type": "T04X1-103",
+    "status": "active",
+    "description": "光迅光层吴江方向193.7",
+    "wavelengths": "IN/OUT:193.7"
+  },
+  {
+    "device_name": "云立方301-E02-O2（吴江方向）-8U（10.152.254.124）",
+    "vendor": "ACCESSLINK",
+    "slot_number": 7,
+    "card_type": "T04X1-103",
+    "status": "active",
+    "description": "光迅光层吴江方向193.8",
+    "wavelengths": "IN/OUT:193.8"
+  },
+  {
+    "device_name": "云立方301-E02-O2（吴江方向）-8U（10.152.254.124）",
+    "vendor": "ACCESSLINK",
+    "slot_number": 8,
+    "card_type": "T04X1-103",
+    "status": "active",
+    "description": "光迅光层吴江方向193.9",
+    "wavelengths": "IN/OUT:193.9"
+  },
+  {
+    "device_name": "云立方301-E02-O2（嘉定方向）",
+    "vendor": "ACCESSLINK",
+    "slot_number": 1,
+    "card_type": "T04X1-103",
+    "status": "active",
+    "description": "光迅光层嘉定方向192.75",
+    "wavelengths": "IN/OUT:192.7"
+  },
+  {
+    "device_name": "云立方301-E02-O2（嘉定方向）",
+    "vendor": "ACCESSLINK",
+    "slot_number": 2,
+    "card_type": "T04X1-103",
+    "status": "active",
+    "description": "光迅光层嘉定方向192.85",
+    "wavelengths": "IN/OUT:192.8"
+  },
+  {
+    "device_name": "云立方301-E02-O2（嘉定方向）",
+    "vendor": "ACCESSLINK",
+    "slot_number": 3,
+    "card_type": "T04X1-103",
+    "status": "active",
+    "description": "光迅光层嘉定方向192.95",
+    "wavelengths": "IN/OUT:192.9"
+  },
+  {
+    "device_name": "云立方301-E02-O2（嘉定方向）",
+    "vendor": "ACCESSLINK",
+    "slot_number": 4,
+    "card_type": "T04X1-103",
+    "status": "active",
+    "description": "光迅光层嘉定方向193.05",
+    "wavelengths": "IN/OUT:193.0"
+  },
+  {
+    "device_name": "云立方301-E02-O2（常熟方向）",
+    "vendor": "ACCESSLINK",
+    "slot_number": 1,
+    "card_type": "T04X1-103",
+    "status": "active",
+    "description": "光迅光层常熟方向192.35",
+    "wavelengths": "IN/OUT:192.3"
+  },
+  {
+    "device_name": "云立方301-E02-O2（常熟方向）",
+    "vendor": "ACCESSLINK",
+    "slot_number": 2,
+    "card_type": "T04X1-103",
+    "status": "active",
+    "description": "光迅光层常熟方向192.45",
+    "wavelengths": "IN/OUT:192.4"
+  },
+  {
+    "device_name": "云立方301-E02-O2（常熟方向）",
+    "vendor": "ACCESSLINK",
+    "slot_number": 3,
+    "card_type": "T04X1-103",
+    "status": "active",
+    "description": "光迅光层常熟方向192.55",
+    "wavelengths": "IN/OUT:192.5"
+  },
+  {
+    "device_name": "云立方301-E02-O2（常熟方向）",
+    "vendor": "ACCESSLINK",
+    "slot_number": 4,
+    "card_type": "T04X1-103",
+    "status": "active",
+    "description": "光迅光层常熟方向192.65",
+    "wavelengths": "IN/OUT:192.6"
+  },
+  {
+    "device_name": "云立方301-E02-O2（常熟方向）-11U（10.152.254.125）",
+    "vendor": "ACCESSLINK",
+    "slot_number": 1,
+    "card_type": "T04X1-103",
+    "status": "active",
+    "description": "光迅光层常熟方向192.75",
+    "wavelengths": "IN/OUT:192.7"
+  },
+  {
+    "device_name": "云立方301-E02-O2（常熟方向）-11U（10.152.254.125）",
+    "vendor": "ACCESSLINK",
+    "slot_number": 2,
+    "card_type": "T04X1-103",
+    "status": "active",
+    "description": "光迅光层常熟方向192.85",
+    "wavelengths": "IN/OUT:192.8"
+  },
+  {
+    "device_name": "云立方301-E02-O2（常熟方向）-11U（10.152.254.125）",
+    "vendor": "ACCESSLINK",
+    "slot_number": 3,
+    "card_type": "T04X1-103",
+    "status": "active",
+    "description": "光迅光层常熟方向192.95",
+    "wavelengths": "IN/OUT:192.9"
+  },
+  {
+    "device_name": "云立方301-E02-O2（常熟方向）-11U（10.152.254.125）",
+    "vendor": "ACCESSLINK",
+    "slot_number": 4,
+    "card_type": "T04X1-103",
+    "status": "active",
+    "description": "光迅光层常熟方向193.05",
+    "wavelengths": "IN/OUT:193.0"
+  },
+  {
+    "device_name": "云立方301-E02-O2（常熟方向）-11U（10.152.254.125）",
+    "vendor": "ACCESSLINK",
+    "slot_number": 5,
+    "card_type": "T04X1-103",
+    "status": "active",
+    "description": "光迅光层常熟方向193.15",
+    "wavelengths": "IN/OUT:193.1"
+  },
+  {
+    "device_name": "云立方301-E02-O2（常熟方向）-11U（10.152.254.125）",
+    "vendor": "ACCESSLINK",
+    "slot_number": 6,
+    "card_type": "T04X1-103",
+    "status": "active",
+    "description": "光迅光层常熟方向193.25",
+    "wavelengths": "IN/OUT:193.2"
+  },
+  {
+    "device_name": "云立方301-E02-O2（常熟方向）-11U（10.152.254.125）",
+    "vendor": "ACCESSLINK",
+    "slot_number": 7,
+    "card_type": "T04X1-103",
+    "status": "active",
+    "description": "光迅光层常熟方向193.35",
+    "wavelengths": "IN/OUT:193.3"
+  },
+  {
+    "device_name": "云立方301-E02-O2（常熟方向）-11U（10.152.254.125）",
+    "vendor": "ACCESSLINK",
+    "slot_number": 8,
+    "card_type": "T04X1-103",
+    "status": "active",
+    "description": "光迅光层常熟方向193.45",
+    "wavelengths": "IN/OUT:193.4"
+  },
+  {
+    "device_name": "云立方T1200（嘉定方向-1）",
+    "vendor": "ACCESSLINK",
+    "slot_number": 1,
+    "card_type": "T1X200S",
+    "status": "active",
+    "description": "光迅光层嘉定方向191.35",
+    "wavelengths": "IN/OUT:191.3"
+  },
+  {
+    "device_name": "云立方T1200（嘉定方向-1）",
+    "vendor": "ACCESSLINK",
+    "slot_number": 2,
+    "card_type": "T1X200S",
+    "status": "active",
+    "description": "光迅光层吴江方向192.2",
+    "wavelengths": "IN/OUT:192.2"
+  },
+  {
+    "device_name": "云立方T1200（嘉定方向-1）",
+    "vendor": "ACCESSLINK",
+    "slot_number": 3,
+    "card_type": "T1X200S",
+    "status": "active",
+    "description": "光迅光层吴江方向192.3",
+    "wavelengths": "IN/OUT:192.3"
+  },
+  {
+    "device_name": "云立方T1200（嘉定方向-1）",
+    "vendor": "ACCESSLINK",
+    "slot_number": 4,
+    "card_type": "T1X200S",
+    "status": "active",
+    "description": "光迅光层嘉定方向191.5",
+    "wavelengths": "IN/OUT:191.5"
+  },
+  {
+    "device_name": "云立方T1200（常熟方向-2）",
+    "vendor": "ACCESSLINK",
+    "slot_number": 1,
+    "card_type": "T1X200S",
+    "status": "active",
+    "description": "光迅光层常熟方向192.25",
+    "wavelengths": "IN/OUT:192.2"
+  },
+  {
+    "device_name": "云立方T1200（腾讯云方向-1）",
+    "vendor": "ACCESSLINK",
+    "slot_number": 1,
+    "card_type": "T1X200S",
+    "status": "active",
+    "description": "光迅光层腾讯方向191.35",
+    "wavelengths": "IN/OUT:191.3"
+  },
+  {
+    "device_name": "云立方T1200（腾讯云方向-1）",
+    "vendor": "ACCESSLINK",
+    "slot_number": 2,
+    "card_type": "T1X200S",
+    "status": "active",
+    "description": "光迅光层腾讯方向191.40",
+    "wavelengths": "IN/OUT:191.4"
+  },
+  {
+    "device_name": "云立方T1200（腾讯云方向-1）",
+    "vendor": "ACCESSLINK",
+    "slot_number": 3,
+    "card_type": "T1X200S",
+    "status": "active",
+    "description": "光迅光层腾讯方向191.45",
+    "wavelengths": "IN/OUT:191.4"
+  },
+  {
+    "device_name": "云立方T1200（腾讯云方向-1）",
+    "vendor": "ACCESSLINK",
+    "slot_number": 4,
+    "card_type": "T1X200S",
+    "status": "active",
+    "description": "光迅光层腾讯方向191.50",
+    "wavelengths": "IN/OUT:191.5"
+  },
+  {
+    "device_name": "云立方T1200（腾讯云方向-2）",
+    "vendor": "ACCESSLINK",
+    "slot_number": 1,
+    "card_type": "T1X200S",
+    "status": "active",
+    "description": "光迅光层腾讯方向191.60",
+    "wavelengths": "IN/OUT:191.6"
+  },
+  {
+    "device_name": "云立方T1200（腾讯云方向-2）",
+    "vendor": "ACCESSLINK",
+    "slot_number": 2,
+    "card_type": "T1X200S",
+    "status": "active",
+    "description": "光迅光层腾讯方向191.70",
+    "wavelengths": "IN/OUT:191.7"
+  },
+  {
+    "device_name": "云立方一期O2（嘉定2345，常熟1678)-E05机柜",
+    "vendor": "ACCESSLINK",
+    "slot_number": 1,
+    "card_type": "T04X1-103",
+    "status": "active",
+    "description": "华为光层常熟方向193.9",
+    "wavelengths": "IN/OUT:193.9"
+  },
+  {
+    "device_name": "云立方一期O2（嘉定2345，常熟1678)-E05机柜",
+    "vendor": "ACCESSLINK",
+    "slot_number": 2,
+    "card_type": "T04X1-103",
+    "status": "active",
+    "description": "光迅光层嘉定方向192.35",
+    "wavelengths": "IN/OUT:192.3"
+  },
+  {
+    "device_name": "云立方一期O2（嘉定2345，常熟1678)-E05机柜",
+    "vendor": "ACCESSLINK",
+    "slot_number": 3,
+    "card_type": "T04X1-103",
+    "status": "active",
+    "description": "光迅光层嘉定方向192.45",
+    "wavelengths": "IN/OUT:192.4"
+  },
+  {
+    "device_name": "云立方一期O2（嘉定2345，常熟1678)-E05机柜",
+    "vendor": "ACCESSLINK",
+    "slot_number": 4,
+    "card_type": "T04X1-103",
+    "status": "active",
+    "description": "光迅光层嘉定方向192.55",
+    "wavelengths": "IN/OUT:192.5"
+  },
+  {
+    "device_name": "云立方一期O2（嘉定2345，常熟1678)-E05机柜",
+    "vendor": "ACCESSLINK",
+    "slot_number": 5,
+    "card_type": "T04X1-103",
+    "status": "active",
+    "description": "光迅光层嘉定方向192.65",
+    "wavelengths": "IN/OUT:192.6"
+  },
+  {
+    "device_name": "云立方一期O2（嘉定2345，常熟1678)-E05机柜",
+    "vendor": "ACCESSLINK",
+    "slot_number": 6,
+    "card_type": "T04X1-103",
+    "status": "active",
+    "description": "华为光层常熟方向194.0",
+    "wavelengths": "IN/OUT:194.0"
+  },
+  {
+    "device_name": "云立方一期O2（嘉定2345，常熟1678)-E05机柜",
+    "vendor": "ACCESSLINK",
+    "slot_number": 7,
+    "card_type": "T04X1-103",
+    "status": "active",
+    "description": "华为光层常熟方向194.1",
+    "wavelengths": "IN/OUT:194.1"
+  },
+  {
+    "device_name": "云立方一期O2（嘉定2345，常熟1678)-E05机柜",
+    "vendor": "ACCESSLINK",
+    "slot_number": 8,
+    "card_type": "T04X1-103",
+    "status": "active",
+    "description": "华为光层常熟方向194.2",
+    "wavelengths": "IN/OUT:194.2"
+  },
+  {
+    "device_name": "云立方一期O2（常熟方向-2)",
+    "vendor": "ACCESSLINK",
+    "slot_number": 1,
+    "card_type": "T04X1-103",
+    "status": "active",
+    "description": "光迅光层常熟方向191.35",
+    "wavelengths": "IN/OUT:191.3"
+  },
+  {
+    "device_name": "云立方一期O2（常熟方向-2)",
+    "vendor": "ACCESSLINK",
+    "slot_number": 2,
+    "card_type": "T04X1-103",
+    "status": "active",
+    "description": "光迅光层常熟方向191.45",
+    "wavelengths": "IN/OUT:191.4"
+  },
+  {
+    "device_name": "云立方一期O2（常熟方向-2)",
+    "vendor": "ACCESSLINK",
+    "slot_number": 3,
+    "card_type": "T04X1-103",
+    "status": "active",
+    "description": "光迅光层常熟方向191.55",
+    "wavelengths": "IN/OUT:191.5"
+  },
+  {
+    "device_name": "云立方一期O2（常熟方向-2)",
+    "vendor": "ACCESSLINK",
+    "slot_number": 4,
+    "card_type": "T04X1-103",
+    "status": "active",
+    "description": "光迅光层常熟方向191.65",
+    "wavelengths": "IN/OUT:191.6"
+  },
+  {
+    "device_name": "云立方一期O2（常熟方向-2)",
+    "vendor": "ACCESSLINK",
+    "slot_number": 5,
+    "card_type": "T04X1-103",
+    "status": "active",
+    "description": "光迅光层常熟方向191.75",
+    "wavelengths": "IN/OUT:191.7"
+  },
+  {
+    "device_name": "云立方一期O2（常熟方向-2)",
+    "vendor": "ACCESSLINK",
+    "slot_number": 6,
+    "card_type": "T04X1-103",
+    "status": "active",
+    "description": "光迅光层常熟方向191.85",
+    "wavelengths": "IN/OUT:191.8"
+  },
+  {
+    "device_name": "云立方一期O2（常熟方向-2)",
+    "vendor": "ACCESSLINK",
+    "slot_number": 7,
+    "card_type": "T04X1-103",
+    "status": "active",
+    "description": "光迅光层常熟方向191.95",
+    "wavelengths": "IN/OUT:191.9"
+  },
+  {
+    "device_name": "云立方一期O2（常熟方向-2)",
+    "vendor": "ACCESSLINK",
+    "slot_number": 8,
+    "card_type": "T04X1-103",
+    "status": "active",
+    "description": "光迅光层常熟方向192.05",
+    "wavelengths": "IN/OUT:192.0"
+  },
+  {
+    "device_name": "9-210-DC908",
+    "vendor": "HUAWEI",
+    "slot_number": 1,
+    "card_type": "N2MD02",
+    "status": "active",
+    "description": "IN1OUT1-空置/IN2OUT2-空置",
+    "wavelengths": null
+  },
+  {
+    "device_name": "9-210-DC908",
+    "vendor": "HUAWEI",
+    "slot_number": 2,
+    "card_type": "N2MD02",
+    "status": "active",
+    "description": "IN1OUT1-苏州-嘉定-云立方 193.5 FOADM-下线/IN2OUT2-云立方-嘉定-常熟-FOADM-193.7",
+    "wavelengths": "IN1OUT1:193.5|IN2OUT2:193.7"
+  },
+  {
+    "device_name": "9-210-DC908",
+    "vendor": "HUAWEI",
+    "slot_number": 3,
+    "card_type": "N2MD02",
+    "status": "active",
+    "description": "IN1OUT1-云立方-常熟-直达-192.7/IN2OUT2-空置",
+    "wavelengths": "IN1OUT1:192.7"
+  },
+  {
+    "device_name": "9-210-DC908",
+    "vendor": "HUAWEI",
+    "slot_number": 4,
+    "card_type": "N2MD02",
+    "status": "active",
+    "description": "IN1OUT1-云立方-常熟-嘉定-FOADM-194.6/IN2OUT2-空置",
+    "wavelengths": "IN1OUT1:194.6"
+  },
+  {
+    "device_name": "9-210-DC908",
+    "vendor": "HUAWEI",
+    "slot_number": 5,
+    "card_type": "N2MD02",
+    "status": "active",
+    "description": "IN1OUT1-空置/IN2OUT2-空置",
+    "wavelengths": null
+  },
+  {
+    "device_name": "9-210-DC908",
+    "vendor": "HUAWEI",
+    "slot_number": 6,
+    "card_type": "N2MD02",
+    "status": "active",
+    "description": "IN1OUT1-云立方-吴江-192.2/IN2OUT2-空置",
+    "wavelengths": "IN1OUT1:192.2"
+  },
+  {
+    "device_name": "9-210-DC908",
+    "vendor": "HUAWEI",
+    "slot_number": 7,
+    "card_type": "N2MD02",
+    "status": "active",
+    "description": "IN1OUT1-云立方-吴江-192.3/IN2OUT2-空置",
+    "wavelengths": "IN1OUT1:192.3"
+  },
+  {
+    "device_name": "9-211-DC908",
+    "vendor": "HUAWEI",
+    "slot_number": 1,
+    "card_type": "N2MS04",
+    "status": "active",
+    "description": "IN/OUT（云立方-常熟-193.3）",
+    "wavelengths": "IN/OUT:193.3"
+  },
+  {
+    "device_name": "9-211-DC908",
+    "vendor": "HUAWEI",
+    "slot_number": 2,
+    "card_type": "N2MS04",
+    "status": "active",
+    "description": "IN/OUT（云立方-常熟-193.6）",
+    "wavelengths": "IN/OUT:193.6"
+  },
+  {
+    "device_name": "9-211-DC908",
+    "vendor": "HUAWEI",
+    "slot_number": 3,
+    "card_type": "N2MD02",
+    "status": "active",
+    "description": "IN1OUT1-空置/IN2OUT2-空置",
+    "wavelengths": null
+  },
+  {
+    "device_name": "9-211-DC908",
+    "vendor": "HUAWEI",
+    "slot_number": 4,
+    "card_type": "N2MS04",
+    "status": "active",
+    "description": "IN/OUT(云立方-常熟-193.2）",
+    "wavelengths": "IN/OUT:193.2"
+  },
+  {
+    "device_name": "9-211-DC908",
+    "vendor": "HUAWEI",
+    "slot_number": 5,
+    "card_type": "N2MS04",
+    "status": "active",
+    "description": "IN/OUT(云立方-嘉定-195.9)",
+    "wavelengths": "IN/OUT:195.9"
+  },
+  {
+    "device_name": "9-211-DC908",
+    "vendor": "HUAWEI",
+    "slot_number": 6,
+    "card_type": "N2MS04",
+    "status": "active",
+    "description": "IN/OUT(云立方-嘉定-195.8)",
+    "wavelengths": "IN/OUT:195.8"
+  },
+  {
+    "device_name": "9-211-DC908",
+    "vendor": "HUAWEI",
+    "slot_number": 7,
+    "card_type": "N2MS04",
+    "status": "active",
+    "description": "IN/OUT(云立方-嘉定 195.3)",
+    "wavelengths": "IN/OUT:195.3"
+  },
+  {
+    "device_name": "9-211-DC908",
+    "vendor": "HUAWEI",
+    "slot_number": 8,
+    "card_type": "N2MS04",
+    "status": "active",
+    "description": "IN/OUT(云立方-嘉定 195.2)",
+    "wavelengths": "IN/OUT:195.2"
+  },
+  {
+    "device_name": "9-212-DC908",
+    "vendor": "HUAWEI",
+    "slot_number": 1,
+    "card_type": "N2MS04",
+    "status": "active",
+    "description": "IN/OUT(云立方-嘉定-195.5)",
+    "wavelengths": "IN/OUT:195.5"
+  },
+  {
+    "device_name": "9-212-DC908",
+    "vendor": "HUAWEI",
+    "slot_number": 2,
+    "card_type": "N2MS04",
+    "status": "active",
+    "description": "IN/OUT(云立方-嘉定-195.4)",
+    "wavelengths": "IN/OUT:195.4"
+  },
+  {
+    "device_name": "9-212-DC908",
+    "vendor": "HUAWEI",
+    "slot_number": 3,
+    "card_type": "N2MS04",
+    "status": "active",
+    "description": "IN/OUT(云立方-嘉定-195.7)",
+    "wavelengths": "IN/OUT:195.7"
+  },
+  {
+    "device_name": "9-212-DC908",
+    "vendor": "HUAWEI",
+    "slot_number": 4,
+    "card_type": "N2MS04",
+    "status": "active",
+    "description": "IN/OUT(云立方-嘉定-195.6)",
+    "wavelengths": "IN/OUT:195.6"
+  },
+  {
+    "device_name": "9-212-DC908",
+    "vendor": "HUAWEI",
+    "slot_number": 5,
+    "card_type": "N2MS04",
+    "status": "active",
+    "description": "IN/OUT(云立方-常熟-193.8）",
+    "wavelengths": "IN/OUT:193.8"
+  },
+  {
+    "device_name": "9-212-DC908",
+    "vendor": "HUAWEI",
+    "slot_number": 6,
+    "card_type": "N2MS04",
+    "status": "active",
+    "description": "IN/OUT-空置",
+    "wavelengths": null
+  },
+  {
+    "device_name": "9-212-DC908",
+    "vendor": "HUAWEI",
+    "slot_number": 7,
+    "card_type": "N2MS04",
+    "status": "active",
+    "description": "IN/OUT（云立方-常熟-193.4）",
+    "wavelengths": "IN/OUT:193.4"
+  },
+  {
+    "device_name": "9-212-DC908",
+    "vendor": "HUAWEI",
+    "slot_number": 8,
+    "card_type": "N2MS04",
+    "status": "active",
+    "description": "IN/OUT（云立方-常熟-193.5）",
+    "wavelengths": "IN/OUT:193.5"
+  },
+  {
+    "device_name": "9-213-DC908",
+    "vendor": "HUAWEI",
+    "slot_number": 1,
+    "card_type": "N2MD02",
+    "status": "active",
+    "description": "IN1/OUT1(嘉定方向192.1)/IN2/OUT2(嘉定方向192.2)",
+    "wavelengths": "IN1OUT1:192.1|IN2OUT2:192.2"
+  },
+  {
+    "device_name": "9-214-DC908Pro(WJ)",
+    "vendor": "HUAWEI",
+    "slot_number": 1,
+    "card_type": "1-N2MD04CE-C1",
+    "status": "active",
+    "description": "IN/OUT（云立方-吴江192.4）",
+    "wavelengths": "IN/OUT:192.4"
+  },
+  {
+    "device_name": "9-214-DC908Pro(WJ)",
+    "vendor": "HUAWEI",
+    "slot_number": 2,
+    "card_type": "1-N2MD04CE-C5",
+    "status": "active",
+    "description": "IN/OUT（云立方-吴江192.5）",
+    "wavelengths": "IN/OUT:192.5"
+  },
+  {
+    "device_name": "9-214-DC908Pro(WJ)",
+    "vendor": "HUAWEI",
+    "slot_number": 3,
+    "card_type": "3-N2MD04CE-C1",
+    "status": "active",
+    "description": "IN/OUT（云立方-吴江192.6）",
+    "wavelengths": "IN/OUT:192.6"
+  },
+  {
+    "device_name": "9-214-DC908Pro(WJ)",
+    "vendor": "HUAWEI",
+    "slot_number": 4,
+    "card_type": "3-N2MD04CE-C5",
+    "status": "active",
+    "description": "IN/OUT（云立方-吴江192.7）",
+    "wavelengths": "IN/OUT:192.7"
+  },
+  {
+    "device_name": "9-214-DC908Pro(WJ)",
+    "vendor": "HUAWEI",
+    "slot_number": 5,
+    "card_type": "5-N2MD04CE-C1",
+    "status": "active",
+    "description": "IN/OUT（云立方-吴江192.8）",
+    "wavelengths": "IN/OUT:192.8"
+  },
+  {
+    "device_name": "9-214-DC908Pro(WJ)",
+    "vendor": "HUAWEI",
+    "slot_number": 6,
+    "card_type": "5-N2MD04CE-C5",
+    "status": "active",
+    "description": "IN/OUT（云立方-吴江192.9）",
+    "wavelengths": "IN/OUT:192.9"
+  },
+  {
+    "device_name": "9-214-DC908Pro(WJ)",
+    "vendor": "HUAWEI",
+    "slot_number": 7,
+    "card_type": "7-N2MD04CE-C1",
+    "status": "active",
+    "description": "IN/OUT（云立方-吴江193.0）",
+    "wavelengths": "IN/OUT:193.0"
+  },
+  {
+    "device_name": "9-214-DC908Pro(WJ)",
+    "vendor": "HUAWEI",
+    "slot_number": 8,
+    "card_type": "7-N2MD04CE-C5",
+    "status": "active",
+    "description": "IN/OUT（云立方-吴江193.1）",
+    "wavelengths": "IN/OUT:193.1"
+  },
+  {
+    "device_name": "9-215-DC908Pro(JD)",
+    "vendor": "HUAWEI",
+    "slot_number": 1,
+    "card_type": "1-N2MD04CE-C1",
+    "status": "active",
+    "description": "IN/OUT（云立方-嘉定192.3）",
+    "wavelengths": "IN/OUT:192.3"
+  },
+  {
+    "device_name": "9-215-DC908Pro(JD)",
+    "vendor": "HUAWEI",
+    "slot_number": 2,
+    "card_type": "1-N2MD04CE-C5",
+    "status": "active",
+    "description": "IN/OUT（云立方-嘉定192.4）",
+    "wavelengths": "IN/OUT:192.4"
+  },
+  {
+    "device_name": "9-215-DC908Pro(JD)",
+    "vendor": "HUAWEI",
+    "slot_number": 3,
+    "card_type": "3-N2MD04CE-C1",
+    "status": "active",
+    "description": "IN/OUT（云立方-嘉定192.5）",
+    "wavelengths": "IN/OUT:192.5"
+  },
+  {
+    "device_name": "9-215-DC908Pro(JD)",
+    "vendor": "HUAWEI",
+    "slot_number": 4,
+    "card_type": "3-N2MD04CE-C5",
+    "status": "active",
+    "description": "IN/OUT（云立方-嘉定192.6）",
+    "wavelengths": "IN/OUT:192.6"
+  },
+  {
+    "device_name": "9-216-DC908Pro(CS)",
+    "vendor": "HUAWEI",
+    "slot_number": 1,
+    "card_type": "1-N2MD04CE-C1",
+    "status": "active",
+    "description": "IN/OUT（云立方-常熟192.3）",
+    "wavelengths": "IN/OUT:192.3"
+  },
+  {
+    "device_name": "9-216-DC908Pro(CS)",
+    "vendor": "HUAWEI",
+    "slot_number": 2,
+    "card_type": "1-N2MD04CE-C5",
+    "status": "active",
+    "description": "IN/OUT（云立方-常熟192.4）",
+    "wavelengths": "IN/OUT:192.4"
+  },
+  {
+    "device_name": "9-216-DC908Pro(CS)",
+    "vendor": "HUAWEI",
+    "slot_number": 3,
+    "card_type": "3-N2MD04CE-C1",
+    "status": "active",
+    "description": "IN/OUT（云立方-常熟192.5）",
+    "wavelengths": "IN/OUT:192.5"
+  },
+  {
+    "device_name": "9-216-DC908Pro(CS)",
+    "vendor": "HUAWEI",
+    "slot_number": 4,
+    "card_type": "3-N2MD04CE-C5",
+    "status": "active",
+    "description": "IN/OUT（云立方-常熟192.6）",
+    "wavelengths": "IN/OUT:192.6"
+  },
+  {
+    "device_name": "9-217-YLF-to-WJ-DC908Pro",
+    "vendor": "HUAWEI",
+    "slot_number": 1,
+    "card_type": "1-N2MD04CE-C1",
+    "status": "active",
+    "description": "IN/OUT（云立方-吴江193.2）",
+    "wavelengths": "IN/OUT:193.2"
+  },
+  {
+    "device_name": "9-217-YLF-to-WJ-DC908Pro",
+    "vendor": "HUAWEI",
+    "slot_number": 2,
+    "card_type": "1-N2MD04CE-C5",
+    "status": "active",
+    "description": "IN/OUT（云立方-吴江193.3）",
+    "wavelengths": "IN/OUT:193.3"
+  },
+  {
+    "device_name": "9-217-YLF-to-WJ-DC908Pro",
+    "vendor": "HUAWEI",
+    "slot_number": 3,
+    "card_type": "3-N2MD04CE-C1",
+    "status": "active",
+    "description": "IN/OUT（云立方-吴江193.4）",
+    "wavelengths": "IN/OUT:193.4"
+  },
+  {
+    "device_name": "9-217-YLF-to-WJ-DC908Pro",
+    "vendor": "HUAWEI",
+    "slot_number": 4,
+    "card_type": "3-N2MD04CE-C5",
+    "status": "active",
+    "description": "IN/OUT（云立方-吴江193.5）",
+    "wavelengths": "IN/OUT:193.5"
+  },
+  {
+    "device_name": "9-217-YLF-to-WJ-DC908Pro",
+    "vendor": "HUAWEI",
+    "slot_number": 5,
+    "card_type": "5-N2MD04CE-C1",
+    "status": "active",
+    "description": "IN/OUT（云立方-吴江193.6）",
+    "wavelengths": "IN/OUT:193.6"
+  },
+  {
+    "device_name": "9-217-YLF-to-WJ-DC908Pro",
+    "vendor": "HUAWEI",
+    "slot_number": 6,
+    "card_type": "5-N2MD04CE-C5",
+    "status": "active",
+    "description": "IN/OUT（云立方-吴江193.7）",
+    "wavelengths": "IN/OUT:193.7"
+  },
+  {
+    "device_name": "9-217-YLF-to-WJ-DC908Pro",
+    "vendor": "HUAWEI",
+    "slot_number": 7,
+    "card_type": "7-N2MD04CE-C1",
+    "status": "active",
+    "description": "IN/OUT（云立方-吴江193.8）",
+    "wavelengths": "IN/OUT:193.8"
+  },
+  {
+    "device_name": "9-217-YLF-to-WJ-DC908Pro",
+    "vendor": "HUAWEI",
+    "slot_number": 8,
+    "card_type": "7-N2MD04CE-C5",
+    "status": "active",
+    "description": "IN/OUT（云立方-吴江193.9）",
+    "wavelengths": "IN/OUT:193.9"
+  },
+  {
+    "device_name": "9-218-YLF-to-CSDC908Pro",
+    "vendor": "HUAWEI",
+    "slot_number": 1,
+    "card_type": "1-N2MD04CE-C1",
+    "status": "active",
+    "description": "IN/OUT（云立方-常熟194.7）",
+    "wavelengths": "IN/OUT:194.7"
+  },
+  {
+    "device_name": "9-218-YLF-to-CSDC908Pro",
+    "vendor": "HUAWEI",
+    "slot_number": 2,
+    "card_type": "1-N2MD04CE-C5",
+    "status": "active",
+    "description": "IN/OUT（云立方-常熟194.8）",
+    "wavelengths": "IN/OUT:194.8"
+  },
+  {
+    "device_name": "9-218-YLF-to-CSDC908Pro",
+    "vendor": "HUAWEI",
+    "slot_number": 3,
+    "card_type": "3-N2MD04CE-C1",
+    "status": "active",
+    "description": "IN/OUT（云立方-常熟194.9）",
+    "wavelengths": "IN/OUT:194.9"
+  },
+  {
+    "device_name": "9-218-YLF-to-CSDC908Pro",
+    "vendor": "HUAWEI",
+    "slot_number": 4,
+    "card_type": "3-N2MD04CE-C5",
+    "status": "active",
+    "description": "IN/OUT（云立方-吴江195.0）",
+    "wavelengths": "IN/OUT:195.0"
+  },
+  {
+    "device_name": "9-218-YLF-to-CSDC908Pro",
+    "vendor": "HUAWEI",
+    "slot_number": 5,
+    "card_type": "5-N2MD04CE-C1",
+    "status": "active",
+    "description": "IN/OUT（云立方-吴江195.1）",
+    "wavelengths": "IN/OUT:195.1"
+  },
+  {
+    "device_name": "9-218-YLF-to-CSDC908Pro",
+    "vendor": "HUAWEI",
+    "slot_number": 6,
+    "card_type": "5-N2MD04CE-C5",
+    "status": "active",
+    "description": "IN/OUT（云立方-吴江195.2）",
+    "wavelengths": "IN/OUT:195.2"
+  },
+  {
+    "device_name": "9-218-YLF-to-CSDC908Pro",
+    "vendor": "HUAWEI",
+    "slot_number": 7,
+    "card_type": "7-N2MD04CE-C1",
+    "status": "active",
+    "description": "IN/OUT（云立方-吴江195.3）",
+    "wavelengths": "IN/OUT:195.3"
+  },
+  {
+    "device_name": "9-218-YLF-to-CSDC908Pro",
+    "vendor": "HUAWEI",
+    "slot_number": 8,
+    "card_type": "7-N2MD04CE-C5",
+    "status": "active",
+    "description": "IN/OUT（云立方-吴江195.4）",
+    "wavelengths": "IN/OUT:195.4"
+  }
+]
