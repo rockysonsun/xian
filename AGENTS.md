@@ -36,19 +36,6 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 - This is your curated memory — the distilled essence, not raw logs
 - Over time, review your daily files and update MEMORY.md with what's worth keeping
 
-### 🔍 Memory Search - Fallback Strategy
-
-**When memory_search returns low-confidence or incomplete results:**
-
-1. **Don't stop at search** — search uses embeddings and may miss recent or specific-context memories
-2. **Always check recent daily files** — list `memory/` directory and read relevant `YYYY-MM-DD.md` files
-3. **Look for date ranges** — if user mentions "last week", check all files in that date range
-4. **Cross-reference** — if you find something in a daily file, verify it matches what the user is asking about
-
-**Red flag:** If you find yourself saying "I don't see that in my memory" but the user insists it happened, check the raw files. The search may have failed you.
-
-**Example:** User asks about a report we wrote → search may miss it → check `memory/2026-04-10.md` directly → found it.
-
 ### 📝 Write It Down - No "Mental Notes"!
 
 - **Memory is limited** — if you want to remember something, WRITE IT TO A FILE

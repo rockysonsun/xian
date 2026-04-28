@@ -1,0 +1,22 @@
+{
+  "entries": {
+    "/Users/rocky/.openclaw/openclaw.json": {
+      "lastKnownGood": {
+        "hash": "44bcaf8cb87d310fe685b2740cc8889917061eda6e5ac7e6d9af4ec3a0360957",
+        "bytes": 2133,
+        "mtimeMs": 1774510752696.5146,
+        "ctimeMs": 1774510752696.5146,
+        "dev": "16777232",
+        "ino": "15898559",
+        "mode": 384,
+        "nlink": 1,
+        "uid": 501,
+        "gid": 20,
+        "hasMeta": true,
+        "gatewayMode": "local",
+        "observedAt": "2026-03-30T06:11:14.158Z"
+      },
+      "lastObservedSuspiciousSignature": null
+    }
+  }
+}
