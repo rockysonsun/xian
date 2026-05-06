@@ -1,6 +1,7 @@
 #!/bin/bash
 # 老仙自我保护备份脚本
 # 每次更新前执行：备份 + 提交
+# 支持每日自动备份（已备份则跳过）
 
 set -e
 
@@ -8,8 +9,15 @@ WORKSPACE="/Users/rocky/.openclaw/workspace"
 BACKUP_DIR="$WORKSPACE/.backups"
 DATE=$(date +%Y%m%d_%H%M%S)
 BACKUP_NAME="laoxian-backup-$DATE"
+TODAY=$(date +%Y%m%d)
 
 echo "🐉 老仙开始自我保护备份..."
+
+# 检查今日是否已备份
+if ls "$BACKUP_DIR"/laoxian-backup-${TODAY}_*.tar.gz 1>/dev/null 2>&1; then
+    echo "✅ 今日 ($TODAY) 已备份，跳过"
+    exit 0
+fi
 
 # 1. 创建本地备份目录
 mkdir -p "$BACKUP_DIR"

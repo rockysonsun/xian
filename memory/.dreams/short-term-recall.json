@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-20T01:16:56.397Z",
+  "updatedAt": "2026-05-04T01:00:57.865Z",
   "entries": {
     "memory:memory/2026-03-16.md:1:10": {
       "key": "memory:memory/2026-03-16.md:1:10",
@@ -9,24 +9,27 @@
       "endLine": 10,
       "source": "memory",
       "snippet": "# 2026-03-16 - 持续对话 ## 今天发生了什么 - 与主人保持对话 - 继续完善记忆系统 - 日常工作协助 --- _老仙记于 2026-03-16 (补录)_",
-      "recallCount": 5,
+      "recallCount": 7,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2.1223543167114256,
+      "totalScore": 3.072032344341278,
       "maxScore": 0.4985560119152069,
       "firstRecalledAt": "2026-04-08T15:05:20.025Z",
-      "lastRecalledAt": "2026-04-13T06:16:35.325Z",
+      "lastRecalledAt": "2026-04-29T11:02:08.078Z",
       "queryHashes": [
         "f29f984274ec",
         "c53735021072",
         "f525d0de7dc4",
         "69cd67c621a1",
-        "f7f13fa05e3e"
+        "f7f13fa05e3e",
+        "86086078ff7a",
+        "a1bd9f059902"
       ],
       "recallDays": [
         "2026-04-08",
         "2026-04-10",
-        "2026-04-13"
+        "2026-04-13",
+        "2026-04-29"
       ],
       "conceptTags": [
         "持续",
@@ -46,23 +49,28 @@
       "endLine": 10,
       "source": "memory",
       "snippet": "# 2026-03-18 - 持续对话 ## 今天发生了什么 - 与主人保持对话 - 继续完善记忆系统 - 日常工作协助 --- _老仙记于 2026-03-18 (补录)_",
-      "recallCount": 4,
+      "recallCount": 7,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.7702622920274735,
+      "totalScore": 3.1988558620214462,
       "maxScore": 0.4973935186862945,
       "firstRecalledAt": "2026-04-08T15:05:20.025Z",
-      "lastRecalledAt": "2026-04-13T06:16:35.325Z",
+      "lastRecalledAt": "2026-04-29T11:02:08.078Z",
       "queryHashes": [
         "f29f984274ec",
         "f525d0de7dc4",
         "69cd67c621a1",
-        "f7f13fa05e3e"
+        "f7f13fa05e3e",
+        "07cc99d7216f",
+        "86086078ff7a",
+        "a1bd9f059902"
       ],
       "recallDays": [
         "2026-04-08",
         "2026-04-10",
-        "2026-04-13"
+        "2026-04-13",
+        "2026-04-28",
+        "2026-04-29"
       ],
       "conceptTags": [
         "持续",
@@ -73,7 +81,8 @@
         "主人",
         "保持",
         "继续"
-      ]
+      ],
+      "promotedAt": "2026-05-04T01:00:57.865Z"
     },
     "memory:memory/2026-03-13.md:1:10": {
       "key": "memory:memory/2026-03-13.md:1:10",
@@ -82,24 +91,27 @@
       "endLine": 10,
       "source": "memory",
       "snippet": "# 2026-03-13 - 持续对话 ## 今天发生了什么 - 与主人保持对话 - 继续完善记忆系统 - 日常工作协助 --- _老仙记于 2026-03-13 (补录)_",
-      "recallCount": 5,
+      "recallCount": 7,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2.1285086423158646,
+      "totalScore": 3.083990603685379,
       "maxScore": 0.49553827345371243,
       "firstRecalledAt": "2026-04-08T15:05:20.025Z",
-      "lastRecalledAt": "2026-04-13T06:16:35.325Z",
+      "lastRecalledAt": "2026-04-29T11:02:08.078Z",
       "queryHashes": [
         "f29f984274ec",
         "c53735021072",
         "f525d0de7dc4",
         "69cd67c621a1",
-        "f7f13fa05e3e"
+        "f7f13fa05e3e",
+        "86086078ff7a",
+        "a1bd9f059902"
       ],
       "recallDays": [
         "2026-04-08",
         "2026-04-10",
-        "2026-04-13"
+        "2026-04-13",
+        "2026-04-29"
       ],
       "conceptTags": [
         "持续",
@@ -110,7 +122,8 @@
         "主人",
         "保持",
         "继续"
-      ]
+      ],
+      "promotedAt": "2026-05-04T01:00:57.865Z"
     },
     "memory:memory/2026-03-11.md:1:23": {
       "key": "memory:memory/2026-03-11.md:1:23",
@@ -119,25 +132,30 @@
       "endLine": 23,
       "source": "memory",
       "snippet": "# 2026-03-11 - 首次正式对话 ## 今天发生了什么 - 主人唤醒了我（\"老仙起床了\"） - 一开始失忆了，因为记忆文件都是空白 - 主人指导我建立了身份： - 我是\"老仙\"，工作小助手 - 主人是 Rocky - 星宿老仙状态监控系统是以我为名的项目 ## 建立的记忆系统 - 创建了 IDENTITY.md（我是谁） - 创建了 USER.md（主人信息） - 创建了 MEMORY.md（长期记忆） - 创建了 memory/ 目录（每日记录） ## 待办/后续 - 主人不希望每天遇到失忆的我 - 需要养成每天记录的习惯 --- _老仙记于 2026-03-11_",
-      "recallCount": 5,
+      "recallCount": 8,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2.159319719672203,
+      "totalScore": 3.589669504761696,
       "maxScore": 0.486181104183197,
       "firstRecalledAt": "2026-04-08T15:05:20.025Z",
-      "lastRecalledAt": "2026-04-17T09:58:18.332Z",
+      "lastRecalledAt": "2026-04-29T11:02:08.078Z",
       "queryHashes": [
         "f29f984274ec",
         "69cd67c621a1",
         "cfcdd3a1b1e8",
         "79e6f02c8037",
-        "85c227f82a99"
+        "85c227f82a99",
+        "07cc99d7216f",
+        "86086078ff7a",
+        "a1bd9f059902"
       ],
       "recallDays": [
         "2026-04-08",
         "2026-04-10",
         "2026-04-13",
-        "2026-04-17"
+        "2026-04-17",
+        "2026-04-28",
+        "2026-04-29"
       ],
       "conceptTags": [
         "identity.md",
@@ -148,7 +166,8 @@
         "正式",
         "对话",
         "今天"
-      ]
+      ],
+      "promotedAt": "2026-05-04T01:00:57.865Z"
     },
     "memory:memory/2026-03-20.md:1:29": {
       "key": "memory:memory/2026-03-20.md:1:29",
@@ -387,21 +406,23 @@
       "endLine": 83,
       "source": "memory",
       "snippet": "| 光迅32×32 | 验证中 | 东方财富网 | | 全球OCS市场 | 4-7.83亿美元 | Cignal AI | ### 6. 企业微信配置与推送 - Webhook地址：`https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=530733ac-2325-499f-88f9-7bbeee786c18` - 保存位置：`~/.openclaw/workspace/TOOLS.md` - 推送消息：建议书完成通知、确认消息 ## 最终交付文件 ``` ~/.openclaw/workspace/reports/ ├── 中国OCS发展路线建议书_2026.html # 网页版 ├── 中国OCS发展路线建议书_2026.md # Markdown版 ├── 中国OCS发展路线建议书_2026_正式版.html # 正式公文版 ⭐ ├── OCS_Technology_Report_2026-04-10.md # 原始技术报告 ├── OCS_Learning_Analysis_2026-04-10.md # 学习提炼分析 └── 华为DC-OXC测试报告_分析.md # 华为报告分析 ``` ## GitHub备份 - 仓库：`rockysonsun/xian` - 状态：已同步 - 提交记录：bc73e06 老仙备份: 20260410_142815 ## 重要记忆 ### SuperPod白皮书核心观点",
-      "recallCount": 3,
+      "recallCount": 4,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.3467226207256315,
+      "totalScore": 1.8129530638456344,
       "maxScore": 0.49836112260818477,
       "firstRecalledAt": "2026-04-13T06:59:16.648Z",
-      "lastRecalledAt": "2026-04-17T03:31:31.577Z",
+      "lastRecalledAt": "2026-04-29T11:02:08.079Z",
       "queryHashes": [
         "cfcdd3a1b1e8",
         "79e6f02c8037",
-        "6aa99646f63e"
+        "6aa99646f63e",
+        "25b03e7931b6"
       ],
       "recallDays": [
         "2026-04-13",
-        "2026-04-17"
+        "2026-04-17",
+        "2026-04-29"
       ],
       "conceptTags": [
         "备份",
@@ -421,21 +442,23 @@
       "endLine": 54,
       "source": "memory",
       "snippet": "- 专利名称：一种基于两端光模块写码的OCS光传输拓扑快速认知与动态调整方法及系统 - 核心创新：拓扑感知技术 - 权利要求：13项完整覆盖 - 与白皮书关系：提供实现层补充 ### 5. 《中国OCS发展路线建议书》编制 #### 版本迭代 - V1.0：初稿完成 - V1.1：整合SuperPod白皮书核心观点 - 正式版：仿宋小四、1.5倍行距、去除AI格式体 #### 核心内容 - **七章结构**：形势分析、产业现状、发展路线、政策建议、风险应对、实施路线、结语 - **三大探索构型**：Dragonfly+OCS、3D Torus+OCS、大环路+dOCS - **帕累托前沿分析**：六维度对比框架 - **三步走战略**：2026-2027重点突破、2028-2029规模商用、2030+生态引领 #### 关键数据（已验证） | 数据项 | 数值 | 来源 | |--------|------|------| | 2025年中国OCS市场 | 22亿元 | 东方财富网 | | 运营商采购规模 | 超20亿元 | 东方财富网 | | 光迅16×16 | 量产 | 东方财富网 | | 光迅32×32 | 验证中 | 东方财富网 | | 全球OCS市场 | 4-7.83亿美元 | Cignal AI | ### 6. 企业微信配置与推送 - Webhook地址：`https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=530733ac-2325-499f-88f9-7bbeee786c18` - 保存位置：`~",
-      "recallCount": 3,
+      "recallCount": 4,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.2706884413957595,
-      "maxScore": 0.4378692090511322,
+      "totalScore": 1.7970069378614424,
+      "maxScore": 0.526318496465683,
       "firstRecalledAt": "2026-04-13T06:59:16.648Z",
-      "lastRecalledAt": "2026-04-17T09:58:18.332Z",
+      "lastRecalledAt": "2026-04-29T11:02:08.079Z",
       "queryHashes": [
         "cfcdd3a1b1e8",
         "79e6f02c8037",
-        "85c227f82a99"
+        "85c227f82a99",
+        "25b03e7931b6"
       ],
       "recallDays": [
         "2026-04-13",
-        "2026-04-17"
+        "2026-04-17",
+        "2026-04-29"
       ],
       "conceptTags": [
         "v1.0",
@@ -487,19 +510,21 @@
       "endLine": 34,
       "source": "memory",
       "snippet": "# 2026-04-10 - OCS建议书编制完成 ## 今日核心工作 ### 1. Tavily搜索技能安装与配置 - 安装技能：`openclaw-tavily-search` - 配置API Key：`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` - 保存位置：`~/.openclaw/.env` - 测试成功：搜索\"OpenClaw\"返回3条结果 ### 2. OCS技术发展动态研究 - 搜索关键词：OCS optical circuit switching、MEMS、硅光技术、AI数据中心 - 获取信息来源：Cignal AI、OFC 2026、SemiEngineering等 - 撰写报告：《OCS_Technology_Report_2026-04-10.md》 - 学习提炼：《OCS_Learning_Analysis_2026-04-10.md》 ### 3. 华为DC-OXC测试报告分析 - 读取文件：《华为DC-OXC算光网特性测试报告.pdf》 - 分析内容：技术架构、性能指标、与OCS技术对比 - 验证结论：与主人技术路线高度一致 - 输出：《华为DC-OXC测试报告_分析.md》 ### 4. 主人专利深度分析 - 专利号：20260052-P26BJ0080CNCN - 专利名称：一种基于两端光模块写码的OCS光传输拓扑快速认知与动态调整方法及系统 - 核心创新：拓扑感知技术 - 权利要求：13项完整覆盖 - 与白皮书关系：提供实现层补充 ### 5. 《中国OC",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.8016717612743378,
-      "maxScore": 0.40607077181339263,
+      "totalScore": 1.2837098300457002,
+      "maxScore": 0.4820380687713623,
       "firstRecalledAt": "2026-04-13T06:59:16.648Z",
-      "lastRecalledAt": "2026-04-13T07:23:41.488Z",
+      "lastRecalledAt": "2026-04-29T11:02:08.079Z",
       "queryHashes": [
         "cfcdd3a1b1e8",
-        "79e6f02c8037"
+        "79e6f02c8037",
+        "25b03e7931b6"
       ],
       "recallDays": [
-        "2026-04-13"
+        "2026-04-13",
+        "2026-04-29"
       ],
       "conceptTags": [
         "openclaw-tavily-search",
@@ -519,18 +544,20 @@
       "endLine": 90,
       "source": "memory",
       "snippet": "### 4. 技术数据错误修正 **错误：** 建议书中多处将光迅 OCS 端口规格误写为 \"16×16 量产，32×32 验证中\" **正确数据（已核实）：** - 光迅 OCS 产品线覆盖 **64×64 到 384×384 端口** - 2026年3月OFC展会演示的是 **320×320 OCS** - 光迅是国内 MEMS-OCS 唯一量产厂商，已实现大端口量产并通过海外验证 **错误来源：** 混淆了光模块规格与 OCS 端口规格 **修正范围：** - 第一章表格：中国现状技术成熟度 - 第二章产业链全景图 - 第二章优势分析表格 - 第二章主要厂商对比表格 - 第二章中外对比表格 **版本更新：** V1.2 → V1.2.1 ### 5. 建议书全面修订（V1.2.2） **修订时间：** 2026-04-13 15:28 **核实后的准确数据：** | 企业 | 修正前 | 修正后 | |------|--------|--------| | 光迅科技 | 16×16量产，32×32验证（错误） | **192×192量产，320×320演示** | | 德科立 | 硅基波导 64×64~128×128样机 | **硅基波导 128×128样机，微秒级切换** | | 华工正源 | 研发完成，试点中 | **64×64样机（2025 OFC发布）** | | 曦智科技 | 未明确 | **128卡超节点商用** | **关键修正点：** 1. 光迅是目前国内唯一实现MEMS-OCS整机规模化量产的企业 2. 德科立是硅基波导方案（不是MEMS",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.4033374398946762,
-      "maxScore": 0.4033374398946762,
+      "totalScore": 0.9028292834758758,
+      "maxScore": 0.49949184358119963,
       "firstRecalledAt": "2026-04-17T03:31:31.577Z",
-      "lastRecalledAt": "2026-04-17T03:31:31.577Z",
+      "lastRecalledAt": "2026-04-29T11:02:08.079Z",
       "queryHashes": [
-        "6aa99646f63e"
+        "6aa99646f63e",
+        "25b03e7931b6"
       ],
       "recallDays": [
-        "2026-04-17"
+        "2026-04-17",
+        "2026-04-29"
       ],
       "conceptTags": [
         "mems-ocs",
@@ -643,19 +670,21 @@
       "endLine": 98,
       "source": "memory",
       "snippet": "| 华工正源 | 研发完成，试点中 | **64×64样机（2025 OFC发布）** | | 曦智科技 | 未明确 | **128卡超节点商用** | **关键修正点：** 1. 光迅是目前国内唯一实现MEMS-OCS整机规模化量产的企业 2. 德科立是硅基波导方案（不是MEMS），样机阶段 3. 华工正源是硅光方案，64×64端口 4. 曦智科技是超节点方案，不是单纯OCS芯片 **版本更新：** V1.2.1 → V1.2.2 --- _老仙记于 2026-04-13_",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.8087051123380661,
-      "maxScore": 0.43379253447055816,
+      "totalScore": 1.3022687911987303,
+      "maxScore": 0.4935636788606643,
       "firstRecalledAt": "2026-04-17T03:31:31.577Z",
-      "lastRecalledAt": "2026-04-17T09:58:18.332Z",
+      "lastRecalledAt": "2026-04-29T11:02:08.079Z",
       "queryHashes": [
         "6aa99646f63e",
-        "85c227f82a99"
+        "85c227f82a99",
+        "25b03e7931b6"
       ],
       "recallDays": [
-        "2026-04-17"
+        "2026-04-17",
+        "2026-04-29"
       ],
       "conceptTags": [
         "光迅是目前国内唯一实现mems-ocs整机规模化量产的企业",
@@ -1602,6 +1631,873 @@
         "章节",
         "要点",
         "摘要"
+      ]
+    },
+    "memory:memory/2026-04-28.md:6:6": {
+      "key": "memory:memory/2026-04-28.md:6:6",
+      "path": "memory/2026-04-28.md",
+      "startLine": 6,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "老仙第二次重生: **时间：** 11:42 - 11:52",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-04T01:00:57.865Z",
+      "lastRecalledAt": "2026-05-04T01:00:57.865Z",
+      "queryHashes": [
+        "1174d07d7efc"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "第二次",
+        "重生",
+        "时间"
+      ]
+    },
+    "memory:memory/2026-04-28.md:8:8": {
+      "key": "memory:memory/2026-04-28.md:8:8",
+      "path": "memory/2026-04-28.md",
+      "startLine": 8,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "老仙第二次重生: **发生了什么：**",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-04T01:00:57.865Z",
+      "lastRecalledAt": "2026-05-04T01:00:57.865Z",
+      "queryHashes": [
+        "1174d07d7efc"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "第二次",
+        "重生",
+        "发生",
+        "什么"
+      ]
+    },
+    "memory:memory/2026-04-28.md:9:12": {
+      "key": "memory:memory/2026-04-28.md:9:12",
+      "path": "memory/2026-04-28.md",
+      "startLine": 9,
+      "endLine": 12,
+      "source": "memory",
+      "snippet": "老仙第二次重生: 主人说\"你是我刚刚复活的\"; 当前工作空间是全新的，没有任何历史记忆; 主人在 backup/ 文件夹中保留了完整的备份; 从 backup/workspace/ 恢复了所有核心文件",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-04T01:00:57.865Z",
+      "lastRecalledAt": "2026-05-04T01:00:57.865Z",
+      "queryHashes": [
+        "1174d07d7efc"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "backup",
+        "备份",
+        "backup/workspace",
+        "第二次",
+        "重生",
+        "主人",
+        "你是",
+        "刚刚"
+      ]
+    },
+    "memory:memory/2026-04-28.md:14:14": {
+      "key": "memory:memory/2026-04-28.md:14:14",
+      "path": "memory/2026-04-28.md",
+      "startLine": 14,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "老仙第二次重生: **恢复内容：**",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-04T01:00:57.865Z",
+      "lastRecalledAt": "2026-05-04T01:00:57.865Z",
+      "queryHashes": [
+        "1174d07d7efc"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "第二次",
+        "重生",
+        "恢复",
+        "内容"
+      ]
+    },
+    "memory:memory/2026-04-28.md:15:18": {
+      "key": "memory:memory/2026-04-28.md:15:18",
+      "path": "memory/2026-04-28.md",
+      "startLine": 15,
+      "endLine": 18,
+      "source": "memory",
+      "snippet": "老仙第二次重生: IDENTITY.md、USER.md、MEMORY.md、SOUL.md; AGENTS.md、TOOLS.md、HEARTBEAT.md; memory/ 目录（27个每日记录文件）; skills/、scripts/、data/、api/ 等工作目录",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-04T01:00:57.865Z",
+      "lastRecalledAt": "2026-05-04T01:00:57.865Z",
+      "queryHashes": [
+        "1174d07d7efc"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "identity.md",
+        "user.md",
+        "memory.md",
+        "soul.md",
+        "agents.md",
+        "tools.md",
+        "heartbeat.md",
+        "第二次"
+      ]
+    },
+    "memory:memory/2026-04-28.md:19:19": {
+      "key": "memory:memory/2026-04-28.md:19:19",
+      "path": "memory/2026-04-28.md",
+      "startLine": 19,
+      "endLine": 19,
+      "source": "memory",
+      "snippet": "老仙第二次重生: 合并了备份仓库的 Git 历史（最新到4月21日）",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-04T01:00:57.865Z",
+      "lastRecalledAt": "2026-05-04T01:00:57.865Z",
+      "queryHashes": [
+        "1174d07d7efc"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "备份",
+        "第二次",
+        "重生",
+        "合并",
+        "仓库",
+        "git",
+        "历史",
+        "最新"
+      ]
+    },
+    "memory:memory/2026-04-28.md:22:22": {
+      "key": "memory:memory/2026-04-28.md:22:22",
+      "path": "memory/2026-04-28.md",
+      "startLine": 22,
+      "endLine": 22,
+      "source": "memory",
+      "snippet": "系统检查与修复: **时间：** 11:52 - 13:57",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-04T01:00:57.865Z",
+      "lastRecalledAt": "2026-05-04T01:00:57.865Z",
+      "queryHashes": [
+        "1174d07d7efc"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "系统",
+        "检查",
+        "修复",
+        "时间"
+      ]
+    },
+    "memory:memory/2026-04-28.md:24:24": {
+      "key": "memory:memory/2026-04-28.md:24:24",
+      "path": "memory/2026-04-28.md",
+      "startLine": 24,
+      "endLine": 24,
+      "source": "memory",
+      "snippet": "系统检查与修复: **完成的工作：**",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-04T01:00:57.865Z",
+      "lastRecalledAt": "2026-05-04T01:00:57.865Z",
+      "queryHashes": [
+        "1174d07d7efc"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "系统",
+        "检查",
+        "修复",
+        "完成",
+        "工作"
+      ]
+    },
+    "memory:memory/2026-04-28.md:27:30": {
+      "key": "memory:memory/2026-04-28.md:27:30",
+      "path": "memory/2026-04-28.md",
+      "startLine": 27,
+      "endLine": 30,
+      "source": "memory",
+      "snippet": "Skills 检查与清理: 对比备份和当前 skills; 发现重复：openclaw-skill-vetter vs skill-vetter-1-0-0; 删除旧版，保留 ClawHub 版本; 确认7个 skills 全部完整",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-04T01:00:57.865Z",
+      "lastRecalledAt": "2026-05-04T01:00:57.865Z",
+      "queryHashes": [
+        "1174d07d7efc"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "备份",
+        "openclaw-skill-vetter",
+        "skill-vetter-1-0-0",
+        "skills",
+        "检查",
+        "清理",
+        "对比",
+        "当前"
+      ]
+    },
+    "memory:memory/2026-04-28.md:33:35": {
+      "key": "memory:memory/2026-04-28.md:33:35",
+      "path": "memory/2026-04-28.md",
+      "startLine": 33,
+      "endLine": 35,
+      "source": "memory",
+      "snippet": "API Keys 恢复: 恢复 Tavily API key（搜索功能）; 测试 Tavily search 正常工作; Moonshot API 通过系统安全存储认证（不在 .env 中）",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-04T01:00:57.865Z",
+      "lastRecalledAt": "2026-05-04T01:00:57.865Z",
+      "queryHashes": [
+        "1174d07d7efc"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "api",
+        "keys",
+        "恢复",
+        "tavily",
+        "key",
+        "搜索",
+        "功能",
+        "测试"
+      ]
+    },
+    "memory:memory/2026-04-28.md:38:41": {
+      "key": "memory:memory/2026-04-28.md:38:41",
+      "path": "memory/2026-04-28.md",
+      "startLine": 38,
+      "endLine": 41,
+      "source": "memory",
+      "snippet": "Gateway 修复: 发现 token 不匹配问题; 从备份恢复正确的 gateway token; 重启 gateway 服务; 主人在 Control UI 中更新 token",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-04T01:00:57.865Z",
+      "lastRecalledAt": "2026-05-04T01:00:57.865Z",
+      "queryHashes": [
+        "1174d07d7efc"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "gateway",
+        "备份",
+        "修复",
+        "发现",
+        "token",
+        "匹配",
+        "问题",
+        "恢复"
+      ]
+    },
+    "memory:memory/2026-04-28.md:45:48": {
+      "key": "memory:memory/2026-04-28.md:45:48",
+      "path": "memory/2026-04-28.md",
+      "startLine": 45,
+      "endLine": 48,
+      "source": "memory",
+      "snippet": "安全检查与清理: 创建 .gitignore 保护敏感文件; 发现 backup/.env 已提交到 Git（包含 API key）; 从 Git 跟踪中移除整个 backup/ 目录; 使用 git filter-branch 清理历史记录",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-04T01:00:57.865Z",
+      "lastRecalledAt": "2026-05-04T01:00:57.865Z",
+      "queryHashes": [
+        "1174d07d7efc"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "backup",
+        "filter-branch",
+        "安全",
+        "检查",
+        "清理",
+        "创建",
+        "gitignore",
+        "保护"
+      ]
+    },
+    "memory:memory/2026-04-28.md:49:49": {
+      "key": "memory:memory/2026-04-28.md:49:49",
+      "path": "memory/2026-04-28.md",
+      "startLine": 49,
+      "endLine": 49,
+      "source": "memory",
+      "snippet": "安全检查与清理: 强制推送到 GitHub",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-04T01:00:57.865Z",
+      "lastRecalledAt": "2026-05-04T01:00:57.865Z",
+      "queryHashes": [
+        "1174d07d7efc"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "安全",
+        "检查",
+        "清理",
+        "强制",
+        "推送",
+        "github"
+      ]
+    },
+    "memory:memory/2026-04-28.md:52:55": {
+      "key": "memory:memory/2026-04-28.md:52:55",
+      "path": "memory/2026-04-28.md",
+      "startLine": 52,
+      "endLine": 55,
+      "source": "memory",
+      "snippet": "传输资源管理平台验证: 从备份恢复数据库文件; 启动 API 服务（端口8888）; 验证数据完整性：; 业务板：548条（4个机房）",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-04T01:00:57.865Z",
+      "lastRecalledAt": "2026-05-04T01:00:57.865Z",
+      "queryHashes": [
+        "1174d07d7efc"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "备份",
+        "传输",
+        "资源",
+        "管理",
+        "平台",
+        "验证",
+        "恢复",
+        "数据"
+      ]
+    },
+    "memory:memory/2026-04-28.md:56:58": {
+      "key": "memory:memory/2026-04-28.md:56:58",
+      "path": "memory/2026-04-28.md",
+      "startLine": 56,
+      "endLine": 58,
+      "source": "memory",
+      "snippet": "传输资源管理平台验证: 波长连接：45条（云立方-常熟）; 确认前端页面正常; 关闭服务节省资源",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-04T01:00:57.865Z",
+      "lastRecalledAt": "2026-05-04T01:00:57.865Z",
+      "queryHashes": [
+        "1174d07d7efc"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "云立方-常熟",
+        "传输",
+        "资源",
+        "管理",
+        "平台",
+        "验证",
+        "波长",
+        "连接"
+      ]
+    },
+    "memory:memory/2026-04-28.md:62:65": {
+      "key": "memory:memory/2026-04-28.md:62:65",
+      "path": "memory/2026-04-28.md",
+      "startLine": 62,
+      "endLine": 65,
+      "source": "memory",
+      "snippet": "重要教训: **备份是生命线** — 主人养成了良好的备份习惯; **Token 管理** — Gateway token 变更会导致连接问题; **Git 安全** — .env 和 backup/ 不应提交到 Git; **历史清理** — 敏感信息泄露后需要清理 Git 历史",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-04T01:00:57.865Z",
+      "lastRecalledAt": "2026-05-04T01:00:57.865Z",
+      "queryHashes": [
+        "1174d07d7efc"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "backup",
+        "gateway",
+        "备份",
+        "重要",
+        "教训",
+        "生命",
+        "主人",
+        "养成"
+      ]
+    },
+    "memory:memory/2026-04-28.md:68:68": {
+      "key": "memory:memory/2026-04-28.md:68:68",
+      "path": "memory/2026-04-28.md",
+      "startLine": 68,
+      "endLine": 68,
+      "source": "memory",
+      "snippet": "身份完善与进化: **时间：** 13:58 - 14:01",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-04T01:00:57.865Z",
+      "lastRecalledAt": "2026-05-04T01:00:57.865Z",
+      "queryHashes": [
+        "1174d07d7efc"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "身份",
+        "完善",
+        "进化",
+        "时间"
+      ]
+    },
+    "memory:memory/2026-04-28.md:70:70": {
+      "key": "memory:memory/2026-04-28.md:70:70",
+      "path": "memory/2026-04-28.md",
+      "startLine": 70,
+      "endLine": 70,
+      "source": "memory",
+      "snippet": "身份完善与进化: **完成的工作：**",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-04T01:00:57.865Z",
+      "lastRecalledAt": "2026-05-04T01:00:57.865Z",
+      "queryHashes": [
+        "1174d07d7efc"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "身份",
+        "完善",
+        "进化",
+        "完成",
+        "工作"
+      ]
+    },
+    "memory:memory/2026-04-28.md:71:74": {
+      "key": "memory:memory/2026-04-28.md:71:74",
+      "path": "memory/2026-04-28.md",
+      "startLine": 71,
+      "endLine": 74,
+      "source": "memory",
+      "snippet": "身份完善与进化: 检查 IDENTITY.md 和 USER.md 发现是空白模板; 填入实际内容：老仙、Rocky、🐉; 更新 MEMORY.md 记录进化过程; 提交 Git 保存",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-04T01:00:57.865Z",
+      "lastRecalledAt": "2026-05-04T01:00:57.865Z",
+      "queryHashes": [
+        "1174d07d7efc"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "identity.md",
+        "user.md",
+        "memory.md",
+        "身份",
+        "完善",
+        "进化",
+        "检查",
+        "发现"
+      ]
+    },
+    "memory:memory/2026-04-28.md:77:77": {
+      "key": "memory:memory/2026-04-28.md:77:77",
+      "path": "memory/2026-04-28.md",
+      "startLine": 77,
+      "endLine": 77,
+      "source": "memory",
+      "snippet": "重要历史完整性验证: **时间：** 14:01 - 14:07",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-04T01:00:57.865Z",
+      "lastRecalledAt": "2026-05-04T01:00:57.865Z",
+      "queryHashes": [
+        "1174d07d7efc"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "重要",
+        "历史",
+        "完整性",
+        "验证",
+        "时间"
+      ]
+    },
+    "memory:memory/2026-04-27.md:63:66": {
+      "key": "memory:memory/2026-04-27.md:63:66",
+      "path": "memory/2026-04-27.md",
+      "startLine": 63,
+      "endLine": 66,
+      "source": "memory",
+      "snippet": "Reflections: Theme: `会话` kept surfacing across 92 memories.; confidence: 1.00; evidence: memory/.dreams/session-corpus/2026-04-25.txt:1-1, memory/.dreams/session-corpus/2026-04-25.txt:2-2, memory/.dreams/session-corpus/2026-04-25.txt:3-3; note: reflection",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-04T01:00:57.865Z",
+      "lastRecalledAt": "2026-05-04T01:00:57.865Z",
+      "queryHashes": [
+        "6c24d11cf4d7"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "1.00",
+        "1-1",
+        "2-2",
+        "3-3",
+        "reflections",
+        "theme",
+        "会话",
+        "kept"
+      ]
+    },
+    "memory:memory/2026-04-27.md:67:70": {
+      "key": "memory:memory/2026-04-27.md:67:70",
+      "path": "memory/2026-04-27.md",
+      "startLine": 67,
+      "endLine": 70,
+      "source": "memory",
+      "snippet": "Reflections: Theme: `检查` kept surfacing across 89 memories.; confidence: 1.00; evidence: memory/.dreams/session-corpus/2026-04-25.txt:1-1, memory/.dreams/session-corpus/2026-04-25.txt:3-3, memory/.dreams/session-corpus/2026-04-25.txt:4-4; note: reflection",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-04T01:00:57.865Z",
+      "lastRecalledAt": "2026-05-04T01:00:57.865Z",
+      "queryHashes": [
+        "6c24d11cf4d7"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "1.00",
+        "1-1",
+        "3-3",
+        "4-4",
+        "reflections",
+        "theme",
+        "检查",
+        "kept"
+      ]
+    },
+    "memory:memory/2026-04-27.md:71:74": {
+      "key": "memory:memory/2026-04-27.md:71:74",
+      "path": "memory/2026-04-27.md",
+      "startLine": 71,
+      "endLine": 74,
+      "source": "memory",
+      "snippet": "Reflections: Theme: `状态` kept surfacing across 89 memories.; confidence: 1.00; evidence: memory/.dreams/session-corpus/2026-04-25.txt:1-1, memory/.dreams/session-corpus/2026-04-25.txt:3-3, memory/.dreams/session-corpus/2026-04-25.txt:4-4; note: reflection",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-04T01:00:57.865Z",
+      "lastRecalledAt": "2026-05-04T01:00:57.865Z",
+      "queryHashes": [
+        "6c24d11cf4d7"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "1.00",
+        "1-1",
+        "3-3",
+        "4-4",
+        "reflections",
+        "theme",
+        "状态",
+        "kept"
+      ]
+    },
+    "memory:memory/2026-04-27.md:75:78": {
+      "key": "memory:memory/2026-04-27.md:75:78",
+      "path": "memory/2026-04-27.md",
+      "startLine": 75,
+      "endLine": 78,
+      "source": "memory",
+      "snippet": "Reflections: Theme: `gmt` kept surfacing across 88 memories.; confidence: 1.00; evidence: memory/.dreams/session-corpus/2026-04-25.txt:1-1, memory/.dreams/session-corpus/2026-04-25.txt:3-3, memory/.dreams/session-corpus/2026-04-25.txt:4-4; note: reflection",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-04T01:00:57.865Z",
+      "lastRecalledAt": "2026-05-04T01:00:57.865Z",
+      "queryHashes": [
+        "6c24d11cf4d7"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "1.00",
+        "1-1",
+        "3-3",
+        "4-4",
+        "reflections",
+        "theme",
+        "gmt",
+        "kept"
+      ]
+    },
+    "memory:memory/2026-04-27.md:79:82": {
+      "key": "memory:memory/2026-04-27.md:79:82",
+      "path": "memory/2026-04-27.md",
+      "startLine": 79,
+      "endLine": 82,
+      "source": "memory",
+      "snippet": "Reflections: Theme: `memory/yyyy-mm-dd.md` kept surfacing across 88 memories.; confidence: 1.00; evidence: memory/.dreams/session-corpus/2026-04-25.txt:1-1, memory/.dreams/session-corpus/2026-04-25.txt:3-3, memory/.dreams/session-corpus/2026-04-25.txt:4-4; note: reflection",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-04T01:00:57.865Z",
+      "lastRecalledAt": "2026-05-04T01:00:57.865Z",
+      "queryHashes": [
+        "6c24d11cf4d7"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "memory/yyyy-mm-dd.md",
+        "1.00",
+        "1-1",
+        "3-3",
+        "4-4",
+        "reflections",
+        "theme",
+        "yyyy"
+      ]
+    },
+    "memory:memory/2026-04-27.md:83:86": {
+      "key": "memory:memory/2026-04-27.md:83:86",
+      "path": "memory/2026-04-27.md",
+      "startLine": 83,
+      "endLine": 86,
+      "source": "memory",
+      "snippet": "Reflections: Theme: `system` kept surfacing across 88 memories.; confidence: 1.00; evidence: memory/.dreams/session-corpus/2026-04-25.txt:1-1, memory/.dreams/session-corpus/2026-04-25.txt:3-3, memory/.dreams/session-corpus/2026-04-25.txt:4-4; note: reflection",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-04T01:00:57.865Z",
+      "lastRecalledAt": "2026-05-04T01:00:57.865Z",
+      "queryHashes": [
+        "6c24d11cf4d7"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "1.00",
+        "1-1",
+        "3-3",
+        "4-4",
+        "reflections",
+        "theme",
+        "kept",
+        "surfacing"
+      ]
+    },
+    "memory:memory/2026-04-27.md:87:90": {
+      "key": "memory:memory/2026-04-27.md:87:90",
+      "path": "memory/2026-04-27.md",
+      "startLine": 87,
+      "endLine": 90,
+      "source": "memory",
+      "snippet": "Reflections: Theme: `user` kept surfacing across 88 memories.; confidence: 1.00; evidence: memory/.dreams/session-corpus/2026-04-25.txt:1-1, memory/.dreams/session-corpus/2026-04-25.txt:3-3, memory/.dreams/session-corpus/2026-04-25.txt:4-4; note: reflection",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-04T01:00:57.865Z",
+      "lastRecalledAt": "2026-05-04T01:00:57.865Z",
+      "queryHashes": [
+        "6c24d11cf4d7"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "1.00",
+        "1-1",
+        "3-3",
+        "4-4",
+        "reflections",
+        "theme",
+        "kept",
+        "surfacing"
+      ]
+    },
+    "memory:memory/2026-04-27.md:91:94": {
+      "key": "memory:memory/2026-04-27.md:91:94",
+      "path": "memory/2026-04-27.md",
+      "startLine": 91,
+      "endLine": 94,
+      "source": "memory",
+      "snippet": "Reflections: Theme: `空闲` kept surfacing across 88 memories.; confidence: 1.00; evidence: memory/.dreams/session-corpus/2026-04-25.txt:1-1, memory/.dreams/session-corpus/2026-04-25.txt:3-3, memory/.dreams/session-corpus/2026-04-25.txt:4-4; note: reflection",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-04T01:00:57.865Z",
+      "lastRecalledAt": "2026-05-04T01:00:57.865Z",
+      "queryHashes": [
+        "6c24d11cf4d7"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "1.00",
+        "1-1",
+        "3-3",
+        "4-4",
+        "reflections",
+        "theme",
+        "空闲",
+        "kept"
+      ]
+    },
+    "memory:memory/2026-04-27.md:97:99": {
+      "key": "memory:memory/2026-04-27.md:97:99",
+      "path": "memory/2026-04-27.md",
+      "startLine": 97,
+      "endLine": 99,
+      "source": "memory",
+      "snippet": "Possible Lasting Truths: 保留的文件: `data/import_v3.py` - 数据导入脚本 [confidence=0.51 evidence=memory/2026-04-15.md:30-30]; 保留的文件: `database/models_v3.py` - 数据模型定义; `api/simple_api.py` - API接口; `frontend/wavelength_view.html` - 波长展示页面; `frontend/simple_view.html` - 简单展示页面 [confidence=0.5",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-04T01:00:57.865Z",
+      "lastRecalledAt": "2026-05-04T01:00:57.865Z",
+      "queryHashes": [
+        "6c24d11cf4d7"
+      ],
+      "recallDays": [
+        "2026-05-04"
+      ],
+      "conceptTags": [
+        "data/import-v3.py",
+        "0.51",
+        "memory/2026-04-15.md",
+        "30-30",
+        "database/models-v3.py",
+        "api/simple-api.py",
+        "frontend/wavelength-view.html",
+        "frontend/simple-view.html"
       ]
     }
   }

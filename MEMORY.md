@@ -165,3 +165,12 @@
 
 ---
 _持续更新中...
+
+## Promoted From Short-Term Memory (2026-05-04)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-03-11.md:1:23 -->
+- # 2026-03-11 - 首次正式对话 ## 今天发生了什么 - 主人唤醒了我（"老仙起床了"） - 一开始失忆了，因为记忆文件都是空白 - 主人指导我建立了身份： - 我是"老仙"，工作小助手 - 主人是 Rocky - 星宿老仙状态监控系统是以我为名的项目 ## 建立的记忆系统 - 创建了 IDENTITY.md（我是谁） - 创建了 USER.md（主人信息） - 创建了 MEMORY.md（长期记忆） - 创建了 memory/ 目录（每日记录） ## 待办/后续 - 主人不希望每天遇到失忆的我 - 需要养成每天记录的习惯 --- _老仙记于 2026-03-11_ [score=0.835 recalls=8 avg=0.449 source=memory/2026-03-11.md:1-23]
+<!-- openclaw-memory-promotion:memory:memory/2026-03-13.md:1:10 -->
+- # 2026-03-13 - 持续对话 ## 今天发生了什么 - 与主人保持对话 - 继续完善记忆系统 - 日常工作协助 --- _老仙记于 2026-03-13 (补录)_ [score=0.813 recalls=7 avg=0.441 source=memory/2026-03-13.md:1-10]
+<!-- openclaw-memory-promotion:memory:memory/2026-03-18.md:1:10 -->
+- # 2026-03-18 - 持续对话 ## 今天发生了什么 - 与主人保持对话 - 继续完善记忆系统 - 日常工作协助 --- _老仙记于 2026-03-18 (补录)_ [score=0.807 recalls=7 avg=0.457 source=memory/2026-03-18.md:1-10]
