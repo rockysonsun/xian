@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-11T01:04:56.911Z",
+  "updatedAt": "2026-05-18T01:08:34.406Z",
   "entries": {
     "memory:memory/2026-03-16.md:1:10": {
       "key": "memory:memory/2026-03-16.md:1:10",
@@ -3714,6 +3714,68 @@
         "整理",
         "一下",
         "技术"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-16.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-16.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-16.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "Assistant: 🐉 老仙每日备份完成！ **备份结果：** - ✅ 工作区配置已备份 - ✅ OpenClaw 核心配置已备份（含向量记忆） - ✅ 无变更需要提交",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-18T01:08:34.406Z",
+      "lastRecalledAt": "2026-05-18T01:08:34.406Z",
+      "queryHashes": [
+        "b43f3073c69a"
+      ],
+      "recallDays": [
+        "2026-05-18"
+      ],
+      "conceptTags": [
+        "备份",
+        "每日",
+        "完成",
+        "结果",
+        "工作",
+        "配置",
+        "openclaw",
+        "核心"
+      ]
+    },
+    "memory:memory/.dreams/session-corpus/2026-05-17.txt:1:1": {
+      "key": "memory:memory/.dreams/session-corpus/2026-05-17.txt:1:1",
+      "path": "memory/.dreams/session-corpus/2026-05-17.txt",
+      "startLine": 1,
+      "endLine": 1,
+      "source": "memory",
+      "snippet": "Assistant: 🐉 老仙每日备份已完成！ **备份结果：** - ✅ 工作区配置已备份 - ✅ OpenClaw 核心配置已备份（含向量记忆） - ✅ 旧备份已清理 - 📦 工作区备份：`laoxian-backup-20260517_181414.tar.gz` - 📦 核心配置备份：`laoxian-backup-20260517_181414-openclaw.tar.gz` 一切正常，无需提交新变更。老仙状态良好 💪",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.58,
+      "maxScore": 0.58,
+      "firstRecalledAt": "2026-05-18T01:08:34.406Z",
+      "lastRecalledAt": "2026-05-18T01:08:34.406Z",
+      "queryHashes": [
+        "7c821d0b4905"
+      ],
+      "recallDays": [
+        "2026-05-18"
+      ],
+      "conceptTags": [
+        "backup",
+        "备份",
+        "每日",
+        "完成",
+        "结果",
+        "工作",
+        "配置",
+        "openclaw"
       ]
     }
   }
