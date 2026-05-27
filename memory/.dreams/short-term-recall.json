@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-18T01:08:34.406Z",
+  "updatedAt": "2026-05-25T01:11:43.696Z",
   "entries": {
     "memory:memory/2026-03-16.md:1:10": {
       "key": "memory:memory/2026-03-16.md:1:10",
@@ -3776,6 +3776,116 @@
         "工作",
         "配置",
         "openclaw"
+      ]
+    },
+    "memory:memory/2026-05-20.md:4:6": {
+      "key": "memory:memory/2026-05-20.md:4:6",
+      "path": "memory/2026-05-20.md",
+      "startLine": 4,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "今天发生了什么: 主人早上好问候（11:08）; 老仙检查记忆文件，发现 5月9日后未更新; 创建今日记忆文件",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-25T01:11:43.696Z",
+      "lastRecalledAt": "2026-05-25T01:11:43.696Z",
+      "queryHashes": [
+        "d633e8f17da8"
+      ],
+      "recallDays": [
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "今天",
+        "发生",
+        "什么",
+        "主人",
+        "早上",
+        "问候",
+        "检查",
+        "记忆"
+      ]
+    },
+    "memory:memory/2026-05-20.md:9:9": {
+      "key": "memory:memory/2026-05-20.md:9:9",
+      "path": "memory/2026-05-20.md",
+      "startLine": 9,
+      "endLine": 9,
+      "source": "memory",
+      "snippet": "备注: 5月10日~5月19日：主人未操作，无记录",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-25T01:11:43.696Z",
+      "lastRecalledAt": "2026-05-25T01:11:43.696Z",
+      "queryHashes": [
+        "d633e8f17da8"
+      ],
+      "recallDays": [
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "备注",
+        "主人",
+        "操作",
+        "记录"
+      ]
+    },
+    "memory:memory/2026-05-20.md:12:12": {
+      "key": "memory:memory/2026-05-20.md:12:12",
+      "path": "memory/2026-05-20.md",
+      "startLine": 12,
+      "endLine": 12,
+      "source": "memory",
+      "snippet": "待办/后续: 检查是否有未完成的待办事项",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-25T01:11:43.696Z",
+      "lastRecalledAt": "2026-05-25T01:11:43.696Z",
+      "queryHashes": [
+        "d633e8f17da8"
+      ],
+      "recallDays": [
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "待办/后续",
+        "检查",
+        "是否",
+        "未完成",
+        "事项"
+      ]
+    },
+    "memory:memory/2026-05-20.md:15:15": {
+      "key": "memory:memory/2026-05-20.md:15:15",
+      "path": "memory/2026-05-20.md",
+      "startLine": 15,
+      "endLine": 15,
+      "source": "memory",
+      "snippet": "待办/后续: _老仙记于 2026-05-20_",
+      "recallCount": 0,
+      "dailyCount": 1,
+      "groundedCount": 0,
+      "totalScore": 0.62,
+      "maxScore": 0.62,
+      "firstRecalledAt": "2026-05-25T01:11:43.696Z",
+      "lastRecalledAt": "2026-05-25T01:11:43.696Z",
+      "queryHashes": [
+        "d633e8f17da8"
+      ],
+      "recallDays": [
+        "2026-05-25"
+      ],
+      "conceptTags": [
+        "待办/后续"
       ]
     }
   }
